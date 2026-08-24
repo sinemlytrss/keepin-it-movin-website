@@ -419,24 +419,27 @@ if (currentPage === 'index.html') {
         });
 
         const giftTexts = {
-            cd: 'Jeremiah Review Button included',
-            vinyl: 'Jeremiah Review Button + Magnet included',
+            cd: 'Jeremiah Review Button included'
         };
         const giftBadge = document.getElementById('giftBadge');
         const giftText = document.getElementById('giftText');
 
         function updateGiftBadge() {
-            const choice = document.querySelector('input[name="uzazi_option"]:checked').value;
-            giftText.textContent = giftTexts[choice];
-            giftBadge.classList.add('show');
-        }
+    const choice = document.querySelector('input[name="uzazi_option"]:checked').value;
+    if (choice === 'cd') {
+        giftText.textContent = giftTexts[choice];
+        giftBadge.classList.add('show');
+    } else {
+        giftBadge.classList.remove('show');
+    }
+}
 
         document.querySelectorAll('input[name="uzazi_option"]').forEach(r => r.addEventListener('change', updateGiftBadge));
         updateGiftBadge(); // sayfa yüklendiğinde varsayılan seçim (CD) için göster
 
 
 
-        const payPalLinks = { cd: '#', vinyl: '#', jeremiah_33: '#', mingus_poster: '#' };
+        const payPalLinks = { cd: 'https://buy.stripe.com/eVq00k4Nj4Lk5Al7Ik8so00', vinyl: 'https://elasticstage.com/jeremiahhunt/releases/uzazi-album', jeremiah_33: 'https://buy.stripe.com/cNi6oI7ZvdhQ7It7Ik8so03', mingus_poster: 'https://buy.stripe.com/14AeVe2Fb1z88Mx5Ac8so01' };
         function openPayPal(linkKey) {
             const url = payPalLinks[linkKey] || '#';
             if (url === '#') { alert('PayPal link not configured. Provide your PayPal checkout URL.'); return }
@@ -451,7 +454,7 @@ if (currentPage === 'index.html') {
         document.querySelectorAll('[data-product]').forEach(b => b.addEventListener('click', () => openPayPal(b.dataset.product)));
 
         document.getElementById('trailerBtn').addEventListener('click', () => {
-            const url = "photos/Uzazi teaser1 - Landscape.mov";
+            const url = "photos/Uzazi Teaser1-Landscape-720p.mp4";
             const modal = document.createElement('div');
             modal.style.position = 'fixed'; modal.style.inset = 0; modal.style.background = 'rgba(0,0,0,0.8)';
             modal.style.display = 'flex'; modal.style.alignItems = 'center'; modal.style.justifyContent = 'center'; modal.style.zIndex = 9999;

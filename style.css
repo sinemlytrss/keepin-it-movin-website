@@ -1373,7 +1373,7 @@ header.scrolled .nav-link:hover {
  
   .homepage-uzazi-cta {
     margin-top: 0;
-    font-size: 0.88rem;
+    font-size: 0.70rem;
   }
 }
  
@@ -1704,7 +1704,7 @@ header.scrolled .nav-link:hover {
   /* Uzun buton yazıları ("Discover Mixolydian" gibi) dar kartlarda
      sıkışmasın diye harf aralığı ve padding küçültülüyor */
   .siw-card-btn {
-    padding: 0.6rem 1.05rem;
+    padding: 0.4rem 1rem;
     font-size: 0.7rem;
     letter-spacing: 0.09em;
     gap: 8px;
@@ -2007,7 +2007,7 @@ header.scrolled .nav-link:hover {
 
   .homepage-event-row {
     gap: 1.4rem;
-    padding: 1.4rem 1.1rem;
+    padding: 1.2rem 1.1rem;
   }
 
   .homepage-event-row:hover {
@@ -2017,11 +2017,11 @@ header.scrolled .nav-link:hover {
 
   .homepage-event-date {
     flex: 0 0 96px;
-    font-size: 0.78rem;
+    font-size: 0.68rem;
   }
 
   .homepage-event-info {
-    font-size: 0.98rem;
+    font-size: 0.80rem;
   }
 }
 
@@ -2063,7 +2063,7 @@ header.scrolled .nav-link:hover {
   }
 
   .homepage-event-info {
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   .homepage-event-arrow {
@@ -2071,12 +2071,12 @@ header.scrolled .nav-link:hover {
   }
 
   .homepage-events-cta-wrap {
-    margin-top: 2.4rem;
+    margin-top: 2rem;
   }
 
   .homepage-events-cta {
     width: 100%;
-    max-width: 320px;
+    max-width: 250px;
     justify-content: center;
   }
 }
@@ -2092,7 +2092,7 @@ header.scrolled .nav-link:hover {
   }
 
   .homepage-event-info {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .homepage-events-cta {
@@ -2392,8 +2392,9 @@ header.scrolled .nav-link:hover {
   }
 
   .about-para {
-    line-height: 1.75;
+    line-height: 1.70;
     margin-bottom: 1.2rem;
+    font-size: 0.80rem;
   }
 
   .about-photo {
@@ -2442,9 +2443,6 @@ header.scrolled .nav-link:hover {
     opacity: 0.5;
   }
 
-  .about-para {
-    font-size: 0.86rem;
-  }
 }
 
 /* ---------- YATAY TELEFON ---------- */
@@ -3270,7 +3268,7 @@ header.scrolled .nav-link:hover {
   }
 
   .contact-desc {
-    max-width: 520px;
+    max-width: 500px;
   }
 
   /* iOS Safari otomatik zoom'u engellemek için form alanları 16px'in
@@ -3301,7 +3299,7 @@ header.scrolled .nav-link:hover {
   }
 
   .contact-desc {
-    line-height: 1.75;
+    line-height: 1.65;
     max-width: 100%;
   }
 
@@ -3333,7 +3331,7 @@ header.scrolled .nav-link:hover {
   }
 
   .contact-desc {
-    font-size: 0.85rem;
+    font-size: 0.76rem;
   }
 
   .contact-form label {
@@ -3928,7 +3926,7 @@ header.scrolled .nav-link:hover {
   align-items: center;
   justify-content: center;
   min-height: 3.45rem;
-  padding: 0 1.55rem;
+  padding: 0 1.50rem;
   border: 1px solid rgba(107, 63, 34, 0.45);
   color: var(--brown);
   text-decoration: none;
@@ -4316,8 +4314,9 @@ header.scrolled .nav-link:hover {
   .teaser-btn,
   .album-buy-btn {
     width: 100%;
+    font-size: 10px;
     justify-content: center;
-    padding: 1rem 1.6rem;
+    padding: 0.8rem 1rem;
   }
 
   .album-gallery-title {
@@ -4367,8 +4366,8 @@ header.scrolled .nav-link:hover {
 
   .teaser-btn,
   .album-buy-btn {
-    font-size: 0.68rem;
-    padding: 0.9rem 1.2rem;
+    font-size: 0.48rem;
+    padding: 0.8rem 1rem;
   }
 
   .album-gallery-title {
@@ -5101,7 +5100,7 @@ header.scrolled .nav-link:hover {
   }
 
   .work-description {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     line-height: 1.7;
     margin-bottom: 2.2rem;
   }
@@ -5782,6 +5781,8 @@ header.scrolled .nav-link:hover {
   .mute-toggle {
     right: 10px;
     bottom: 10px;
+        width: 27px;
+    height: 27px;
   }
 }
 
