@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J. HomePage</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet">
+    <!-- Font Awesome — sosyal medya ikonları için -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="homepage">
+
+  <!-- ── HEADER ── -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+        aria-controls="primaryNavigation" aria-expanded="false">
+        <span class="menu-toggle-line menu-toggle-line-long"></span>
+        <span class="menu-toggle-line menu-toggle-line-short"></span>
+      </button>
+
+      <nav id="primaryNavigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
+        <div class="dropdown-wrap">
+          <span class="nav-link" tabindex="0">
+            Projects <span class="arrow">▼</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="jeremiah.html">Jeremiah Hunt</a>
+            <a href="kim.html">KIM</a>
+            <a href="mixolydian.html">Mixolydian</a>
+          </div>
+        </div>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="offstage.html" class="nav-link">Off Stage</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+
+    <video class="hero-video" autoplay muted loop playsinline poster="photos/flut-pic.png">
+      <source src="photos/Flut.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-heading">
+        Keeping<br>
+        It<br>
+        Moving
+      </h1>
+
+      <div class="hero-taglines">
+        <span class="hero-tagline">More than music.</span> <br>
+        <span class="hero-tagline">A mindset.</span>
+        <span class="hero-tagline">A movement.</span>
+        <span class="hero-tagline">A way of life.</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="collection.html" class="btn-primary">See The Collection</a>
+        <a href="index.html#step-into-world" class="btn-secondary">View Works</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+      Scroll
+    </div>
+
+  </section>
+
+
+  <!-- ── KIM SECTION ── -->
+  <section class="about-section" id="about-section">
+    <div class="about-inner">
+
+      <!-- SOL -->
+      <div class="about-left">
+
+        <!-- Çift dikey çizgi -->
+        <div class="section-line">
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- İçerik -->
+        <div class="about-body">
+
+          <h2 class="about-title">Keepin' It Movin'</h2>
+
+          <div class="about-intro">
+            <p class="about-subtitle">
+              The connection between movement,<br>
+              music, and the journey within.
+            </p>
+
+            <div class="about-logo">
+            <img src="photos/K-Symbol-Transparent.svg" alt="Keepin' It Movin'">
+          </div>
+          </div>
+
+          
+
+          <p class="about-para">
+            Keepin’ It Movin’ philosophy is about staying in motion… physically, creatively, and personally. It’s about
+            knowing when to move forward, continuing through obstacles, and always finding room to grow. These ideas
+            live in the music and beyond it: keep moving, keep growing, and keep going.
+          </p>
+
+          <!-- Icon list: 2 üstte, 1 altta ortada -->
+          <div class="kim-icons">
+
+            <div class="kim-icon-item">
+              <div class="kim-icon-dot">
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div class="kim-icon-text">
+                <strong>Movement</strong>
+                <span>Awareness in motion.</span>
+              </div>
+            </div>
+
+            <div class="kim-icon-item">
+              <div class="kim-icon-dot">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </svg>
+              </div>
+              <div class="kim-icon-text">
+                <strong>Music</strong>
+                <span>Expression of the soul.</span>
+              </div>
+            </div>
+
+            <div class="kim-icon-item">
+              <div class="kim-icon-dot">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-leaf-icon lucide-leaf">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+              </div>
+              <div class="kim-icon-text">
+                <strong>Growth</strong>
+                <span>Becoming, every day.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- SAĞ — 4:5 fotoğraf -->
+      <div class="about-photo">
+        <img src="photos/home-keeping-img.jpg" alt="Keepin' It Movin'" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="homepage-uzazi">
+    <div class="homepage-uzazi-inner">
+      <span class="homepage-uzazi-label">New Music</span>
+      <h2 class="homepage-uzazi-title">UZAZI</h2>
+      <p class="homepage-uzazi-sub">Coming September 5</p>
+
+      <div class="homepage-uzazi-cover">
+        <img src="PHOTOS/uzazicover.jpg" alt="Uzazi album cover" />
+      </div>
+      <div class="homepage-uzazi-links">
+        <a class="homepage-uzazi-cta" href="jeremiah.html#album-section">
+          <span>Explore Uzazi</span>
+          <span>→</span>
+        </a>
+        <a class="homepage-uzazi-cta" href="collection.html#collection-section">
+          <span>Buy Now</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="step-into-world" id="step-into-world">
+    <div class="step-into-world-header">
+      <h2 class="step-into-world-title">Step Into The World</h2>
+      <p class="step-into-world-lede">A closer look at the different spaces this work moves through.</p>
+    </div>
+
+
+    <div class="step-into-world-grid">
+
+      <a class="siw-card" href="jeremiah.html">
+        <div class="siw-card-photo">
+          <img src="photos/jer-4.jpg" alt="Jeremiah Hunt" />
+        </div>
+        <div class="siw-card-body">
+          <h3 class="siw-card-title">Jeremiah Hunt</h3>
+          <p class="siw-card-desc">See the music, production, and creative work.</p>
+          <span class="siw-card-btn"><span>Discover</span><span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="siw-card" href="kim.html">
+        <div class="siw-card-photo">
+          <img src="photos/kim-group.JPG" alt="KIM" />
+        </div>
+        <div class="siw-card-body">
+          <h3 class="siw-card-title">KIM</h3>
+          <p class="siw-card-desc">Music in motion. People in harmony.</p>
+          <span class="siw-card-btn"><span>Discover KIM</span><span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="siw-card" href="mixolydian.html">
+        <div class="siw-card-photo">
+          <img src="photos/mix-video4.png" alt="Mixolydian" />
+        </div>
+        <div class="siw-card-body">
+          <h3 class="siw-card-title">Mixolydian</h3>
+          <p class="siw-card-desc">An intimate jazz listening place.</p>
+          <span class="siw-card-btn"><span>Discover Mixolydian</span><span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a class="siw-card" href="offstage.html">
+        <div class="siw-card-photo">
+          <img src="photos/jump.JPG" alt="Off Stage" />
+        </div>
+        <div class="siw-card-body">
+          <h3 class="siw-card-title">Off Stage</h3>
+          <p class="siw-card-desc">Life beyond the performance.</p>
+          <span class="siw-card-btn"><span>Explore Off Stage</span><span class="arrow">→</span></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="homepage-events-section">
+    <div class="homepage-events-header">
+      <span class="homepage-events-eyebrow">What's Next</span>
+      <h2 class="homepage-events-title">Upcoming Events</h2>
+      <div class="homepage-events-rule-ornament">
+        <span class="line"></span>
+        <span class="dot"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+
+    <div class="homepage-events-list">
+
+      <a class="homepage-event-row" href="events.html?date=2026-08-28#calendar-section">
+        <span class="homepage-event-date">Aug 28–29</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Winter's Jazz Club</span> — Chicago <span
+            class="homepage-event-detail">Soul Jazz Collective with LaShera Ellis</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
+
+      <a class="homepage-event-row" href="events.html?date=2026-09-02#calendar-section">
+        <span class="homepage-event-date">Sep 2</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Andy's Jazz Club</span> — <span
+            class="homepage-event-detail">Charles Heath Quartet</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
+
+      <a class="homepage-event-row" href="events.html?date=2026-09-06#calendar-section">
+        <span class="homepage-event-date">Sep 6</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Millennium Park: Von Freeman Stage</span> —
+          <span class="homepage-event-detail">Chicago Jazz Festival: Jeremiah Hunt</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
+
+      <a class="homepage-event-row" href="events.html?date=2026-09-09#calendar-section">
+        <span class="homepage-event-date">Sep 9</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Andy's Jazz Club</span> — <span
+            class="homepage-event-detail">Charles Heath Quartet</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
+
+      <a class="homepage-event-row" href="events.html?date=2026-09-10#calendar-section">
+        <span class="homepage-event-date">Sep 10</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Winter's Jazz Club</span> — <span
+            class="homepage-event-detail">Paul Marinaro Quartet</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
+
+    </div>
+
+    <div class="homepage-events-cta-wrap">
+      <a class="homepage-events-cta" href="events.html">
+        <span>View All Events</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Sol -->
+      <div class="contact-left">
+        <div class="contact-rule">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="contact-body">
+          <span class="contact-label">Stay Connected</span>
+
+          <h2 class="contact-title">
+            Keep It<br>Moving
+          </h2>
+
+          <p class="contact-desc">
+            Have a question, an idea, or something you’d like to share?
+            I’d love to hear from you. Whether it’s about the music,
+            the movement, or something beyond it, let’s keep the conversation going.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sağ — Form -->
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" data-fs-field required />
+          <span data-fs-error="name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" data-fs-field required />
+          <span data-fs-error="email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What would you like to share?" data-fs-field
+            required></textarea>
+          <span data-fs-error="message"></span>
+        </div>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess" data-fs-success>
+          Thank you for reaching out. I’ll be in touch soon. ✦
+        </div>
+
+        <!-- General error -->
+        <div class="form-error" data-fs-error></div>
+
+        <button type="submit" class="contact-submit" data-fs-submit-btn>
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+<footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+      </a>
+ 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="collection.html">Collection</a>
+        <a href="events.html">Events</a>
+        <a href="offstage.html">Off Stage</a>
+
+      </nav>
+ 
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer-divider"></div>
+ 
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+    </div>
+ 
+  </div>
+</footer>
+
+  <script>
+    // Header scroll state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
+    }, { passive: true });
+
+    // Dropdown JS
+    const dropdowns = document.querySelectorAll('.dropdown-wrap');
+    dropdowns.forEach(wrap => {
+      let closeTimer = null;
+      const open = () => {
+        clearTimeout(closeTimer);
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
+        wrap.classList.add('open');
+      };
+      const close = () => {
+        closeTimer = setTimeout(() => wrap.classList.remove('open'), 120);
+      };
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      const menu = wrap.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        menu.addEventListener('mouseleave', close);
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown-wrap'))
+        dropdowns.forEach(d => d.classList.remove('open'));
+    });
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNavigation = document.getElementById('primaryNavigation');
+    const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+    const setMobileMenu = (isOpen) => {
+      header.classList.toggle('mobile-menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!header.classList.contains('mobile-menu-open'));
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    dropdowns.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-link');
+      trigger.addEventListener('click', () => {
+        if (mobileBreakpoint.matches) {
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
+          wrap.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setMobileMenu(false);
+    });
+
+    mobileBreakpoint.addEventListener('change', e => {
+      if (!e.matches) setMobileMenu(false);
+    });
+
+    // ── ACTIVE NAVIGATION ──
+
+    const currentPage =
+      window.location.pathname.split('/').pop() || 'index.html';
+
+    const navLinks = document.querySelectorAll(
+      '#primaryNavigation a.nav-link'
+    );
+
+    const keepMovingLink = document.querySelector('.keep-moving-link');
+
+
+    // Normal sayfa linkleri
+    navLinks.forEach(link => {
+
+      const href = link.getAttribute('href');
+
+      if (!href) return;
+
+      const [linkPath, linkHash] = href.split('#');
+
+      // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+      if (linkHash) {
+        link.classList.remove('active');
+        return;
+      }
+
+      const linkPage =
+        linkPath.split('/').pop() || 'index.html';
+
+      link.classList.toggle(
+        'active',
+        linkPage === currentPage
+      );
+    });
+
+
+    // ── ACTIVE PROJECTS DROPDOWN ──
+
+    const projectPages = [
+      'jeremiah.html',
+      'kim.html',
+      'mixolydian.html'
+    ];
+
+    const projectsWrap =
+      document.querySelector('.dropdown-wrap');
+
+    if (
+      projectsWrap &&
+      projectPages.includes(currentPage)
+    ) {
+      const projectsTrigger =
+        projectsWrap.querySelector('.nav-link');
+
+      projectsTrigger.classList.add('active');
+    }
+
+
+    // ── KEEPIN' IT MOVIN' ACTIVE STATE ──
+
+    if (currentPage === 'index.html') {
+
+      const keepMovingSection =
+        document.getElementById('about-section');
+
+      if (keepMovingLink && keepMovingSection) {
+
+        const updateKeepMovingActive = () => {
+
+          const sectionTop =
+            keepMovingSection.getBoundingClientRect().top;
+
+          const sectionBottom =
+            keepMovingSection.getBoundingClientRect().bottom;
+
+          // Section ekranda veya henüz aşağı doğru geçilmemişse active
+          const isActive =
+            sectionTop <= window.innerHeight * 0.5 &&
+            sectionBottom > window.innerHeight * 0.2;
+
+          keepMovingLink.classList.toggle(
+            'active',
+            isActive
+          );
+        };
+
+        window.addEventListener(
+          'scroll',
+          updateKeepMovingActive,
+          { passive: true }
+        );
+
+        updateKeepMovingActive();
+      }
+    }
+
+
+
+
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+
+    document.querySelectorAll('.contact-form').forEach((form) => {
+
+      formspree('initForm', {
+        formElement: form,
+        formId: 'xdenyeoj'
+      });
+
+    });
+
+  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>

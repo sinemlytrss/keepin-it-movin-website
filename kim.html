@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIM Collective – Banner</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+        <!-- Font Awesome — sosyal medya ikonları için -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ── HEADER ── -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="primaryNavigation" aria-expanded="false">
+        <span class="menu-toggle-line menu-toggle-line-long"></span>
+        <span class="menu-toggle-line menu-toggle-line-short"></span>
+      </button>
+
+      <nav id="primaryNavigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
+        <div class="dropdown-wrap">
+          <span class="nav-link" tabindex="0">
+            Projects <span class="arrow">▼</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="jeremiah.html">Jeremiah Hunt</a>
+            <a href="kim.html">KIM</a>
+            <a href="mixolydian.html">Mixolydian</a>
+          </div>
+        </div>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="offstage.html" class="nav-link">Off Stage</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+      </nav>
+
+    </div>
+  </header>
+
+    <!-- ── KIM COLLECTIVE BANNER ── -->
+    <section class="page-banner">
+        <img class="page-banner-img" src="photos/kim-banner.JPG" alt="KIM Collective" />
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <span class="page-banner-label">Keepin' It Movin'</span>
+            <div class="page-banner-rule">
+            </div>
+            <h1 class="page-banner-title">KIM Collective</h1>
+        </div>
+    </section>
+
+    <!-- ── THE COLLECTIVE ── -->
+    <section class="about-section">
+        <div class="about-inner">
+
+            <!-- SOL -->
+            <div class="about-left">
+                <div class="section-line">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="about-body">
+
+                    <h2 class="about-title">The Collective</h2>
+
+                    <p class="about-subtitle">
+                        Music in motion.<br>
+                        People in harmony.
+                    </p>
+
+                    <p class="about-para">
+                        KIM is a collective rooted in the idea of "Keepin' It Movin'"—using music to inspire movement
+                        physically, creatively, and personally. Drawing from jazz, funk, soul, rock, hip-hop, and a wide
+                        range of musical influences, the collective embraces exploration without being confined to a
+                        single genre. Every performance is an opportunity to create music that feels alive, connects
+                        people, and encourages them to keep moving forward.
+                    </p>
+
+                    <p class="about-para">
+                        At the heart of KIM is a shared commitment to creativity, collaboration, and continuous growth.
+                        Musicians come together to explore new ideas, learn from one another, and create meaningful
+                        experiences through music. Every gathering brings fresh perspectives while remaining connected
+                        by a common purpose: inspiring movement, connection, and growth.
+                    </p>
+
+                    <p class="about-para">
+                        KIM continues to grow through the people who bring their creativity, curiosity, and commitment
+                        to the music. If you're a musician in the Chicago area who feels connected to this spirit, we'd
+                        love to hear from you.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- SAĞ — fotoğraf -->
+            <div class="about-photo">
+                <img src="photos/kim-group.JPG" alt="KIM Collective - The Band" />
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── GALLERY ── -->
+    <section class="kim-gallery-section">
+
+        <div class="kim-gallery-header">
+            <span class="kim-gallery-label">The Collective</span>
+            <h2 class="kim-gallery-title">In the Moment</h2>
+        </div>
+
+        <div class="kim-gallery-grid">
+
+            <!-- 1 — photo (span 2 row) -->
+            <div class="kim-gallery-item photo">
+                <img src="photos/gallery-1.JPG" alt="KIM Collective" />
+            </div>
+
+            <!-- 2 — photo -->
+            <div class="kim-gallery-item photo">
+                <img src="photos/gallery2.jpeg" alt="KIM Collective" />
+            </div>
+
+            <!-- 3 — video -->
+            <div class="kim-gallery-item video" data-video="photos/video2-720p.mp4">
+
+                <img src="photos/video2.png" alt="KIM Collective video thumbnail" />
+
+                <div class="play-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+
+                <span class="video-badge">Video</span>
+
+            </div>
+
+            <!-- 4 — photo -->
+            <div class="kim-gallery-item photo">
+                <img src="photos/gallery3.jpeg" alt="KIM Collective" />
+            </div>
+
+            <!-- 5 — video -->
+            <div class="kim-gallery-item video" data-video="photos/video.MOV">
+
+                <img src="photos/video.png" alt="KIM Collective video thumbnail" />
+
+                <div class="play-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+
+                <span class="video-badge">Video</span>
+
+            </div>
+
+            <!-- 6 — video -->
+            <div class="kim-gallery-item video" data-video="photos/video3-720p.mp4">
+
+                <img src="photos/video3.png" alt="KIM Collective video thumbnail" />
+
+                <div class="play-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+
+                <span class="video-badge">Video</span>
+
+            </div>
+
+            <!-- 7 — photo -->
+            <div class="kim-gallery-item photo">
+                <img src="photos/kim-group.JPG" alt="KIM Collective" />
+            </div>
+
+            <!-- 8 — photo -->
+            <div class="kim-gallery-item photo">
+                <img src="photos/kim-banner.JPG" alt="KIM Collective" />
+            </div>
+
+            <!-- 9 — video (span 2 row) -->
+            <div class="kim-gallery-item video" data-video="photos/video4-720p.mp4">
+
+                <img src="photos/video4.png" alt="KIM Collective video thumbnail" />
+
+                <div class="play-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+
+                <span class="video-badge">Video</span>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ── LIGHTBOX ── -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lb-close">&#x2715;</button>
+        <button class="lightbox-prev" id="lb-prev">&#8592;</button>
+        <div class="lightbox-inner" id="lb-inner"></div>
+        <button class="lightbox-next" id="lb-next">&#8594;</button>
+        <span class="lightbox-counter" id="lb-counter"></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ── CONTACT ── -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Sol -->
+      <div class="contact-left">
+        <div class="contact-rule">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="contact-body">
+          <span class="contact-label">Get in Touch</span>
+          <h2 class="contact-title">Join the<br>Movement</h2>
+          <p class="contact-desc">
+            Whether you're interested in joining the collective, collaborating, or simply have a question, we'd love to hear from you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sağ — Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell us about yourself or your question..." required></textarea>
+        </div>
+        <div class="form-success" id="formSuccess">
+          Thank you — we'll be in touch soon. ✦
+        </div>
+        <button type="submit" class="contact-submit">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+      </a>
+ 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="collection.html">Collection</a>
+        <a href="events.html">Events</a>
+        <a href="offstage.html">Off Stage</a>
+
+      </nav>
+ 
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer-divider"></div>
+ 
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+    </div>
+ 
+  </div>
+</footer>
+
+
+    <script>
+            // Header scroll state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
+    }, { passive: true });
+
+    // Dropdown JS
+    const dropdowns = document.querySelectorAll('.dropdown-wrap');
+    dropdowns.forEach(wrap => {
+      let closeTimer = null;
+      const open = () => {
+        clearTimeout(closeTimer);
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
+        wrap.classList.add('open');
+      };
+      const close = () => {
+        closeTimer = setTimeout(() => wrap.classList.remove('open'), 120);
+      };
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      const menu = wrap.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        menu.addEventListener('mouseleave', close);
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown-wrap'))
+        dropdowns.forEach(d => d.classList.remove('open'));
+    });
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNavigation = document.getElementById('primaryNavigation');
+    const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+    const setMobileMenu = (isOpen) => {
+      header.classList.toggle('mobile-menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!header.classList.contains('mobile-menu-open'));
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    dropdowns.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-link');
+      trigger.addEventListener('click', () => {
+        if (mobileBreakpoint.matches) {
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
+          wrap.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setMobileMenu(false);
+    });
+
+    mobileBreakpoint.addEventListener('change', e => {
+      if (!e.matches) setMobileMenu(false);
+    });
+  
+    // ── ACTIVE NAVIGATION ──
+
+const currentPage =
+  window.location.pathname.split('/').pop() || 'index.html';
+
+const navLinks = document.querySelectorAll(
+  '#primaryNavigation a.nav-link'
+);
+
+const keepMovingLink = document.querySelector('.keep-moving-link');
+
+
+// Normal sayfa linkleri
+navLinks.forEach(link => {
+
+  const href = link.getAttribute('href');
+
+  if (!href) return;
+
+  const [linkPath, linkHash] = href.split('#');
+
+  // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+  if (linkHash) {
+    link.classList.remove('active');
+    return;
+  }
+
+  const linkPage =
+    linkPath.split('/').pop() || 'index.html';
+
+  link.classList.toggle(
+    'active',
+    linkPage === currentPage
+  );
+});
+
+
+// ── ACTIVE PROJECTS DROPDOWN ──
+
+const projectPages = [
+  'jeremiah.html',
+  'kim.html',
+  'mixolydian.html'
+];
+
+const projectsWrap =
+  document.querySelector('.dropdown-wrap');
+
+if (
+  projectsWrap &&
+  projectPages.includes(currentPage)
+) {
+  const projectsTrigger =
+    projectsWrap.querySelector('.nav-link');
+
+  projectsTrigger.classList.add('active');
+}
+
+
+// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
+
+if (currentPage === 'index.html') {
+
+  const keepMovingSection =
+    document.getElementById('about-section');
+
+  if (keepMovingLink && keepMovingSection) {
+
+    const updateKeepMovingActive = () => {
+
+      const sectionTop =
+        keepMovingSection.getBoundingClientRect().top;
+
+      const sectionBottom =
+        keepMovingSection.getBoundingClientRect().bottom;
+
+      // Section ekranda veya henüz aşağı doğru geçilmemişse active
+      const isActive =
+        sectionTop <= window.innerHeight * 0.5 &&
+        sectionBottom > window.innerHeight * 0.2;
+
+      keepMovingLink.classList.toggle(
+        'active',
+        isActive
+      );
+    };
+
+    window.addEventListener(
+      'scroll',
+      updateKeepMovingActive,
+      { passive: true }
+    );
+
+    updateKeepMovingActive();
+  }
+}
+
+
+
+
+
+
+
+        const items = Array.from(document.querySelectorAll('.kim-gallery-item'));
+        const lightbox = document.getElementById('lightbox');
+        const lbInner = document.getElementById('lb-inner');
+        const lbCounter = document.getElementById('lb-counter');
+        let current = 0;
+
+        function getMedia(item) {
+            const isVideo = item.classList.contains('video');
+            const img = item.querySelector('img');
+            const src = img ? img.src : '';
+            const videoSrc = item.getAttribute('data-video') || null;
+            return { isVideo, src, videoSrc };
+        }
+
+        function openLightbox(index) {
+            current = index;
+            renderLightbox();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            lbInner.innerHTML = '';
+        }
+
+        function renderLightbox() {
+            lbInner.innerHTML = '';
+            const item = items[current];
+            const { isVideo, src, videoSrc } = getMedia(item);
+
+            if (isVideo) {
+                const vid = document.createElement('video');
+                vid.src = videoSrc || src;
+                vid.controls = true;
+                vid.autoplay = true;
+                vid.style.maxWidth = '90vw';
+                vid.style.maxHeight = '85vh';
+                lbInner.appendChild(vid);
+            } else {
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = item.querySelector('img').alt || '';
+                lbInner.appendChild(img);
+            }
+
+            lbCounter.textContent = `${current + 1} / ${items.length}`;
+        }
+
+        function navigate(dir) {
+            current = (current + dir + items.length) % items.length;
+            renderLightbox();
+        }
+
+        // Event listeners
+        items.forEach((item, i) => {
+            item.addEventListener('click', () => openLightbox(i));
+        });
+
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+        document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+
+        // Backdrop tıklama
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        // Klavye
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigate(-1);
+            if (e.key === 'ArrowRight') navigate(1);
+        });
+
+
+
+
+
+    window.formspree =
+  window.formspree ||
+  function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+
+document.querySelectorAll('.contact-form').forEach((form) => {
+
+  formspree('initForm', {
+    formElement: form,
+    formId: 'xdenyeoj'
+  });
+
+});
+
+  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+    
+
+</body>
+
+</html>

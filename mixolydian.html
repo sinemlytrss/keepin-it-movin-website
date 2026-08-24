@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixolydian</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+        <!-- Font Awesome — sosyal medya ikonları için -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ── HEADER ── -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="primaryNavigation" aria-expanded="false">
+        <span class="menu-toggle-line menu-toggle-line-long"></span>
+        <span class="menu-toggle-line menu-toggle-line-short"></span>
+      </button>
+
+      <nav id="primaryNavigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
+        <div class="dropdown-wrap">
+          <span class="nav-link" tabindex="0">
+            Projects <span class="arrow">▼</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="jeremiah.html">Jeremiah Hunt</a>
+            <a href="kim.html">KIM</a>
+            <a href="mixolydian.html">Mixolydian</a>
+          </div>
+        </div>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="offstage.html" class="nav-link">Off Stage</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+      </nav>
+
+    </div>
+  </header>
+
+    <!-- ── MIXOLYDIAN BANNER ── -->
+    <section class="page-banner">
+        <video class="page-banner-video" src="photos/banner-mix-video.mp4" autoplay muted loop playsinline></video>
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <span class="page-banner-label">The Jazz Club</span>
+            <div class="page-banner-rule"></div>
+            <h1 class="page-banner-title">Mixolydian</h1>
+            <span class="page-banner-sub">
+                An intimate jazz listening experience<br>
+                inspired by Southern hospitality.
+            </span>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-inner">
+
+            <!-- SOL -->
+            <div class="about-left">
+                <div class="section-line">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="about-body">
+
+                    <h2 class="about-title">About Mixolydian</h2>
+
+                    <p class="about-subtitle">
+                        Built for meaningful music, memorable meals, and genuine connection.
+                    </p>
+
+                    <p class="about-para">
+                        Mixolydian is a vision for an intimate jazz listening room where every detail is designed to
+                        bring people closer to the music. Inspired by Jacksonville's rich jazz heritage and the cultural
+                        legacy of LaVilla, the experience invites guests to slow down, listen deeply, and enjoy live
+                        performances in a setting that feels both welcoming and thoughtfully curated.
+                    </p>
+
+                    <p class="about-para">
+                        The idea began with three longtime friends brought together by a shared love of jazz, Southern
+                        hospitality, and meaningful conversation. What started as a simple evening of stories and
+                        imagination has grown into an evolving concept—one that celebrates exceptional musicianship,
+                        shared meals, and the kind of connection that can only happen when people gather with intention.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- SAĞ — fotoğraf -->
+            <div class="about-photo">
+                <img src="photos/mix-logo.png" alt="KIM Collective - The Band" />
+            </div>
+
+        </div>
+    </section>
+
+
+ <section class="glimpses-section">
+    <div class="section-intro">
+      <h2 class="section-title">Cinematic Glimpses</h2>
+      <p class="section-subtitle">
+        A closer look at the atmosphere, artistry, and vision behind Mixolydian.
+      </p>
+    </div>
+
+    <!-- ── GRID ── -->
+    <div class="glimpses-grid">
+      <!-- 1: Vertical Video -->
+      <div class="glimpses-item vertical" data-video="photos/mix-video1.mp4">
+        <img src="photos/mix-video1.png" alt="Cinematic Preview" />
+        <div class="play-overlay">
+          <div class="play-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2: Horizontal Video 1 -->
+      <div class="glimpses-item horizontal" data-video="photos/mix-video2.mp4">
+        <img src="photos/mix-video2.png" alt="Cinematic Preview" />
+        <div class="play-overlay">
+          <div class="play-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3: Horizontal Video 2 -->
+      <div class="glimpses-item horizontal" data-video="photos/mix-video3.mov">
+        <img src="photos/mix-video3.png" alt="Cinematic Preview" />
+        <div class="play-overlay">
+          <div class="play-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4: Horizontal Video 3 -->
+      <div class="glimpses-item horizontal" data-video="photos/mix-video4.mp4">
+        <img src="photos/mix-video4.png" alt="Cinematic Preview" />
+        <div class="play-overlay">
+          <div class="play-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="videoLightbox">
+    <span class="lightbox-close">×</span>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+
+
+
+      <!-- ── CONTACT ── -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Sol -->
+      <div class="contact-left">
+        <div class="contact-rule">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="contact-body">
+          <span class="contact-label">Let's Connect</span>
+          <h2 class="contact-title">We'd Love to<br>Hear From You
+          <p class="contact-desc">
+            Whether you're curious about the vision behind Mixolydian or simply have a question, feel free to reach out.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sağ — Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Tell us about yourself or your question..." required></textarea>
+        </div>
+        <div class="form-success" id="formSuccess">
+          Thank you — we'll be in touch soon. ✦
+        </div>
+        <button type="submit" class="contact-submit">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+      </a>
+ 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="collection.html">Collection</a>
+        <a href="events.html">Events</a>
+        <a href="offstage.html">Off Stage</a>
+
+      </nav>
+ 
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer-divider"></div>
+ 
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+    </div>
+ 
+  </div>
+</footer>
+
+  <script>
+        // Header scroll state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
+    }, { passive: true });
+
+    // Dropdown JS
+    const dropdowns = document.querySelectorAll('.dropdown-wrap');
+    dropdowns.forEach(wrap => {
+      let closeTimer = null;
+      const open = () => {
+        clearTimeout(closeTimer);
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
+        wrap.classList.add('open');
+      };
+      const close = () => {
+        closeTimer = setTimeout(() => wrap.classList.remove('open'), 120);
+      };
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      const menu = wrap.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        menu.addEventListener('mouseleave', close);
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown-wrap'))
+        dropdowns.forEach(d => d.classList.remove('open'));
+    });
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNavigation = document.getElementById('primaryNavigation');
+    const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+    const setMobileMenu = (isOpen) => {
+      header.classList.toggle('mobile-menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!header.classList.contains('mobile-menu-open'));
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    dropdowns.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-link');
+      trigger.addEventListener('click', () => {
+        if (mobileBreakpoint.matches) {
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
+          wrap.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setMobileMenu(false);
+    });
+
+    mobileBreakpoint.addEventListener('change', e => {
+      if (!e.matches) setMobileMenu(false);
+    });
+  
+    // ── ACTIVE NAVIGATION ──
+
+const currentPage =
+  window.location.pathname.split('/').pop() || 'index.html';
+
+const navLinks = document.querySelectorAll(
+  '#primaryNavigation a.nav-link'
+);
+
+const keepMovingLink = document.querySelector('.keep-moving-link');
+
+
+// Normal sayfa linkleri
+navLinks.forEach(link => {
+
+  const href = link.getAttribute('href');
+
+  if (!href) return;
+
+  const [linkPath, linkHash] = href.split('#');
+
+  // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+  if (linkHash) {
+    link.classList.remove('active');
+    return;
+  }
+
+  const linkPage =
+    linkPath.split('/').pop() || 'index.html';
+
+  link.classList.toggle(
+    'active',
+    linkPage === currentPage
+  );
+});
+
+
+// ── ACTIVE PROJECTS DROPDOWN ──
+
+const projectPages = [
+  'jeremiah.html',
+  'kim.html',
+  'mixolydian.html'
+];
+
+const projectsWrap =
+  document.querySelector('.dropdown-wrap');
+
+if (
+  projectsWrap &&
+  projectPages.includes(currentPage)
+) {
+  const projectsTrigger =
+    projectsWrap.querySelector('.nav-link');
+
+  projectsTrigger.classList.add('active');
+}
+
+
+// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
+
+if (currentPage === 'index.html') {
+
+  const keepMovingSection =
+    document.getElementById('about-section');
+
+  if (keepMovingLink && keepMovingSection) {
+
+    const updateKeepMovingActive = () => {
+
+      const sectionTop =
+        keepMovingSection.getBoundingClientRect().top;
+
+      const sectionBottom =
+        keepMovingSection.getBoundingClientRect().bottom;
+
+      // Section ekranda veya henüz aşağı doğru geçilmemişse active
+      const isActive =
+        sectionTop <= window.innerHeight * 0.5 &&
+        sectionBottom > window.innerHeight * 0.2;
+
+      keepMovingLink.classList.toggle(
+        'active',
+        isActive
+      );
+    };
+
+    window.addEventListener(
+      'scroll',
+      updateKeepMovingActive,
+      { passive: true }
+    );
+
+    updateKeepMovingActive();
+  }
+}
+
+
+
+
+
+
+
+    const glimpsesItems = document.querySelectorAll('.glimpses-item');
+    const lightbox = document.getElementById('videoLightbox');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    glimpsesItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const videoSrc = item.getAttribute('data-video');
+
+        lightboxContent.innerHTML = `
+          <video src="${videoSrc}" autoplay controls playsinline></video>
+        `;
+
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('active');
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = 'auto';
+    };
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+
+
+
+    window.formspree =
+  window.formspree ||
+  function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+
+document.querySelectorAll('.contact-form').forEach((form) => {
+
+  formspree('initForm', {
+    formElement: form,
+    formId: 'xdenyeoj'
+  });
+
+});
+
+  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>s
+
+</body>
+
+</html>

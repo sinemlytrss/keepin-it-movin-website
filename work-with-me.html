@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet">
+    <!-- Font Awesome — sosyal medya ikonları için -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ── HEADER ── -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="primaryNavigation" aria-expanded="false">
+        <span class="menu-toggle-line menu-toggle-line-long"></span>
+        <span class="menu-toggle-line menu-toggle-line-short"></span>
+      </button>
+
+      <nav id="primaryNavigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
+        <div class="dropdown-wrap">
+          <span class="nav-link" tabindex="0">
+            Projects <span class="arrow">▼</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="jeremiah.html">Jeremiah Hunt</a>
+            <a href="kim.html">KIM</a>
+            <a href="mixolydian.html">Mixolydian</a>
+          </div>
+        </div>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="offstage.html" class="nav-link">Off Stage</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+      </nav>
+
+    </div>
+  </header>
+  <section class="page-banner">
+    <img class="page-banner-img" src="photos/video4.png" alt="Events Banner" />
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content">
+      <span class="page-banner-label">WAYS TO CONNECT</span>
+      <div class="page-banner-rule"></div>
+      <h1 class="page-banner-title">WORK WITH ME</h1>
+      <span class="page-banner-sub">
+        Let’s create something meaningful.
+      </span>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow fade-left">Work With Me</p>
+        <p class="hero-text fade-left" style="--delay: 0.2s;"> Whether you're looking for live music, guidance with your
+          own creative development, or a collaborator to help bring an idea to life, there are several ways we can work
+          together. Choose the path that best fits what you're looking for and tell me more about your vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking">
+    <div class="booking-container">
+      <div class="booking-left">
+        <div class="eyebrow">01 — Booking Inquiry</div>
+        <h2>Bring the music<br>into your space.</h2>
+        <p>Every setting calls for a different kind of experience. Whether it's an intimate gathering, a large stage, or
+          a creative project, Jeremiah works with each client to shape the right musical experience for the space,
+          audience, and occasion.</p>
+        <a class="booking-cta" href="#" id="bookingCtaBtn">
+          <span>Submit a Booking Inquiry</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="booking-divider"></div>
+
+      <div class="booking-right">
+        <div class="available-label">Available For</div>
+        <ol class="service-list">
+          <li><span class="num">01</span><span class="name">KIM</span></li>
+          <li><span class="num">02</span><span class="name">Jazz Performances</span></li>
+          <li><span class="num">03</span><span class="name">Private Events</span></li>
+          <li><span class="num">04</span><span class="name">Festivals &amp; Concert Venues</span></li>
+          <li><span class="num">05</span><span class="name">Recording Sessions</span></li>
+          <li><span class="num">06</span><span class="name">Bass Performance</span></li>
+          <li><span class="num">07</span><span class="name">DJ Services</span></li>
+          <li><span class="num">08</span><span class="name">Speaking, Workshops &amp; Creative Appearances</span></li>
+        </ol>
+        <p class="available-desc">Jeremiah Hunt is available for concerts, festivals, private events, recording
+          sessions, creative programs, and selected DJ engagements. Performances can be tailored to the setting, from
+          intimate gatherings to full-band experiences.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="learn">
+    <div class="booking-container">
+      <div class="booking-left">
+        <div class="eyebrow">02 — Learn How to Create Music</div>
+        <h2>Feel the vibe,<br>not just your instrument.</h2>
+        <p>My approach is designed to help people become more conscious, independent, and creative musicians. Lessons
+          and consultations can explore instrumental technique, theory, rhythm, improvisation, composition, production,
+          or the process of developing an original musical voice.</p>
+        <p>The goal is not simply to memorize information. It is to understand how music works, how to communicate
+          through it, and how to transform your own ideas into sound.</p>
+        <p>Whether you're a beginner, a developing musician, an experienced artist, or simply curious about the creative
+          process, we can explore the areas that matter most to you.</p>
+        <a class="booking-cta" href="#" id="learnCtaBtn">
+          <span>Explore Your Sound</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="booking-divider"></div>
+
+      <div class="booking-right">
+        <div class="available-label">Explore</div>
+        <ol class="service-list">
+          <li><span class="num">01</span><span class="name">Electric &amp; Upright Bass</span></li>
+          <li><span class="num">02</span><span class="name">Music Theory</span></li>
+          <li><span class="num">03</span><span class="name">Grooves &amp; Bass Lines</span></li>
+          <li><span class="num">04</span><span class="name">Improvisation</span></li>
+          <li><span class="num">05</span><span class="name">Composition</span></li>
+          <li><span class="num">06</span><span class="name">Arranging</span></li>
+          <li><span class="num">07</span><span class="name">Music Production</span></li>
+          <li><span class="num">08</span><span class="name">Artistic Concept Development</span></li>
+          <li><span class="num">09</span><span class="name">Listening &amp; Musical Awareness</span></li>
+          <li><span class="num">10</span><span class="name">Musical Communication</span></li>
+          <li><span class="num">11</span><span class="name">From Idea to Sound</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="collab">
+    <div class="booking-container">
+      <div class="booking-left">
+        <div class="eyebrow">03 — Let's Collaborate</div>
+        <h2>Some ideas meant<br>to be built together.</h2>
+        <p>I'm open to collaborating with artists and organizations whose work is thoughtful, original, and connected to
+          a meaningful vision. Whether you're developing a song, performance, recording, event, or creative concept, I'm
+          interested in exploring how my musicianship, production experience, and perspective can help bring the idea to
+          life.</p>
+
+        <div class="collab-subhead">Collaboration Can Take Many Forms</div>
+        <ol class="service-list">
+          <li><span class="num">01</span><span class="name">Producing a Song or Album</span></li>
+          <li><span class="num">02</span><span class="name">Arranging Music</span></li>
+          <li><span class="num">03</span><span class="name">Composing Original Music</span></li>
+          <li><span class="num">04</span><span class="name">Bass Performance &amp; Recording</span></li>
+          <li><span class="num">05</span><span class="name">Live Show Development</span></li>
+          <li><span class="num">06</span><span class="name">Interdisciplinary Work</span></li>
+          <li><span class="num">07</span><span class="name">Workshops &amp; Community Projects</span></li>
+          <li><span class="num">08</span><span class="name">Music for Film &amp; Visual Media</span></li>
+          <li><span class="num">09</span><span class="name">Creative Direction &amp; Concept Development</span></li>
+        </ol>
+
+        <a class="booking-cta" href="#" id="collabCtaBtn">
+          <span>Share Your Idea</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="booking-divider"></div>
+
+      <div class="booking-right">
+        <div class="collab-photo">
+          <img src="photos/music.jpg" alt="Jeremiah Hunt performing bass alongside a vocalist on stage" />
+        </div>
+        <div class="collab-tagline">
+          <span class="rule"></span>
+          <span class="tagline-text">Music · Creation · Connection</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inquiry" id="inquiry">
+    <div class="booking-container">
+      <div class="booking-left">
+        <div class="eyebrow" id="inquiryEyebrow">Inquiry</div>
+        <h2 id="inquiryTitle">General Inquiry</h2>
+        <p id="inquiryDesc">Not sure exactly what you're looking for yet? Tell me a bit about what you have in mind and
+          I'll follow up to talk through the details.</p>
+      </div>
+
+      <div class="booking-divider"></div>
+
+      <div class="booking-right">
+        <form class="inquiry-form" id="inquiryForm" data-fs-form>
+          <input type="hidden" name="inquiry_type" id="inquiryType" />
+          <div class="inquiry-field interest-field">
+            <label for="interestSelect">Choose Inquiry <span class="req">*</span></label>
+            <select id="interestSelect" name="Choose Inquiry">
+              <option value="general">General Inquiry</option>
+              <option value="booking">Booking Inquiry</option>
+              <option value="learning">Learning Inquiry</option>
+              <option value="collaboration">Collaboration Inquiry</option>
+            </select>
+            <span class="field-warning">⚠ Please choose an option</span>
+          </div>
+
+          <div class="inquiry-field topic-field" id="topicFieldWrap" style="display:none;">
+            <label for="topicSelect">What are you interested in?</label>
+            <select id="topicSelect" name="What are you interested in"></select>
+            <span class="field-warning">⚠ Please choose an option</span>
+          </div>
+
+          <div class="inquiry-fields" id="inquiryFields"></div>
+          <button type="submit" class="booking-cta inquiry-submit">
+            <span id="inquirySubmitLabel">Send Your Inquiry</span>
+            <span>→</span>
+          </button>
+          <p class="inquiry-success" id="inquirySuccess">Thank you — your message has been received. I'll be in touch
+            soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+      </a>
+ 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="collection.html">Collection</a>
+        <a href="events.html">Events</a>
+        <a href="offstage.html">Off Stage</a>
+
+      </nav>
+ 
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer-divider"></div>
+ 
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+    </div>
+ 
+  </div>
+</footer>
+
+  <script>
+        // Header scroll state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
+    }, { passive: true });
+
+    // Dropdown JS
+    const dropdowns = document.querySelectorAll('.dropdown-wrap');
+    dropdowns.forEach(wrap => {
+      let closeTimer = null;
+      const open = () => {
+        clearTimeout(closeTimer);
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
+        wrap.classList.add('open');
+      };
+      const close = () => {
+        closeTimer = setTimeout(() => wrap.classList.remove('open'), 120);
+      };
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      const menu = wrap.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        menu.addEventListener('mouseleave', close);
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown-wrap'))
+        dropdowns.forEach(d => d.classList.remove('open'));
+    });
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNavigation = document.getElementById('primaryNavigation');
+    const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+    const setMobileMenu = (isOpen) => {
+      header.classList.toggle('mobile-menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!header.classList.contains('mobile-menu-open'));
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    dropdowns.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-link');
+      trigger.addEventListener('click', () => {
+        if (mobileBreakpoint.matches) {
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
+          wrap.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setMobileMenu(false);
+    });
+
+    mobileBreakpoint.addEventListener('change', e => {
+      if (!e.matches) setMobileMenu(false);
+    });
+  
+    // ── ACTIVE NAVIGATION ──
+
+const currentPage =
+  window.location.pathname.split('/').pop() || 'index.html';
+
+const navLinks = document.querySelectorAll(
+  '#primaryNavigation a.nav-link'
+);
+
+const keepMovingLink = document.querySelector('.keep-moving-link');
+
+
+// Normal sayfa linkleri
+navLinks.forEach(link => {
+
+  const href = link.getAttribute('href');
+
+  if (!href) return;
+
+  const [linkPath, linkHash] = href.split('#');
+
+  // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+  if (linkHash) {
+    link.classList.remove('active');
+    return;
+  }
+
+  const linkPage =
+    linkPath.split('/').pop() || 'index.html';
+
+  link.classList.toggle(
+    'active',
+    linkPage === currentPage
+  );
+});
+
+
+// ── ACTIVE PROJECTS DROPDOWN ──
+
+const projectPages = [
+  'jeremiah.html',
+  'kim.html',
+  'mixolydian.html'
+];
+
+const projectsWrap =
+  document.querySelector('.dropdown-wrap');
+
+if (
+  projectsWrap &&
+  projectPages.includes(currentPage)
+) {
+  const projectsTrigger =
+    projectsWrap.querySelector('.nav-link');
+
+  projectsTrigger.classList.add('active');
+}
+
+
+// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
+
+if (currentPage === 'index.html') {
+
+  const keepMovingSection =
+    document.getElementById('about-section');
+
+  if (keepMovingLink && keepMovingSection) {
+
+    const updateKeepMovingActive = () => {
+
+      const sectionTop =
+        keepMovingSection.getBoundingClientRect().top;
+
+      const sectionBottom =
+        keepMovingSection.getBoundingClientRect().bottom;
+
+      // Section ekranda veya henüz aşağı doğru geçilmemişse active
+      const isActive =
+        sectionTop <= window.innerHeight * 0.5 &&
+        sectionBottom > window.innerHeight * 0.2;
+
+      keepMovingLink.classList.toggle(
+        'active',
+        isActive
+      );
+    };
+
+    window.addEventListener(
+      'scroll',
+      updateKeepMovingActive,
+      { passive: true }
+    );
+
+    updateKeepMovingActive();
+  }
+}
+
+
+
+
+
+    const fadeLeftElements = document.querySelectorAll('.fade-left');
+
+    const fadeLeftObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          fadeLeftObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    fadeLeftElements.forEach(element => {
+      fadeLeftObserver.observe(element);
+    });
+
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const inquiryData = {
+        general: {
+          eyebrow: 'Inquiry',
+          title: 'General Inquiry',
+          desc: "Not sure exactly what you're looking for yet? Tell me a bit about what you have in mind and I'll follow up to talk through the details.",
+          topics: null,
+          fields: [
+            { label: 'Name', required: true },
+            { label: 'Email', required: true },
+            { label: 'Message', type: 'textarea', required: true }
+          ],
+          submitLabel: 'Send Your Inquiry'
+        },
+        booking: {
+          eyebrow: '01 — Booking Inquiry',
+          title: 'Booking',
+          desc: null,
+          topics: [
+            'KIM',
+            'Jazz Performances',
+            'Private Events',
+            'Festivals & Concert Venues',
+            'Recording Sessions',
+            'Bass Performance',
+            'DJ Services',
+            'Speaking, Workshops & Creative Appearances'
+          ],
+          fields: [
+            { label: 'Name', required: true },
+            { label: 'Email and phone number', required: true },
+            { label: 'Organization or venue', required: false },
+            { label: 'Type of event', required: true },
+            { label: 'Date and location', required: true },
+            { label: 'Estimated audience size', required: false },
+            { label: 'Preferred project or musical format', required: false },
+            { label: 'Budget', required: false },
+            { label: 'Additional details', type: 'textarea', required: false }
+          ],
+          submitLabel: 'Submit a Booking Inquiry'
+        },
+        learning: {
+          eyebrow: '02 — Learn How to Create Music',
+          title: 'Learn How to Create Music',
+          desc: null,
+          topics: [
+            'Electric & Upright Bass',
+            'Music Theory',
+            'Grooves & Bass Lines',
+            'Improvisation',
+            'Composition',
+            'Arranging',
+            'Music Production',
+            'Artistic Concept Development',
+            'Listening & Musical Awareness',
+            'Musical Communication',
+            'From Idea to Sound'
+          ],
+          fields: [
+            { label: 'Name', required: true },
+            { label: 'Email', required: true },
+            { label: 'Instrument and experience level', required: true },
+            { label: 'What they want to learn or create', type: 'textarea', required: true },
+            { label: 'Preferred in-person or virtual format', required: false },
+            { label: 'General availability', required: false }
+          ],
+          submitLabel: 'Submit a Learning Inquiry'
+        },
+        collaboration: {
+          eyebrow: "03 — Let's Collaborate",
+          title: "Let's Collaborate",
+          desc: null,
+          topics: [
+            'Producing a Song or Album',
+            'Arranging Music',
+            'Composing Original Music',
+            'Bass Performance & Recording',
+            'Live Show Development',
+            'Interdisciplinary Work',
+            'Workshops & Community Projects',
+            'Music for Film & Visual Media',
+            'Creative Direction & Concept Development'
+          ],
+          fields: [
+            { label: 'Name', required: true },
+            { label: 'Email', required: true },
+            { label: 'Type of artist, organization, or project', required: true },
+            { label: 'Description of the idea', type: 'textarea', required: true },
+            { label: 'What kind of collaboration they are seeking', required: false },
+            { label: 'Project timeline', required: false },
+            { label: 'Budget, if applicable', required: false },
+            { label: 'Links to existing music or work', type: 'textarea', required: false }
+          ],
+          submitLabel: 'Share Your Idea'
+        }
+      };
+
+      function buildFieldHTML(field, idx) {
+        const id = 'inquiry_field_' + idx;
+        const reqMark = field.required ? ' <span class="req">*</span>' : '';
+        const reqAttr = field.required ? 'required' : '';
+        const control = field.type === 'textarea'
+          ? `<textarea id="${id}" name="${field.label}" ${reqAttr}></textarea>`
+          : `<input type="text" id="${id}" name="${field.label}" ${reqAttr} />`;
+        return `<div class="inquiry-field" data-required="${!!field.required}">
+      <label for="${id}">${field.label}${reqMark}</label>
+      ${control}
+      <span class="field-warning">⚠ This field is required</span>
+    </div>`;
+      }
+
+      function clearFieldWarning(e) {
+        const wrap = e.target.closest('.inquiry-field');
+        if (wrap && wrap.value !== '') wrap.classList.remove('invalid');
+        if (wrap && e.target.value.trim() !== '') wrap.classList.remove('invalid');
+      }
+
+      function renderInquiry(type, opts = {}) {
+        const data = inquiryData[type];
+        if (!data) return;
+
+        document.getElementById('inquiryEyebrow').textContent = data.eyebrow;
+        document.getElementById('inquiryTitle').textContent = data.title;
+
+        const descEl = document.getElementById('inquiryDesc');
+        if (data.desc) {
+          descEl.textContent = data.desc;
+          descEl.style.display = 'block';
+        } else {
+          descEl.style.display = 'none';
+        }
+
+        const fieldsWrap = document.getElementById('inquiryFields');
+        fieldsWrap.innerHTML = data.fields.map(buildFieldHTML).join('');
+        fieldsWrap.querySelectorAll('input, textarea').forEach(el => {
+          el.addEventListener('input', clearFieldWarning);
+        });
+
+        const topicWrap = document.getElementById('topicFieldWrap');
+        const topicSelect = document.getElementById('topicSelect');
+        if (data.topics && data.topics.length) {
+          topicSelect.innerHTML = data.topics.map(t => `<option value="${t}">${t}</option>`).join('');
+          topicWrap.style.display = 'flex';
+          topicWrap.classList.remove('invalid');
+        } else {
+          topicSelect.innerHTML = '';
+          topicWrap.style.display = 'none';
+        }
+
+        document.getElementById('inquirySubmitLabel').textContent = data.submitLabel;
+
+        const form = document.getElementById('inquiryForm');
+        form.dataset.type = type;
+        const inquiryNames = {
+          general: 'General Inquiry',
+          booking: 'Booking Inquiry',
+          learning: 'Learning Inquiry',
+          collaboration: 'Collaboration Inquiry'
+        };
+
+        document.getElementById('inquiryType').value = inquiryNames[type];
+        document.getElementById('interestSelect').value = type;
+        fieldsWrap.style.display = 'flex';
+        document.querySelector('.inquiry-submit').style.display = 'inline-flex';
+        document.getElementById('inquirySuccess').classList.remove('show');
+
+        if (opts.scroll !== false) {
+          document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      document.getElementById('interestSelect').addEventListener('change', (e) => {
+        renderInquiry(e.target.value, { scroll: false });
+      });
+
+      document.getElementById('inquiryForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const form = e.target;
+        let firstInvalid = null;
+
+        form.querySelectorAll('.inquiry-field').forEach(wrap => {
+          const control = wrap.querySelector('input, textarea');
+          wrap.classList.remove('invalid');
+          if (control && control.hasAttribute('required') && control.value.trim() === '') {
+            wrap.classList.add('invalid');
+            if (!firstInvalid) firstInvalid = control;
+          }
+        });
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+
+        document.getElementById('inquiryFields').style.display = 'none';
+        document.querySelector('.interest-field').style.display = 'none';
+        document.getElementById('topicFieldWrap').style.display = 'none';
+        document.querySelector('.inquiry-submit').style.display = 'none';
+        document.getElementById('inquirySuccess').classList.add('show');
+      });
+
+      document.getElementById('bookingCtaBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        renderInquiry('booking');
+      });
+
+      document.getElementById('learnCtaBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        renderInquiry('learning');
+      });
+
+      document.getElementById('collabCtaBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        renderInquiry('collaboration');
+      });
+
+      renderInquiry('general', { scroll: false });
+    });
+
+
+
+    /* ── FORMSPREE INQUIRY FORM ── */
+
+window.formspree =
+  window.formspree ||
+  function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+
+formspree('initForm', {
+  formElement: '#inquiryForm',
+  formId: 'xdenyeoj'
+});
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+
+</html>

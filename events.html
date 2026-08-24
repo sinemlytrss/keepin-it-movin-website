@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+        <!-- Font Awesome — sosyal medya ikonları için -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ── HEADER ── -->
+  <header id="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="logo">
+        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="primaryNavigation" aria-expanded="false">
+        <span class="menu-toggle-line menu-toggle-line-long"></span>
+        <span class="menu-toggle-line menu-toggle-line-short"></span>
+      </button>
+
+      <nav id="primaryNavigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
+        <div class="dropdown-wrap">
+          <span class="nav-link" tabindex="0">
+            Projects <span class="arrow">▼</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="jeremiah.html">Jeremiah Hunt</a>
+            <a href="kim.html">KIM</a>
+            <a href="mixolydian.html">Mixolydian</a>
+          </div>
+        </div>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="offstage.html" class="nav-link">Off Stage</a>
+        <a href="collection.html" class="nav-link">Collection</a>
+        <a href="work-with-me.html" class="nav-link">Work With Me</a>
+      </nav>
+
+    </div>
+  </header>
+    <section class="page-banner">
+        <img class="page-banner-img" src="photos/events-banner.JPG" alt="Events Banner" />
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content">
+            <span class="page-banner-label">Upcoming</span>
+            <div class="page-banner-rule"></div>
+            <h1 class="page-banner-title">EVENTS</h1>
+            <span class="page-banner-sub">
+               A calendar of music, collaboration, and shared moments.
+            </span>
+        </div>
+    </section>
+
+<section class="calendar-section" id="calendar-section">
+    <div class="container">
+  <div class="controls" role="tablist">
+    <div class="filters" role="toolbar" aria-label="Event filters">
+      <button data-filter="all" class="active">ALL</button>
+      <button data-filter="bandleader"><span class="f-star">★</span>BANDLEADER</button>
+      <button data-filter="sideman"><span class="f-dot">•</span>SIDE-MAN</button>
+      <button data-filter="curation"><span class="f-ex">*</span>CURATIONS</button>
+    </div> 
+
+    <div class="month-nav" aria-label="month navigation">
+      <button id="prevMonth" title="Previous month">←</button>
+      <div id="monthLabel">September 2026</div>
+      <button id="nextMonth" title="Next month">→</button>
+    </div>
+  </div>
+
+  <div class="calendar-wrap">
+    <div class="calendar" id="calendar">
+      <div class="month"><h4 id="visMonthHeader">Month</h4><div></div></div>
+      <div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+      <div class="grid-days" id="days"></div>
+    </div>
+
+    <aside class="side-panel" id="sidePanel">
+      <div class="event-photo" id="eventPhoto"><img src="https://placehold.co/800x600?text=Select+a+date" alt="placeholder"/></div>
+      <div class="event-title" id="eventTitle">Select a date</div>
+      <div class="event-meta" id="eventMeta">No event selected</div>
+      <div class="event-desc" id="eventDesc">Click a day on the calendar to view event details. Use the filters above to show only Bandleader or Side-man dates.</div>
+      <a id="viewLink" class="view-link" href="#" target="_blank" style="display:none">View event</a>
+      <div class="footer-note">Use ← / → keys to navigate months</div>
+    </aside>
+  </div>
+</div>
+</section>
+
+
+<!-- ── CONTACT ── -->
+<section class="contact-section">
+  <div class="contact-inner">
+
+    <!-- Sol -->
+    <div class="contact-left">
+      <div class="contact-rule">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="contact-body">
+        <span class="contact-label">Stay Connected</span>
+
+        <h2 class="contact-title">
+          Have a<br>Question?
+        </h2>
+
+        <p class="contact-desc">
+          Want to learn more about an upcoming show, event, or gathering?
+          Feel free to reach out. I'd be happy to hear from you.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sağ — Form -->
+    <form class="contact-form" id="contactForm" novalidate>
+
+      <div class="form-group">
+        <label for="cf-name">Name</label>
+        <input
+          type="text"
+          id="cf-name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="cf-email">Email</label>
+        <input
+          type="email"
+          id="cf-email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="cf-message">Message</label>
+        <textarea
+          id="cf-message"
+          name="message"
+          placeholder="Tell me about your question..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        Thank you for reaching out. I'll be in touch soon. ✦
+      </div>
+
+      <button type="submit" class="contact-submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-inner">
+ 
+    <div class="footer-top">
+      <a href="index.html" class="footer-logo">
+        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+      </a>
+ 
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="work-with-me.html">Work With Me</a>
+        <a href="collection.html">Collection</a>
+        <a href="events.html">Events</a>
+        <a href="offstage.html">Off Stage</a>
+
+      </nav>
+ 
+      <div class="footer-social">
+        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+ 
+    <div class="footer-divider"></div>
+ 
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+    </div>
+ 
+  </div>
+</footer>
+
+<script>
+      // Header scroll state
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
+    }, { passive: true });
+
+    // Dropdown JS
+    const dropdowns = document.querySelectorAll('.dropdown-wrap');
+    dropdowns.forEach(wrap => {
+      let closeTimer = null;
+      const open = () => {
+        clearTimeout(closeTimer);
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
+        wrap.classList.add('open');
+      };
+      const close = () => {
+        closeTimer = setTimeout(() => wrap.classList.remove('open'), 120);
+      };
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      const menu = wrap.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+        menu.addEventListener('mouseleave', close);
+      }
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown-wrap'))
+        dropdowns.forEach(d => d.classList.remove('open'));
+    });
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNavigation = document.getElementById('primaryNavigation');
+    const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+
+    const setMobileMenu = (isOpen) => {
+      header.classList.toggle('mobile-menu-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenu(!header.classList.contains('mobile-menu-open'));
+    });
+
+    primaryNavigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    dropdowns.forEach(wrap => {
+      const trigger = wrap.querySelector('.nav-link');
+      trigger.addEventListener('click', () => {
+        if (mobileBreakpoint.matches) {
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
+          wrap.classList.toggle('open');
+        }
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') setMobileMenu(false);
+    });
+
+    mobileBreakpoint.addEventListener('change', e => {
+      if (!e.matches) setMobileMenu(false);
+    });
+  
+    // ── ACTIVE NAVIGATION ──
+
+const currentPage =
+  window.location.pathname.split('/').pop() || 'index.html';
+
+const navLinks = document.querySelectorAll(
+  '#primaryNavigation a.nav-link'
+);
+
+const keepMovingLink = document.querySelector('.keep-moving-link');
+
+
+// Normal sayfa linkleri
+navLinks.forEach(link => {
+
+  const href = link.getAttribute('href');
+
+  if (!href) return;
+
+  const [linkPath, linkHash] = href.split('#');
+
+  // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+  if (linkHash) {
+    link.classList.remove('active');
+    return;
+  }
+
+  const linkPage =
+    linkPath.split('/').pop() || 'index.html';
+
+  link.classList.toggle(
+    'active',
+    linkPage === currentPage
+  );
+});
+
+
+// ── ACTIVE PROJECTS DROPDOWN ──
+
+const projectPages = [
+  'jeremiah.html',
+  'kim.html',
+  'mixolydian.html'
+];
+
+const projectsWrap =
+  document.querySelector('.dropdown-wrap');
+
+if (
+  projectsWrap &&
+  projectPages.includes(currentPage)
+) {
+  const projectsTrigger =
+    projectsWrap.querySelector('.nav-link');
+
+  projectsTrigger.classList.add('active');
+}
+
+
+// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
+
+if (currentPage === 'index.html') {
+
+  const keepMovingSection =
+    document.getElementById('about-section');
+
+  if (keepMovingLink && keepMovingSection) {
+
+    const updateKeepMovingActive = () => {
+
+      const sectionTop =
+        keepMovingSection.getBoundingClientRect().top;
+
+      const sectionBottom =
+        keepMovingSection.getBoundingClientRect().bottom;
+
+      // Section ekranda veya henüz aşağı doğru geçilmemişse active
+      const isActive =
+        sectionTop <= window.innerHeight * 0.5 &&
+        sectionBottom > window.innerHeight * 0.2;
+
+      keepMovingLink.classList.toggle(
+        'active',
+        isActive
+      );
+    };
+
+    window.addEventListener(
+      'scroll',
+      updateKeepMovingActive,
+      { passive: true }
+    );
+
+    updateKeepMovingActive();
+  }
+}
+
+
+
+
+
+
+const events = [
+  {date:'2026-09-06',type:'bandleader',title:"Millennium Park: Von Freeman Stage — Chicago Jazz Festival: Jeremiah Hunt",venue:'Chicago, IL',url:'https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_jazz_festival.html',img: "photos/jeremiah-1.jpg"},
+  {date:'2026-09-18',type:'bandleader',title:"Englewood Jazz Festival — Jeremiah Hunt Quartet",venue:'Chicago, IL',url:'https://englewoodjazzfestival.org',img: "photos/jeremiah-1.jpg"},
+  {date:'2026-09-22',type:'bandleader',title:"The Jazz Showcase — Jeremiah Hunt",venue:'Chicago, IL',url:'https://www.jazzshowcase.com/nowplaying',img:"photos/jeremiah-1.jpg"},
+  {date:'2026-08-28',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with LaShera Ellis",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-lashera-ellis-50',img:"photos/LaShera-Ellis.avif"},
+  {date:'2026-08-29',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with LaShera Ellis",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-lashera-ellis-51',img:"photos/LaShera-Ellis.avif"},
+  {date:'2026-09-02',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"},
+  {date:'2026-09-09',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"},
+  {date:'2026-09-10',type:'sideman',title:"Winter’s Jazz Club — Paul Marinaro Quartet",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/paul-marinaro-quartet-17',img:"photos/Paul-Marinaro-Quartet.avif"},
+  {date:'2026-09-12',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with Boyce Hudson",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-boyce-hudson-2',img:"photos/Dee-Alexander.gif"},
+  {date:'2026-09-16',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"},
+  {date:'2026-09-17',type:'curation',title:"Humboldt Park Boathouse — Keepin’ It Movin’: The Art of Jazz — Humboldt Park, Chicago",venue:'Chicago, IL',url:'',img:"photos/kim-group.jpg"},
+  {date:'2026-09-20',type:'curation',title:"Chicago Live Festival — KIM",venue:'Chicago, IL',url:'https://navypier.org/pier-events/chicago-live/',img:"photos/kim-group.jpg"},
+  {date:'2026-09-23',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"},
+  {date:'2026-09-26',type:'sideman',title:"Hyde Park Jazz Festival: Pickens Stage - It's all about OBJ: Dee Alexander & Bruce Henry",venue:'Chicago, IL',url:'https://hydeparkjazzfestival.org/obj-deealexander-brucehenry',img:"photos/Dee-Alexander.gif"},
+  {date:'2026-09-30',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"},
+  {date:'2026-10-01',type:'sideman',title:"The Jazz Showcase - Chico Freeman Quartet",venue:'Chicago, IL',url:'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e',img:"photos/ChicoFreeman.webp"},
+  {date:'2026-10-07',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img: "photos/charles-heath.jpeg"},
+  {date:'2026-10-16',type:'sideman',title:"Caffè Vivace - G. Thomas Allen Quintet",venue:'Cincinnati, OH',url:'https://tickets.caffevivace.com/shows/12361/?date=2026-10-16',img:"photos/G.-Thomas-Allen-Quintet.webp"},
+  {date:'2026-10-22',type:'sideman',title:"Keystone Korner - G. Thomas Allen",venue:'Baltimore, MD',url:'https://instantseats.com',img:"photos/G.-Thomas-Allen-Quintet.webp"},
+  {date:'2026-10-28',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.jpeg"}
+];
+
+// State
+let current = new Date(); // start at current month
+let filter = 'all';       // 'all' | 'bandleader' | 'sideman' | 'curation'
+
+// Elements (assumes these IDs exist in DOM)
+const daysEl = document.getElementById('days');
+const monthLabel = document.getElementById('monthLabel');
+const visMonthHeader = document.getElementById('visMonthHeader');
+const viewLink = document.getElementById('viewLink');
+const eventPhoto = document.getElementById('eventPhoto');
+const eventTitle = document.getElementById('eventTitle');
+const eventMeta = document.getElementById('eventMeta');
+const eventDesc = document.getElementById('eventDesc');
+
+// Initialize
+function start(){
+  renderMonth(current.getMonth(), current.getFullYear());
+  applyFilter(filter);
+}
+
+// Render month grid
+function renderMonth(month, year){
+  monthLabel.textContent = `${new Intl.DateTimeFormat('en', {month:'long'}).format(new Date(year,month))} ${year}`;
+  visMonthHeader.textContent = `${new Intl.DateTimeFormat('en', {month:'long'}).format(new Date(year,month))} ${year}`;
+  daysEl.innerHTML = '';
+
+  const first = new Date(year, month, 1);
+  const last = new Date(year, month + 1, 0);
+  const startDay = first.getDay();
+
+  // blanks for alignment
+  for(let i = 0; i < startDay; i++){
+    const b = document.createElement('div');
+    b.className = 'day inactive';
+    daysEl.appendChild(b);
+  }
+
+  for(let d = 1; d <= last.getDate(); d++){
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const dayEl = document.createElement('div');
+    dayEl.className = 'day';
+    dayEl.dataset.date = dateStr;
+    dayEl.innerHTML = `<div class="date">${d}</div>`;
+
+    const evs = events.filter(e => e.date === dateStr);
+    if(evs.length){
+      const visible = evs.some(e => filter === 'all' || e.type === filter);
+      if(visible){
+        const marker = document.createElement('div');
+        marker.className = 'marker';
+        // Precedence: bandleader -> special -> sideman
+        if(evs.some(e => e.type === 'bandleader')){
+          marker.classList.add('star'); marker.textContent = '★';
+        } else if(evs.some(e => e.type === 'curation')){
+          marker.classList.add('asterisk'); marker.textContent = '*';
+        } else {
+          marker.classList.add('dot'); marker.textContent = '•';
+        }
+        dayEl.appendChild(marker);
+      }
+    }
+
+    dayEl.addEventListener('click', () => selectDate(dateStr));
+    daysEl.appendChild(dayEl);
+  }
+}
+
+// Select a date and populate side panel
+function selectDate(dateStr){
+  const dayEvents = events.filter(e => e.date === dateStr);
+  if(dayEvents.length === 0){
+    eventPhoto.innerHTML = `<img src="https://placehold.co/800x600?text=No+Event+on+${dateStr}" alt="no"/>`;
+    eventTitle.textContent = 'No event';
+    eventMeta.textContent = dateStr;
+    eventDesc.textContent = 'No scheduled performance for this date.';
+    viewLink.style.display = 'none';
+    return;
+  }
+
+  const evt = dayEvents[0];
+  eventPhoto.innerHTML = `<img src="${evt.img}" alt="event"/>`;
+  eventTitle.textContent = evt.title;
+  eventMeta.textContent = evt.venue + ' • ' + (new Date(evt.date)).toLocaleDateString();
+  eventDesc.textContent = '';
+
+  if(evt.url){
+    viewLink.href = evt.url;
+    viewLink.style.display = 'inline-block';
+    viewLink.textContent = 'View event';
+  } else {
+    viewLink.style.display = 'none';
+  }
+}
+
+// Filters
+const filterButtons = document.querySelectorAll('.filters button');
+filterButtons.forEach(b => b.addEventListener('click', () => {
+  filterButtons.forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  filter = b.dataset.filter;
+  renderMonth(current.getMonth(), current.getFullYear());
+  applyFilter(filter);
+}));
+
+function applyFilter(f){
+  filter = f;
+  document.querySelectorAll('.day .marker').forEach(m => m.remove());
+  events.forEach(ev => {
+    if(filter === 'all' || (filter === 'bandleader' && ev.type === 'bandleader') || (filter === 'sideman' && ev.type === 'sideman') || (filter === 'curation' && ev.type === 'curation')){
+      const sel = document.querySelector(`.day[data-date="${ev.date}"]`);
+      if(sel){
+        if(!sel.querySelector('.marker')){
+          const marker = document.createElement('div');
+          marker.className = 'marker';
+          if(ev.type === 'bandleader'){ marker.classList.add('star'); marker.textContent = '★'; }
+          else if(ev.type === 'curation'){ marker.classList.add('asterisk'); marker.textContent = '*'; }
+          else { marker.classList.add('dot'); marker.textContent = '•'; }
+          sel.appendChild(marker);
+        }
+      }
+    }
+  });
+}
+
+// Month navigation
+document.getElementById('prevMonth').addEventListener('click', () => {
+  current.setMonth(current.getMonth() - 1);
+  renderMonth(current.getMonth(), current.getFullYear());
+  applyFilter(filter);
+});
+document.getElementById('nextMonth').addEventListener('click', () => {
+  current.setMonth(current.getMonth() + 1);
+  renderMonth(current.getMonth(), current.getFullYear());
+  applyFilter(filter);
+});
+
+// Keyboard nav
+window.addEventListener('keydown', (e) => {
+  if(e.key === 'ArrowLeft'){ document.getElementById('prevMonth').click(); }
+  if(e.key === 'ArrowRight'){ document.getElementById('nextMonth').click(); }
+});
+
+// Open a specific event when a date is included in the URL.
+const requestedDate = new URLSearchParams(window.location.search).get('date');
+const requestedEventExists = requestedDate && events.some(event => event.date === requestedDate);
+
+if (requestedEventExists) {
+  const [year, month] = requestedDate.split('-').map(Number);
+  current = new Date(year, month - 1, 1);
+}
+
+start();
+
+if (requestedEventExists) {
+  selectDate(requestedDate);
+}
+
+
+
+
+
+
+
+    window.formspree =
+  window.formspree ||
+  function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+
+document.querySelectorAll('.contact-form').forEach((form) => {
+
+  formspree('initForm', {
+    formElement: form,
+    formId: 'xdenyeoj'
+  });
+
+});
+
+  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>
