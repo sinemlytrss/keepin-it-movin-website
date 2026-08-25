@@ -5,9 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Collection — Uzazi Gallery</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Jost:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap"
+  rel="stylesheet"
+>
         <!-- Font Awesome — sosyal medya ikonları için -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
@@ -50,7 +54,7 @@
     </div>
   </header>
     <section class="page-banner">
-        <img class="page-banner-img" src="photos/jeremiah-2.JPG" alt="collection banner" />
+        <img class="page-banner-img" src="photos/jeremiah-2.webp" alt="collection banner" />
         <div class="page-banner-overlay"></div>
         <div class="page-banner-content">
             <span class="page-banner-label">THE COLLECTION</span>
@@ -69,15 +73,15 @@
                 <p class="top-note">As a small thank you, Jeremiah Review buttons and magnets are available as
                     complimentary gifts with select purchases, while supplies last.</p>
                 <div class="mini-stack" id="miniGallery" title="Fotoğrafları gör">
-                    <img class="back" src="photos/TJR_Button.jpeg" alt="Jeremiah Review button" />
-                    <img class="front" src="photos/TJR_Magnet.jpeg" alt="Jeremiah Review magnet" />
+                    <img class="back" src="photos/TJR_Button.webp" alt="Jeremiah Review button" />
+                    <img class="front" src="photos/TJR_Magnet.webp" alt="Jeremiah Review magnet" />
                 </div>
             </div>
 
             <main class="gallery-grid">
                 <div class="feature">
                     <div class="cover">
-                        <img src="photos/uzazicover.jpg" alt="Uzazi cover" />
+                        <img src="photos/uzazicover.webp" alt="Uzazi cover" />
                     </div>
                     <div class="meta">
                         <h2>UZAZI</h2>
@@ -120,7 +124,7 @@
 
             <div class="items-row">
                 <article class="card">
-                    <div class="thumb"><img src="photos/J.Hunt_33Album.png" alt="Jeremiah 33" /></div>
+                    <div class="thumb"><img src="photos/J.Hunt_33Album.webp" alt="Jeremiah 33" /></div>
                     <h3>Jeremiah 33</h3>
                     <p>Jeremiah’s first album, 33, available as a physical CD. A foundational piece of his musical journey and creative work.</p>
                     <div class="gift-badge show">
@@ -134,7 +138,7 @@
                 </article>
 
                 <article class="card">
-                    <div class="thumb"><img src="photos/poster.png" alt="Mingus poster" /></div>
+                    <div class="thumb"><img src="photos/poster.webp" alt="Mingus poster" /></div>
                     <h3>Charles Mingus Centennial Poster</h3>
                     <p>An archival poster from a 2022 tribute concert celebrating the centennial of Charles Mingus. A limited piece connected to a meaningful moment in Jeremiah’s musical journey.</p>
                     <div class="buy">
@@ -197,7 +201,8 @@
  
     <div class="footer-top">
       <a href="index.html" class="footer-logo">
-        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+        <img src="photos/white-logo.webp" alt="Jeremiah Hunt" loading="lazy"
+  decoding="async" />
       </a>
  
       <nav class="footer-nav" aria-label="Footer navigation">
@@ -406,8 +411,8 @@ if (currentPage === 'index.html') {
 
         document.getElementById('miniGallery').addEventListener('click', () => {
             const photos = [
-                "photos/TJR_Button.jpeg",
-                "photos/TJR_Magnet.jpeg"
+                "photos/TJR_Button.webp",
+                "photos/TJR_Magnet.webp"
             ];
             const modal = document.createElement('div');
             modal.className = 'gallery-modal';

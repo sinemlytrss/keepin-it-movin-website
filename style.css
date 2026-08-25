@@ -5321,16 +5321,6 @@ header.scrolled .nav-link:hover {
   }
 }
 
-/* 2) Daha güvenilir YouTube thumbnail — maxresdefault her videoda
-      üretilmemiş olabilir; hqdefault her zaman mevcuttur. İsterseniz
-      background-image satırını buna göre değiştirin:
-.youtube-card {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
-    url("https://img.youtube.com/vi/d16Nzp3eaB0/hqdefault.jpg");
-}
-*/
-
 /* 3) Dokunmatik cihazlarda görsel geri bildirim (hover tetiklenmediği için) */
 @media (hover: none) and (pointer: coarse) {
   .youtube-card:active .youtube-play {

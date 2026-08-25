@@ -6,18 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>J. HomePage</title>
   <link rel="stylesheet" href="style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
-    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Jost:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700&family=Libre+Caslon+Display&display=swap"
+  rel="stylesheet"
+>
     <!-- Font Awesome — sosyal medya ikonları için -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" type="image/svg+xml" href="photos/logo2.svg">
 </head>
 
 <body class="homepage">
@@ -61,7 +59,7 @@
   <!-- ── HERO ── -->
   <section class="hero">
 
-    <video class="hero-video" autoplay muted loop playsinline poster="photos/flut-pic.png">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="photos/flut-pic.webp">
       <source src="photos/Flut.mp4" type="video/mp4" />
     </video>
 
@@ -184,7 +182,7 @@
 
       <!-- SAĞ — 4:5 fotoğraf -->
       <div class="about-photo">
-        <img src="photos/home-keeping-img.jpg" alt="Keepin' It Movin'" />
+        <img src="photos/home-keeping-img.webp" alt="Keepin' It Movin'" />
       </div>
 
     </div>
@@ -198,7 +196,7 @@
       <p class="homepage-uzazi-sub">Coming September 5</p>
 
       <div class="homepage-uzazi-cover">
-        <img src="photos/uzazicover.jpg" alt="Uzazi album cover"/>
+        <img src="photos/uzazicover.webp" alt="Uzazi album cover"/>
       </div>
       <div class="homepage-uzazi-links">
         <a class="homepage-uzazi-cta" href="jeremiah.html#album-section">
@@ -225,7 +223,7 @@
 
       <a class="siw-card" href="jeremiah.html">
         <div class="siw-card-photo">
-          <img src="photos/jer-4.jpg" alt="Jeremiah Hunt" />
+          <img src="photos/jer-4.webp" alt="Jeremiah Hunt" />
         </div>
         <div class="siw-card-body">
           <h3 class="siw-card-title">Jeremiah Hunt</h3>
@@ -236,7 +234,7 @@
 
       <a class="siw-card" href="kim.html">
         <div class="siw-card-photo">
-          <img src="photos/kim-group.JPG" alt="KIM" />
+          <img src="photos/kim-group.webp" alt="KIM" />
         </div>
         <div class="siw-card-body">
           <h3 class="siw-card-title">KIM</h3>
@@ -247,7 +245,7 @@
 
       <a class="siw-card" href="mixolydian.html">
         <div class="siw-card-photo">
-          <img src="photos/mix-video4.png" alt="Mixolydian" />
+          <img src="photos/mix-video4.webp" alt="Mixolydian" />
         </div>
         <div class="siw-card-body">
           <h3 class="siw-card-title">Mixolydian</h3>
@@ -258,7 +256,7 @@
 
       <a class="siw-card" href="offstage.html">
         <div class="siw-card-photo">
-          <img src="photos/jump.JPG" alt="Off Stage" />
+          <img src="photos/jump.webp" alt="Off Stage" />
         </div>
         <div class="siw-card-body">
           <h3 class="siw-card-title">Off Stage</h3>
@@ -402,7 +400,8 @@
  
     <div class="footer-top">
       <a href="index.html" class="footer-logo">
-        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+        <img src="photos/white-logo.webp" alt="Jeremiah Hunt" loading="lazy"
+  decoding="async" />
       </a>
  
       <nav class="footer-nav" aria-label="Footer navigation">
