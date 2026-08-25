@@ -231,62 +231,70 @@
         </div>
     </section>
 
-    <!-- ── CONTACT ── -->
-    <section class="contact-section">
-        <div class="contact-inner">
 
-            <!-- Sol -->
-            <div class="contact-left">
-                <div class="contact-rule">
-                    <span></span>
-                    <span></span>
-                </div>
+      <!-- ── CONTACT ── -->
+  <section class="contact-section">
+    <div class="contact-inner">
 
-                <div class="contact-body">
-                    <span class="contact-label">Stay Connected</span>
-
-                    <h2 class="contact-title">
-                        Let's<br>Keep in Touch
-                    </h2>
-
-                    <p class="contact-desc">
-                        Have a question, want to connect, or simply want to share a thought?
-                        I'd love to hear from you.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Sağ — Form -->
-            <form class="contact-form" id="contactForm" novalidate>
-
-                <div class="form-group">
-                    <label for="cf-name">Name</label>
-                    <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="cf-email">Email</label>
-                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="cf-message">Message</label>
-                    <textarea id="cf-message" name="message" placeholder="How can I help?" required></textarea>
-                </div>
-
-                <div class="form-success" id="formSuccess">
-                    Thank you for reaching out. I'll be in touch soon.
-                </div>
-
-                <button type="submit" class="contact-submit">
-                    Send Message
-                </button>
-
-            </form>
-
+      <!-- Sol -->
+      <div class="contact-left">
+        <div class="contact-rule">
+          <span></span>
+          <span></span>
         </div>
-    </section>
 
+        <div class="contact-body">
+          <span class="contact-label">Stay Connected</span>
+
+          <h2 class="contact-title">
+            Let's<br>Keep in Touch
+          </h2>
+
+          <p class="contact-desc">
+            Have a question, want to connect, or simply want to share a thought?
+                        I'd love to hear from you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sağ — Form -->
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" data-fs-field required />
+          <span data-fs-error="name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" data-fs-field required />
+          <span data-fs-error="email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What would you like to share?" data-fs-field
+            required></textarea>
+          <span data-fs-error="message"></span>
+        </div>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess" data-fs-success>
+          Thank you for reaching out. I’ll be in touch soon. ✦
+        </div>
+
+        <!-- General error -->
+        <div class="form-error" data-fs-error></div>
+
+        <button type="submit" class="contact-submit" data-fs-submit-btn>
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </section>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -500,20 +508,21 @@ if (currentPage === 'index.html') {
 
 
 
-        window.formspree =
-  window.formspree ||
-  function () {
-    (formspree.q = formspree.q || []).push(arguments);
-  };
+      window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
 
-document.querySelectorAll('.contact-form').forEach((form) => {
+    document.querySelectorAll('.contact-form').forEach((form) => {
 
-  formspree('initForm', {
-    formElement: form,
-    formId: 'xdenyeoj'
-  });
+      formspree('initForm', {
+        formElement: form,
+        formId: 'xdenyeoj'
+      });
 
-});
+    });
+
 
   </script>
 

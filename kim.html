@@ -252,33 +252,54 @@
           <span></span>
           <span></span>
         </div>
+
         <div class="contact-body">
           <span class="contact-label">Get in Touch</span>
-          <h2 class="contact-title">Join the<br>Movement</h2>
+
+          <h2 class="contact-title">
+            Join the<br>Movement
+          </h2>
+
           <p class="contact-desc">
-            Whether you're interested in joining the collective, collaborating, or simply have a question, we'd love to hear from you.
+             Whether you're interested in joining the collective, collaborating, or simply have a question, we'd love to hear from you.
           </p>
         </div>
       </div>
 
       <!-- Sağ — Form -->
-      <form class="contact-form" id="contactForm" novalidate>
+      <form class="contact-form" id="contactForm">
+
         <div class="form-group">
           <label for="cf-name">Name</label>
-          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+          <input type="text" id="cf-name" name="name" placeholder="Your name" data-fs-field required />
+          <span data-fs-error="name"></span>
         </div>
+
         <div class="form-group">
           <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" data-fs-field required />
+          <span data-fs-error="email"></span>
         </div>
+
         <div class="form-group">
           <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" placeholder="Tell us about yourself or your question..." required></textarea>
+          <textarea id="cf-message" name="message" placeholder="What would you like to share?" data-fs-field
+            required></textarea>
+          <span data-fs-error="message"></span>
         </div>
-        <div class="form-success" id="formSuccess">
-          Thank you — we'll be in touch soon. ✦
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess" data-fs-success>
+          Thank you for reaching out. I’ll be in touch soon. ✦
         </div>
-        <button type="submit" class="contact-submit">Send Message</button>
+
+        <!-- General error -->
+        <div class="form-error" data-fs-error></div>
+
+        <button type="submit" class="contact-submit" data-fs-submit-btn>
+          Send Message
+        </button>
+
       </form>
 
     </div>
@@ -579,20 +600,20 @@ if (currentPage === 'index.html') {
 
 
 
-    window.formspree =
-  window.formspree ||
-  function () {
-    (formspree.q = formspree.q || []).push(arguments);
-  };
+       window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
 
-document.querySelectorAll('.contact-form').forEach((form) => {
+    document.querySelectorAll('.contact-form').forEach((form) => {
 
-  formspree('initForm', {
-    formElement: form,
-    formId: 'xdenyeoj'
-  });
+      formspree('initForm', {
+        formElement: form,
+        formId: 'xdenyeoj'
+      });
 
-});
+    });
 
   </script>
 
