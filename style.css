@@ -137,29 +137,10 @@ body {
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(243, 237, 226, 0.55);
+  color: rgba(243, 237, 226, 0.854);
   margin-top: 0.4rem;
 }
 
-/* İçerik Alanı */
-.content-section {
-  background: var(--cream);
-  color: var(--dark);
-  padding: 8rem 2rem;
-  text-align: center;
-}
-
-.content-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.content-inner p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  font-weight: 300;
-  opacity: 0.8;
-}
 /* ══════════════════════════════════════════════════════════════
    PAGE BANNER (GLOBAL) — CROSS-BROWSER FIXES
    Mevcut kurallarınızın altına ekleyin.
@@ -249,15 +230,6 @@ body {
   .page-banner-rule {
     max-width: 420px;
   }
-
-  .content-section {
-    padding: 5rem 1.6rem;
-  }
-
-  .content-inner p {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
 }
 
 /* ---------- TELEFON (≤480px) ---------- */
@@ -290,10 +262,6 @@ body {
     font-size: 0.68rem;
     letter-spacing: 0.16em;
   }
-
-  .content-section {
-    padding: 4rem 6%;
-  }
 }
 
 /* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
@@ -309,10 +277,6 @@ body {
   .page-banner-content {
     padding: 1.3rem;
     gap: 0.8rem;
-  }
-
-  .content-inner p {
-    font-size: 0.92rem;
   }
 }
 
@@ -344,17 +308,7 @@ body {
   .page-banner-title {
     font-size: clamp(6rem, 7vw, 8.5rem);
   }
-
-  .content-inner {
-    max-width: 900px;
-  }
 }
-
-
-
-
-
-
 
 /* ══════════════════════════════
        ABOUT SECTION
@@ -480,13 +434,6 @@ body {
   width: 1.5px;
   opacity: 0.65;
 }
-
-
-
-
-
-
-
 
 /* ══════════════════════════════
        HEADER
@@ -2251,23 +2198,6 @@ header.scrolled .nav-link:hover {
   line-height: 1.4;
 }
 
-/* Sağ — fotoğraf 4:5 */
-.kim-photo {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
-
-.kim-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
-
 /* ══════════════════════════════════════════════════════════════
    ABOUT / KIM SECTION — CROSS-BROWSER FIXES
    Mevcut kurallarınızın altına ekleyin.
@@ -2276,14 +2206,12 @@ header.scrolled .nav-link:hover {
 /* 1) aspect-ratio desteklemeyen eski tarayıcılar için fallback
       (padding-top yüzdesi ile 4:5 oranını simüle eder). */
 @supports not (aspect-ratio: 4 / 5) {
-  .about-photo,
-  .kim-photo {
+  .about-photo {
     height: 0;
     padding-top: 125%; /* 4:5 oranı */
   }
 
-  .about-photo img,
-  .kim-photo img {
+  .about-photo img {
     position: absolute;
     inset: 0;
   }
@@ -2532,6 +2460,17 @@ header.scrolled .nav-link:hover {
       letter-spacing: 0.02em;
     }
 
+    .kim-gallery-sub{
+    font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+    color: var(--brown);
+    margin: 1rem auto;
+    font-family: 'Cormorant Garamond', serif;
+
+    line-height: 1.8;
+    font-weight: 500;
+    opacity: 0.75;
+    }
+
     /* Grid */
     .kim-gallery-grid {
       max-width: 1280px;
@@ -2541,11 +2480,6 @@ header.scrolled .nav-link:hover {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 280px);
       gap: 10px;
-    }
-
-    /* Dikey video — son item, 2 satır kaplar */
-    .kim-gallery-item.video-tall {
-      grid-row: span 2;
     }
 
     /* Her item */
@@ -2767,6 +2701,117 @@ header.scrolled .nav-link:hover {
   backdrop-filter: blur(12px);
 }
 
+
+/* =========================
+   KIM BOOKING / INQUIRY
+========================= */
+
+.kim-booking-section {
+    padding: 120px 8%;
+    background: #111;
+    color: #f7f5f2;
+}
+
+.kim-booking-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.kim-booking-eyebrow {
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+.kim-booking-title {
+    margin: 0 0 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.kim-booking-description {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.kim-booking-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 170px;
+    padding: 15px 28px;
+
+    border: 1px solid rgba(247, 245, 242, 0.6);
+
+    color: #f7f5f2;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.kim-booking-button:hover {
+    background: #f7f5f2;
+    color: #111;
+    border-color: #f7f5f2;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .kim-booking-section {
+        padding: 85px 6%;
+    }
+
+    .kim-booking-title {
+        font-size: clamp(36px, 11vw, 54px);
+    }
+
+    .kim-booking-description {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .kim-booking-button {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
 @supports not (backdrop-filter: blur(1px)) {
   .lightbox {
     background: rgba(20, 12, 5, 0.97);
@@ -2869,10 +2914,6 @@ header.scrolled .nav-link:hover {
     grid-template-rows: repeat(5, 180px);
     grid-auto-rows: 180px;
     gap: 6px;
-  }
-
-  .kim-gallery-item.video-tall {
-    grid-row: auto; /* dar sütunda 2 satır kaplama görünümü bozuk durur */
   }
 
   .play-btn {
@@ -3385,6 +3426,48 @@ header.scrolled .nav-link:hover {
 
 
 /* ── SECTION HEADER ── */
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.6rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--brown);
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--brown);
+  transition: gap 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.about-cta:hover,
+.about-cta:focus-visible {
+  gap: 16px;
+  color: var(--dark);
+  border-color: var(--dark);
+}
+
+.about-cta:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.about-cta > * + * { margin-left: 10px; }
+
+@supports (gap: 10px) {
+  .about-cta > * + * { margin-left: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-cta,
+  .about-cta .arrow {
+    transition: none;
+  }
+}
+
+
 .glimpses-section {
   padding: 8rem 2rem;
   background: radial-gradient(circle at top, #3d2b1f 0%, #2d2923 100%);
@@ -3765,7 +3848,17 @@ header.scrolled .nav-link:hover {
 
 
 
-
+/* "J" harfinin yerine geçen logo — .page-banner-title'ın kendisi
+   değiştirilmedi, sadece bu ek class eklendi. em birimi kullanıldığı
+   için .page-banner-title'ın clamp() ile değişen font-size'ına her
+   breakpoint'te otomatik uyum sağlıyor, ayrıca media query gerekmiyor. */
+.title-logo-letter {
+  display: inline-block;
+  height: 0.80em;
+  width: auto;
+  vertical-align: -0.30em; 
+  margin-right: 0.025em;
+}
 
 
 
@@ -3798,7 +3891,7 @@ header.scrolled .nav-link:hover {
 }
 
 .album-art-wrapper::before {
-  content: 'THE UPCOMING ALBUM';
+  content: 'UPCOMING ALBUM';
   position: absolute;
   top: -40px;
   left: 0;
@@ -3829,27 +3922,6 @@ header.scrolled .nav-link:hover {
   position: relative;
 }
 
-/* Çift Çizgi (Section Line) */
-.uzazi-line {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.uzazi-line span:nth-child(1) {
-  width: 40px;
-  height: 1px;
-  background: var(--amber);
-  opacity: 0.5;
-}
-
-.uzazi-line span:nth-child(2) {
-  width: 60px;
-  height: 2px;
-  background: var(--amber);
-}
-
 .album-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 6vw, 6rem);
@@ -3858,14 +3930,6 @@ header.scrolled .nav-link:hover {
   line-height: 0.85;
   color: var(--brown);
   margin: 0;
-}
-
-.album-label {
-  font-size: 0.85rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.1rem;
 }
 
 .album-description {
@@ -3884,10 +3948,17 @@ header.scrolled .nav-link:hover {
 }
 
 /* Teaser Button */
+
+.album-actions-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
 .album-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 0.8rem;
   margin-top: 1rem;
 }
@@ -3942,6 +4013,40 @@ header.scrolled .nav-link:hover {
   border-color: var(--brown);
   color: var(--cream);
   transform: translateX(5px);
+}
+
+/* ── WATCH TRAILER — iki butonun altında, ortalanmış, ikincil bir CTA ── */
+.album-trailer-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.watch-trailer-btn {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(107, 63, 34, 0.4);
+  transition: gap 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.watch-trailer-btn svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.watch-trailer-btn:hover {
+  gap: 16px;
+  color: var(--dark);
+  border-color: var(--dark);
 }
 
 /* ── TEASER VIDEO OVERLAY (Hidden by default) ── */
@@ -4182,6 +4287,7 @@ header.scrolled .nav-link:hover {
 @media (prefers-reduced-motion: reduce) {
   .album-cover,
   .teaser-btn,
+  .watch-trailer-btn,
   .album-buy-btn,
   .album-gallery-backdrop,
   .album-gallery-inner,
@@ -4192,7 +4298,8 @@ header.scrolled .nav-link:hover {
   }
 
   .teaser-btn:hover,
-  .album-buy-btn:hover {
+  .album-buy-btn:hover,
+  .watch-trailer-btn {
     transform: none;
   }
 }
@@ -4206,6 +4313,15 @@ header.scrolled .nav-link:hover {
 @media (max-width: 1024px) {
   .album-section {
     padding: 7rem 3rem;
+  }
+
+  .album-actions-group {
+    width: 100%;
+    align-items: stretch;   /* fit-content yerine tam genişlik */
+  }
+
+  .album-trailer-wrap {
+    justify-content: center;  /* zaten vardıysa tekrar yazmanıza gerek yok */
   }
 
   .album-container {
@@ -4310,9 +4426,11 @@ header.scrolled .nav-link:hover {
   .album-actions > * + * {
     margin-left: 0;
   }
+  
 
   .teaser-btn,
-  .album-buy-btn {
+  .album-buy-btn
+  .watch-trailer-btn {
     width: 100%;
     font-size: 10px;
     justify-content: center;
@@ -4354,18 +4472,14 @@ header.scrolled .nav-link:hover {
     font-size: 2.1rem;
   }
 
-  .album-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-  }
-
   .album-art-wrapper::before {
     font-size: 0.6rem;
     letter-spacing: 0.3em;
   }
 
   .teaser-btn,
-  .album-buy-btn {
+  .album-buy-btn
+  .watch-trailer-btn {
     font-size: 0.48rem;
     padding: 0.8rem 1rem;
   }
@@ -4430,350 +4544,6 @@ header.scrolled .nav-link:hover {
 
 
 
-
-
-
-/* ── INSIDE UZAZI SECTION ── */
-.inside-section {
-  background: var(--dark);
-  color: var(--cream);
-  padding: 5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.inside-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  max-width: 700px;
-}
-
-.inside-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 1.5rem;
-  display: block;
-}
-
-.inside-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: 0.04em;
-  margin: 0 0 1rem 0;
-}
-
-.inside-divider {
-  width: 60px;
-  height: 1px;
-  background: rgba(201, 168, 122, 0.4);
-  margin: 0 auto 2rem;
-}
-
-/* Video Block */
-.inside-video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-}
-
-.inside-video-label {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--amber);
-  background: rgba(45, 41, 35, 0.666);
-  padding: 6px 14px;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(201, 168, 122, 0.2);
-}
-
-/* Sound Control Icon */
-.sound-toggle {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  z-index: 10;
-  cursor: pointer;
-  color: var(--amber);
-  background: rgba(45, 41, 35, 0.75);
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(201, 168, 122, 0.2);
-  backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
-}
-
-.sound-toggle:hover {
-  background: rgba(45, 41, 35, 0.95);
-  transform: scale(1.1);
-}
-
-.sound-toggle svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-.inside-video {
-  width: 100%;
-  display: block;
-  max-height: 620px;
-  object-fit: cover;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
-}
-
-/* ── TEASER VIDEO OVERLAY ── */
-.teaser-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(45, 41, 35, 0.98);
-  z-index: 5000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.teaser-overlay.active {
-  display: flex;
-  opacity: 1;
-}
-
-.teaser-video-container {
-  width: 90%;
-  max-width: 1000px;
-}
-
-.close-teaser {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  color: var(--cream);
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   INSIDE UZAZI SECTION — CROSS-BROWSER FIXES
-   Mevcut kurallarınızın altına ekleyin.
-   ══════════════════════════════════════════════════════════════ */
-
-/* 1) backdrop-filter için eksik -webkit- prefix'i tamamla
-      (standart property de linter uyumluluğu için birlikte yazılıyor) */
-.inside-video-label,
-.sound-toggle {
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-}
-
-/* 2) backdrop-filter'ı hiç desteklemeyen tarayıcılar için daha opak
-      arka plan fallback'i */
-@supports not (backdrop-filter: blur(1px)) {
-  .inside-video-label {
-    background: rgba(45, 41, 35, 0.92);
-  }
-
-  .sound-toggle {
-    background: rgba(45, 41, 35, 0.92);
-  }
-}
-
-/* 3) "inset: 0" kısayolunu desteklemeyen eski Safari fallback'i */
-@supports not (inset: 0) {
-  .teaser-overlay {
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
-}
-
-/* 4) Çentik / Dynamic Island güvenli alanı */
-.close-teaser {
-  top: calc(40px + env(safe-area-inset-top, 0px));
-  right: calc(40px + env(safe-area-inset-right, 0px));
-}
-
-/* 5) Dokunmatik cihazlarda ses butonunu büyüt (min. 44px dokunma hedefi) */
-@media (hover: none) and (pointer: coarse) {
-  .sound-toggle {
-    width: 44px;
-    height: 44px;
-  }
-
-  .sound-toggle svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* 6) Hareket hassasiyeti olan kullanıcılar için geçişleri kapat */
-@media (prefers-reduced-motion: reduce) {
-  .sound-toggle,
-  .teaser-overlay {
-    transition: none;
-  }
-
-  .sound-toggle:hover {
-    transform: none;
-  }
-}
-
-
-/* ══════════════════════════════════════════════════════════════
-   INSIDE UZAZI SECTION — RESPONSIVE BREAKPOINTS
-   ══════════════════════════════════════════════════════════════ */
-
-/* ---------- TABLET (≤1024px) ---------- */
-@media (max-width: 1024px) {
-  .inside-section {
-    padding: 4rem 2rem;
-  }
-
-  .inside-video {
-    max-height: 520px;
-  }
-}
-
-/* ---------- BÜYÜK TELEFON / DİKEY TABLET (≤768px) ---------- */
-@media (max-width: 768px) {
-  .inside-section {
-    padding: 3.5rem 6%;
-  }
-
-  .inside-header {
-    margin-bottom: 2.2rem;
-  }
-
-  .inside-eyebrow {
-    letter-spacing: 0.3em;
-    margin-bottom: 1rem;
-  }
-
-  .inside-title {
-    font-size: clamp(2.2rem, 8vw, 3.6rem);
-  }
-
-  .inside-divider {
-    margin-bottom: 1.4rem;
-  }
-
-  .inside-video {
-    max-height: 420px;
-  }
-
-  .inside-video-label {
-    top: 14px;
-    left: 14px;
-    font-size: 0.58rem;
-    padding: 5px 11px;
-  }
-
-  .sound-toggle {
-    top: 14px;
-    right: 16px;
-  }
-}
-
-/* ---------- TELEFON (≤480px) ---------- */
-@media (max-width: 480px) {
-  .inside-section {
-    padding: 3rem 6%;
-  }
-
-  .inside-eyebrow {
-    font-size: 0.62rem;
-  }
-
-  .inside-title {
-    font-size: clamp(1.9rem, 10vw, 2.8rem);
-  }
-
-  .inside-video {
-    max-height: 320px;
-  }
-
-  .inside-video-label {
-    top: 12px;
-    left: 12px;
-    font-size: 0.54rem;
-    letter-spacing: 0.22em;
-    padding: 4px 9px;
-  }
-
-  .sound-toggle {
-    top: 12px;
-    right: 12px;
-  }
-
-  .teaser-video-container {
-    width: 100%;
-  }
-
-  .close-teaser {
-    top: calc(18px + env(safe-area-inset-top, 0px));
-    right: calc(18px + env(safe-area-inset-right, 0px));
-    font-size: 1.6rem;
-  }
-}
-
-/* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
-@media (max-width: 360px) {
-  .inside-title {
-    font-size: 1.7rem;
-  }
-
-  .inside-video {
-    max-height: 260px;
-  }
-
-  .inside-video-label {
-    display: none; /* çok dar ekranda video üstündeki etiket sıkışıp
-                       oynatma alanını daraltmasın */
-  }
-}
-
-/* ---------- YATAY TELEFON (kısa yükseklik) ---------- */
-@media (max-height: 480px) and (orientation: landscape) {
-  .inside-section {
-    padding: 2rem 6%;
-  }
-
-  .inside-header {
-    margin-bottom: 1.4rem;
-  }
-
-  .inside-title {
-    font-size: clamp(1.8rem, 5vw, 2.6rem);
-  }
-
-  .inside-video {
-    max-height: 60vh;
-  }
-}
-
-/* ---------- BÜYÜK / GENİŞ EKRANLAR ---------- */
-@media (min-width: 1600px) {
-  .inside-video-wrapper {
-    max-width: 1080px;
-  }
-
-  .inside-video {
-    max-height: 700px;
-  }
-}
 
 
 
@@ -5285,23 +5055,19 @@ header.scrolled .nav-link:hover {
   text-transform:none; /* keep lowercase as requested */
 }
 
-/* Video container: responsive 16:9 using aspect-ratio */
-.video-embed{
-  width:100%;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  background:#000;
-  aspect-ratio:16 / 9;
-}
+.music-business-description {
+   color: var(--cream);
+    max-width: 680px;
+    font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+    margin: 1rem auto;
+    font-family: 'Cormorant Garamond', serif;
 
-/* iframe fills container */
-.video-embed iframe{
-  width:100%;
-  height:100%;
-  display:block;
-  border:0;
+    line-height: 1.8;
+    font-weight: 500;
+
+    opacity: 0.75;
 }
+/* Video container: responsive 16:9 using aspect-ratio */
 /* ══════════════════════════════════════════════════════════════
    VIDEO SECTION (YouTube card) — CROSS-BROWSER FIXES
    Mevcut kurallarınızın altına ekleyin.
@@ -5309,8 +5075,7 @@ header.scrolled .nav-link:hover {
 
 /* 1) aspect-ratio desteklemeyen eski tarayıcılar için fallback */
 @supports not (aspect-ratio: 16 / 9) {
-  .youtube-card,
-  .video-embed {
+  .youtube-card {
     height: 0;
     padding-top: 56.25%; /* 16:9 oranı */
   }
@@ -5320,16 +5085,6 @@ header.scrolled .nav-link:hover {
     inset: 0;
   }
 }
-
-/* 2) Daha güvenilir YouTube thumbnail — maxresdefault her videoda
-      üretilmemiş olabilir; hqdefault her zaman mevcuttur. İsterseniz
-      background-image satırını buna göre değiştirin:
-.youtube-card {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
-    url("https://img.youtube.com/vi/d16Nzp3eaB0/hqdefault.jpg");
-}
-*/
 
 /* 3) Dokunmatik cihazlarda görsel geri bildirim (hover tetiklenmediği için) */
 @media (hover: none) and (pointer: coarse) {
@@ -5475,361 +5230,481 @@ header.scrolled .nav-link:hover {
 
 
 
-.b-loops-section {
-  padding: 7rem 6%;
-}
-
-.b-loops-header {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto 3rem;
-}
-
-.b-loops-label {
-  display: block;
-  font-family: 'Jost', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 0.8rem;
-}
-
-.b-loops-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
-  color: var(--cream);
-  margin: 0;
-}
-
-.b-loops-grid {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-}
-
-.loop-item {
-  position: relative;
-  aspect-ratio: 3 / 4;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--dark);
-  cursor: pointer;
-  box-shadow: 0 14px 34px rgba(45, 41, 35, 0.12);
-}
-
-.loop-cover,
-.loop-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.loop-cover {
-  transition: opacity 0.4s ease;
-}
-
-.loop-video {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.loop-item.is-playing .loop-cover {
-  opacity: 0;
-}
-
-.loop-item.is-playing .loop-video {
-  opacity: 1;
-}
-
-/* dark scrim so icons stay legible over any footage */
-.loop-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(45, 41, 35, 0.22);
-  transition: background 0.3s ease;
-  pointer-events: none;
-}
-
-.loop-item:hover::after {
-  background: rgba(45, 41, 35, 0.34);
-}
-
-/* ---- play / pause button ---- */
-.play-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(243, 237, 226, 0.92);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
-}
-
-.loop-item.is-playing .play-overlay {
-  opacity: 0;
-}
-
-.loop-item:hover .play-overlay {
-  opacity: 1;
-  background: var(--amber);
-}
-
-.play-overlay:hover {
-  transform: translate(-50%, -50%) scale(1.06);
-}
-
-.play-overlay .icon {
-  width: 22px;
-  height: 22px;
-  display: flex;
-}
-
-.play-overlay .icon svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--dark);
-}
-
-.play-overlay .pause-icon { display: none; }
-.play-overlay .play-icon  { display: flex; }
-
-.loop-item.is-playing .play-overlay .play-icon  { display: none; }
-.loop-item.is-playing .play-overlay .pause-icon { display: flex; }
-
-/* ---- mute / unmute button ---- */
-.mute-toggle {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid rgba(243, 237, 226, 0.5);
-  background: rgba(45, 41, 35, 0.45);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease;
-  z-index: 2;
-}
-
-.mute-toggle:hover {
-  background: rgba(45, 41, 35, 0.7);
-  border-color: var(--amber);
-}
-
-.mute-toggle .icon {
-  width: 18px;
-  height: 18px;
-  display: flex;
-}
-
-.mute-toggle .icon svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--cream);
-}
-
-.mute-toggle .unmuted-icon { display: none; }
-.mute-toggle .muted-icon   { display: flex; }
-
-.loop-item.is-muted-off .mute-toggle .muted-icon   { display: none; }
-.loop-item.is-muted-off .mute-toggle .unmuted-icon { display: flex; }
-/* ══════════════════════════════════════════════════════════════
-   B_LOOPS SECTION — CROSS-BROWSER FIXES
-   Mevcut kurallarınızın altına ekleyin.
-   ══════════════════════════════════════════════════════════════ */
-
-/* 1) backdrop-filter için eksik -webkit- prefix'i tamamla
-      (standart property de linter uyumluluğu için birlikte yazılıyor) */
-.mute-toggle {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-
-@supports not (backdrop-filter: blur(1px)) {
-  .mute-toggle {
-    background: rgba(45, 41, 35, 0.82);
-  }
-}
-
-/* 2) aspect-ratio desteklemeyen eski tarayıcılar için fallback */
-@supports not (aspect-ratio: 3 / 4) {
-  .loop-item {
-    height: 0;
-    padding-top: 133.33%; /* 3:4 oranı */
-  }
-}
-
-/* 3) Dokunmatik cihazlarda play butonu oynatma sırasında da hafif
-      görünür kalsın (hover tetiklenmediği için) */
-@media (hover: none) and (pointer: coarse) {
-  .loop-item.is-playing .play-overlay {
-    opacity: 0.55;
-  }
-
-  .mute-toggle {
-    width: 42px;
-    height: 42px; /* 44px'e daha yakın dokunma hedefi */
-  }
-}
-
-/* 4) Hareket hassasiyeti olan kullanıcılar için geçişleri kapat */
-@media (prefers-reduced-motion: reduce) {
-  .loop-cover,
-  .loop-video,
-  .loop-item::after,
-  .play-overlay,
-  .mute-toggle {
-    transition: none;
-  }
-
-  .play-overlay:hover {
-    transform: translate(-50%, -50%);
-  }
-}
-
-
-/* ══════════════════════════════════════════════════════════════
-   B_LOOPS SECTION — RESPONSIVE BREAKPOINTS
-   ══════════════════════════════════════════════════════════════ */
-
-/* ---------- TABLET (≤1024px) ---------- */
-@media (max-width: 1024px) {
+  /* ============ B_LOOPS SECTION ============ */
   .b-loops-section {
-    padding: 5.7rem 10%;
+    padding: 7rem 6%;
   }
-
+ 
   .b-loops-header {
-    margin-bottom: 2.4rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
   }
-}
-
-/* ---------- BÜYÜK TELEFON / DİKEY TABLET (≤768px) ---------- */
-@media (max-width: 768px) {
-  .b-loops-section {
-    padding: 4.7rem 10%;
-  }
-
-  .b-loops-title {
-    font-size: clamp(2rem, 7vw, 2.6rem);
-  }
-
-  .b-loops-grid {
-    gap: 1.6rem;
-  }
-
-  .play-overlay {
-    width: 56px;
-    height: 56px;
-  }
-
-  .play-overlay .icon {
-    width: 19px;
-    height: 19px;
-  }
-}
-
-/* ---------- TELEFON (≤480px) ----------
-   KRİTİK: auto-fit + minmax(320px,1fr) çok dar ekranlarda kartın
-   320px'in altına inememesi yüzünden yatay taşmaya sebep olabilir.
-   Sütunu açıkça 1fr'e sabitleyip bu riski ortadan kaldırıyoruz. */
-@media (max-width: 480px) {
-  .b-loops-section {
-    padding: 3.7rem 10%;
-  }
-
+ 
   .b-loops-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.8rem;
   }
-
-  .b-loops-grid {
-    grid-template-columns: 1fr;
-    gap: 1.4rem;
-  }
-
-  .play-overlay {
-    width: 50px;
-    height: 50px;
-  }
-
-  .play-overlay .icon {
-    width: 17px;
-    height: 17px;
-  }
-
-  .mute-toggle {
-    right: 10px;
-    bottom: 10px;
-        width: 27px;
-    height: 27px;
-  }
-}
-
-/* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
-@media (max-width: 360px) {
+ 
   .b-loops-title {
-    font-size: 1.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    color: var(--cream);
+    margin: 0;
   }
-
-  .loop-item {
-    aspect-ratio: 4 / 5; /* 3:4'ten biraz daha kısa, çok dar ekranda
-                             kartın aşırı uzamasını engeller */
+ 
+  /* ---- outer layout: loops grid (left) | youtube card (right) ---- */
+  .b-loops-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: center;
   }
-
-  .play-overlay {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-/* ---------- YATAY TELEFON (kısa yükseklik) ---------- */
-@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
-  .b-loops-section {
-    padding: 2.5rem 6%;
-  }
-
-  .b-loops-header {
-    margin-bottom: 1.6rem;
-  }
-
+ 
   .b-loops-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.2rem;
+    gap: 2rem;
   }
-
+ 
   .loop-item {
-    aspect-ratio: 16 / 10; /* yatayda daha kısa kart, dikeyde taşmasın */
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--dark);
+    cursor: pointer;
+    box-shadow: 0 14px 34px rgba(45, 41, 35, 0.12);
   }
-}
-
-/* ---------- BÜYÜK / GENİŞ EKRANLAR ---------- */
-@media (min-width: 1600px) {
-  .b-loops-grid {
-    max-width: 1080px;
+ 
+  .loop-cover,
+  .loop-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
-}
-
+ 
+  .loop-cover {
+    transition: opacity 0.4s ease;
+  }
+ 
+  .loop-video {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+ 
+  .loop-item.is-playing .loop-cover { opacity: 0; }
+  .loop-item.is-playing .loop-video { opacity: 1; }
+ 
+  .loop-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(45, 41, 35, 0.22);
+    transition: background 0.3s ease;
+    pointer-events: none;
+  }
+ 
+  .loop-item:hover::after {
+    background: rgba(45, 41, 35, 0.34);
+  }
+ 
+  /* ---- play / pause button ---- */
+  .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(243, 237, 226, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
+  }
+ 
+  .loop-item.is-playing .play-overlay { opacity: 0; }
+ 
+  .loop-item:hover .play-overlay {
+    opacity: 1;
+    background: var(--amber);
+  }
+ 
+  .play-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+ 
+  .play-overlay .icon {
+    width: 22px;
+    height: 22px;
+    display: flex;
+  }
+ 
+  .play-overlay .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--dark);
+  }
+ 
+  .play-overlay .pause-icon { display: none; }
+  .play-overlay .play-icon  { display: flex; }
+ 
+  .loop-item.is-playing .play-overlay .play-icon  { display: none; }
+  .loop-item.is-playing .play-overlay .pause-icon { display: flex; }
+ 
+  /* ---- mute / unmute button ---- */
+  .mute-toggle {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(243, 237, 226, 0.5);
+    background: rgba(45, 41, 35, 0.45);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    z-index: 2;
+  }
+ 
+  @supports not (backdrop-filter: blur(1px)) {
+    .mute-toggle {
+      background: rgba(45, 41, 35, 0.82);
+    }
+  }
+ 
+  .mute-toggle:hover {
+    background: rgba(45, 41, 35, 0.7);
+    border-color: var(--amber);
+  }
+ 
+  .mute-toggle .icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+  }
+ 
+  .mute-toggle .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--cream);
+  }
+ 
+  .mute-toggle .unmuted-icon { display: none; }
+  .mute-toggle .muted-icon   { display: flex; }
+ 
+  .loop-item.is-muted-off .mute-toggle .muted-icon   { display: none; }
+  .loop-item.is-muted-off .mute-toggle .unmuted-icon { display: flex; }
+ 
+  /* aspect-ratio desteklemeyen eski tarayıcılar için fallback */
+  @supports not (aspect-ratio: 3 / 4) {
+    .loop-item {
+      height: 0;
+      padding-top: 133.33%; /* 3:4 oranı */
+    }
+  }
+ 
+  /* ---- youtube card (right column) ---- */
+  .b-loops-video-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+ 
+  .b-loops-video-wrap .wrap {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+ 
+  .video-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--cream);
+    margin: 0 0 1.4rem;
+  }
+ 
+  .youtube-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 14px 34px rgba(45, 41, 35, 0.25);
+    background-color: var(--dark);
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  @supports not (aspect-ratio: 16 / 9) {
+    .youtube-card {
+      height: 0;
+      padding-top: 56.25%;
+    }
+  }
+ 
+  .youtube-card--loops {
+    background-image:
+      linear-gradient(rgba(20, 12, 5, 0.4), rgba(20, 12, 5, 0.55)),
+      url("https://img.youtube.com/vi/COAduY3jkI0/maxresdefault.jpg");
+  }
+ 
+  .youtube-card-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--cream);
+  }
+ 
+  .youtube-play {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(243, 237, 226, 0.75);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, background 0.4s ease;
+  }
+ 
+  .youtube-play svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--cream);
+    margin-left: 3px;
+  }
+ 
+  .youtube-label {
+    margin-top: 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(243, 237, 226, 0.85);
+  }
+ 
+  .youtube-card:hover .youtube-play {
+    transform: scale(1.08);
+    background: rgba(243, 237, 226, 0.14);
+  }
+ 
+  /* ---- touch devices ---- */
+  @media (hover: none) and (pointer: coarse) {
+    .loop-item.is-playing .play-overlay {
+      opacity: 0.55;
+    }
+ 
+    .mute-toggle {
+      width: 42px;
+      height: 42px;
+    }
+ 
+    .youtube-card:active .youtube-play {
+      transform: scale(1.05);
+      background: rgba(243, 237, 226, 0.16);
+    }
+  }
+ 
+  /* ---- reduced motion ---- */
+  @media (prefers-reduced-motion: reduce) {
+    .loop-cover,
+    .loop-video,
+    .loop-item::after,
+    .play-overlay,
+    .mute-toggle,
+    .youtube-play {
+      transition: none;
+    }
+ 
+    .play-overlay:hover {
+      transform: translate(-50%, -50%);
+    }
+ 
+    .youtube-card:hover .youtube-play,
+    .youtube-card:active .youtube-play {
+      transform: none;
+    }
+  }
+ 
+  /* ============ RESPONSIVE ============ */
+ 
+  /* ---- tablet (≤1024px) ---- */
+  @media (max-width: 1024px) {
+    .b-loops-section {
+      padding: 5.7rem 10%;
+    }
+ 
+    .b-loops-header {
+      margin-bottom: 2.4rem;
+    }
+ 
+    .b-loops-layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+ 
+    .b-loops-video-wrap {
+      justify-content: center;
+    }
+ 
+    .b-loops-video-wrap .wrap {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+ 
+  /* ---- büyük telefon / dikey tablet (≤768px) ---- */
+  @media (max-width: 768px) {
+    .b-loops-section {
+      padding: 4.7rem 10%;
+    }
+ 
+    .b-loops-title {
+      font-size: clamp(2rem, 7vw, 2.6rem);
+    }
+ 
+    .b-loops-grid {
+      gap: 1.6rem;
+    }
+ 
+    .play-overlay {
+      width: 56px;
+      height: 56px;
+    }
+ 
+    .play-overlay .icon {
+      width: 19px;
+      height: 19px;
+    }
+ 
+    .video-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.1rem;
+    }
+ 
+    .youtube-play {
+      width: 52px;
+      height: 52px;
+    }
+  }
+ 
+  /* ---- telefon (≤480px) ----
+     KRİTİK: auto-fit + minmax(220px,1fr) çok dar ekranlarda kartın
+     220px'in altına inememesi yüzünden yatay taşmaya sebep olabilir.
+     Sütunu açıkça 1fr'e sabitleyip bu riski ortadan kaldırıyoruz. */
+  @media (max-width: 480px) {
+    .b-loops-section {
+      padding: 3.7rem 10%;
+    }
+ 
+    .b-loops-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+    }
+ 
+    .b-loops-grid {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+ 
+    .play-overlay {
+      width: 50px;
+      height: 50px;
+    }
+ 
+    .play-overlay .icon {
+      width: 17px;
+      height: 17px;
+    }
+ 
+    .mute-toggle {
+      right: 10px;
+      bottom: 10px;
+      width: 34px;
+      height: 34px;
+    }
+ 
+    .youtube-play {
+      width: 46px;
+      height: 46px;
+    }
+ 
+    .youtube-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.16em;
+    }
+  }
+ 
+  /* ---- çok küçük telefon (≤360px) ---- */
+  @media (max-width: 360px) {
+    .b-loops-title {
+      font-size: 1.7rem;
+    }
+ 
+    .loop-item {
+      aspect-ratio: 4 / 5;
+    }
+ 
+    .play-overlay {
+      width: 44px;
+      height: 44px;
+    }
+  }
+ 
+  /* ---- yatay telefon (kısa yükseklik) ---- */
+  @media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+    .b-loops-section {
+      padding: 2.5rem 6%;
+    }
+ 
+    .b-loops-header {
+      margin-bottom: 1.6rem;
+    }
+ 
+    .b-loops-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+ 
+    .loop-item {
+      aspect-ratio: 16 / 10;
+    }
+  }
+ 
+  /* ---- büyük / geniş ekranlar ---- */
+  @media (min-width: 1600px) {
+    .b-loops-layout {
+      max-width: 1360px;
+    }
+  }
 
 
 
@@ -7695,620 +7570,550 @@ header.scrolled .nav-link:hover {
 
 
 
-.collection-section {
-    background: var(--cream);
-    padding: 8rem 6%;
-  }
- 
-  .collection-container {
-    max-width: 1320px;
-    margin: 3rem auto;
-    padding: 0 4%;
-  }
- 
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr;   /* tek sütun: eskiden 1fr 1fr idi ama içerik tek elemandı,
-                                      bu yüzden feature alanı yarı genişlikte sıkışıyordu */
-    gap: 2rem;
-    align-items: start;
-  }
- 
-  .feature {
-    background: transparent;
-    padding: 2rem;
-    border-radius: 8px;
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-  }
- 
-  .cover {
-    flex: 0 0 520px;      /* soldan büyütüldü: 380px -> 520px */
-    border-radius: 6px;
-    overflow: hidden;
-    margin-top: 3rem;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  }
- 
-    .cover img {
-
-    width: 100%;
-    max-width: 480px;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-   /* Uzazi kartının üstündeki not + yanındaki mini foto stack */
-  .top-note-row {
-    max-width: 1200px;
-    margin: 0 auto 1.5rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    padding: 10px 18px;
-    border-top: 1px solid rgba(138, 90, 59, 0.25);
-    border-bottom: 1px solid rgba(138, 90, 59, 0.25);
-  }
- 
-  .top-note {
-    text-align: center;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-    color: var(--brown);
-    font-weight: 600;
-    text-transform: uppercase;
-    margin: 0;
-  }
- 
-  /* iki üst üste bindirilmiş mini foto */
-  .mini-stack {
-    position: relative;
-    width: 74px;
-    height: 54px;
-    flex: 0 0 auto;
-    cursor: pointer;
-  }
- 
-  .mini-stack img {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 2px solid var(--cream);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-    transition: transform .15s ease;
-  }
- 
-  .mini-stack img.back {
-    top: 0;
-    left: 0;
-    transform: rotate(-8deg);
-    z-index: 1;
-  }
- 
-  .mini-stack img.front {
-    top: 6px;
-    left: 22px;
-    transform: rotate(6deg);
-    z-index: 2;
-  }
- 
-  .mini-stack:hover img.back {
-    transform: rotate(-12deg) translate(-2px, -2px);
-  }
- 
-  .mini-stack:hover img.front {
-    transform: rotate(10deg) translate(2px, -2px);
-  }
- 
-  /* galeri modali */
-  .gallery-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.82);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    z-index: 9999;
-    padding: 40px;
-  }
- 
-  .gallery-modal img {
-    max-width: 40%;
-    max-height: 70vh;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-  }
- 
-  .gallery-modal .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    font-size: 28px;
-    color: #fff;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
- 
-
- 
- 
-  .meta {
-    flex: 1;
-  }
- 
-  /* --- BÜYÜTÜLEN METİNLER --- */
-  .meta h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3.6rem;      /* 2.4rem -> 3.6rem */
-    line-height: 1.1;
-    margin: 0;
-  }
- 
-  .meta .sub {
-    color: var(--brown);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.10rem;     /* yeni: eskiden tanımsızdı, tarayıcı varsayılanı küçüktü */
-    letter-spacing: 0.04em;
-    margin: 14px 0;
-  }
- 
-  .meta p {
-    font-family: 'Inter', sans-serif;
-    color: rgba(45, 41, 35, 0.85);
-    font-size: 1.10rem;     /* yeni: büyütüldü */
-    line-height: 1.75;
-  }
- 
-  .meta .options {
-    margin-top: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-
-  .gift-badge {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 4px;
-    padding: 12px 16px;
-    border-radius: 6px;
-    background: rgba(138, 90, 59, 0.08);
-    border: 1px dashed rgba(138, 90, 59, 0.4);
-    font-family: 'Libre Baskerville', serif;
-    font-size: 1rem;
-    color: var(--dark);
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    overflow: hidden;
-    transition: max-height .28s ease, opacity .22s ease, padding .28s ease, margin .28s ease;
-  }
- 
-  .gift-badge.show {
-    max-height: 80px;
-    opacity: 1;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-top: 4px;
-  }
- 
-  .gift-badge .star {
-    color: var(--brown);
-    font-size: 1.2rem;
-    flex: 0 0 auto;
-  }
- 
-  .gift-badge .label {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--brown);
-    margin-right: 4px;
-  }
-
- 
-  .option {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 16px;
-    border-radius: 6px;
-    background: rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    font-size: 1.1rem;      /* büyütüldü */
-  }
- 
-  .option label {
-    font-weight: 600;
-  }
- 
-  .option .price {
-    font-weight: 700;
-    color: var(--dark);
-  }
- 
-  .actions {
-    margin-top: 22px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
- 
-  .col-btn {
-    background: var(--brown);
-    color: var(--cream);
-    padding: 12px 18px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform .12s ease, box-shadow .12s ease;
-  }
- 
-  .col-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  }
- 
-  /* "Complimentary item" butonunun yerini alan Watch trailer butonu:
-     artık trailer-wrapper'ın arka planı yok, actions içinde normal bir
-     ghost buton olarak diğer butonun yanında duruyor. */
-  .col-btn.ghost {
-    background: transparent;
-    border: 1px solid rgba(45, 41, 35, 0.15);
-    color: var(--dark);
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
- 
-  .col-btn.ghost .play-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--brown);
-    color: var(--cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    flex: 0 0 auto;
-  }
- 
-  .small-legend {
-    font-size: 1rem;        /* büyütüldü */
-    color: rgba(45, 41, 35, 0.7);
-    margin-top: 14px;
-  }
- 
-  .items-row {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    align-items: center;
-    justify-content: center;
-  }
- 
-  .card {
-    flex: 1;
-    background: #fff;
-    padding: 16px;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
- 
-  .thumb {
-    height: 410px;
-    width: 380px;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #eee;
-  }
- 
-  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
- 
-  .card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    margin: 0;
-    font-size: 1.4rem;
-  }
- 
-  .card p {
-    font-family: 'Inter', sans-serif;
-    flex: 1;
-    color: rgba(45, 41, 35, 0.85);
-  }
- 
-  .card .buy {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
- 
-  .card .price {
-    font-weight: 700;
-  }
- 
-  .note {
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    color: rgba(45, 41, 35, 0.75);
-    padding: 0 6%;
-  }
- 
-
-
-  /* ── COLLECTION: CONTEMPORARY GALLERY TREATMENT ── */
-  .collection-section {
-    position: relative;
-    overflow: hidden;
-    padding: clamp(4.5rem, 9vw, 8rem) 8%; /* üst-alt boşluk: 4.5rem ile 8rem arasında, ekran genişliğine göre değişiyor */
-    background:
-      radial-gradient(circle at 92% 12%, rgba(201, 168, 122, 0.18), transparent 23rem),
-      linear-gradient(135deg, #f8f3ea 0%, var(--cream) 52%, #e9ddcd 100%);
-  }
-
-  .collection-section::before {
-    content: '';
-    position: absolute;
-    inset: 2rem;
-    border: 1px solid rgba(107, 63, 34, 0.13);
-    pointer-events: none;
-  }
-
-  .collection-section .collection-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .collection-section .top-note-row {
-    max-width: none;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 0 0 clamp(2.5rem, 6vw, 5.5rem);
-    padding: 1rem 0;
-    border-color: rgba(107, 63, 34, 0.25);
-  }
-
-  .collection-section .top-note {
-    max-width: 720px;
-    text-align: left;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    line-height: 1.7;
-  }
-
-  .collection-section .mini-stack { width: 88px; height: 60px; }
-  .collection-section .mini-stack img { border-radius: 0; border-color: #f8f3ea; }
-
-  .collection-section .gallery-grid { display: block; }
-
-  .collection-section .feature {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1fr);
-    gap: clamp(2.5rem, 7vw, 7rem);
-    padding: clamp(1.25rem, 3vw, 2.5rem);
-    align-items: center;
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255, 253, 249, 0.68), rgba(255, 253, 249, 0.22));
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72), 0 20px 50px rgba(45, 41, 35, 0.045);
-  }
-
-  .collection-section .cover {
-    position: relative;
-    flex: none;
-    width: auto;
-    margin: 0;
-    padding: clamp(0.65rem, 1.4vw, 1rem);
-    border: 1px solid rgba(107, 63, 34, 0.2);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.54);
-    box-shadow: 0 24px 58px rgba(45, 41, 35, 0.14);
-    transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 350ms ease;
-  }
-
-  .collection-section .cover:hover {
-    transform: translateY(-6px) rotate(-0.35deg);
-    box-shadow: 0 34px 72px rgba(45, 41, 35, 0.19);
-  }
-
-  .collection-section .cover::after {
-    content: '01 / UZAZI';
-    position: absolute;
-    right: 1.25rem;
-    bottom: 1.25rem;
-    padding: 0.55rem 0.7rem;
-    border-radius: 999px;
-    background: rgba(243, 237, 226, 0.9);
-    color: var(--brown);
-    font: 600 0.62rem/1 'Inter', sans-serif;
-    letter-spacing: 0.2em;
-  }
-
-  .collection-section .cover img { max-width: none; height: auto; aspect-ratio: 1 / 1; border-radius: 12px; }
-
-  .collection-section .meta { padding: 1.5rem 0 0; }
-
-  .collection-section .meta h2 {
-    color: var(--dark);
-    font-size: clamp(4rem, 8vw, 7.5rem);
-    font-weight: 300;
-    line-height: 0.78;
-    letter-spacing: -0.04em;
-  }
-
-  .collection-section .meta .sub {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin: 1.7rem 0 1.4rem;
-    color: var(--brown);
-    font: 600 0.68rem/1.4 'Inter', sans-serif;
-    letter-spacing: 0.2em;
-  }
-
-  .collection-section .meta .sub::before { content: '✦'; color: var(--amber); font-size: 0.9rem; }
-
-  .collection-section .meta p {
-    max-width: 590px;
-    font-size: 0.98rem;
-    line-height: 1.9;
-    color: rgba(45, 41, 35, 0.8);
-  }
-
-  /* Purchase-format radios intentionally retain their original card styling. */
-  .collection-section .gift-badge { border-radius: 0.8rem; background: rgba(201, 168, 122, 0.12); border-style: solid; font-size: 0.8rem; }
-  .collection-section .actions { margin-top: 2rem; gap: 0.8rem; }
-  .collection-section .col-btn {
-    padding: 0.88rem 1.3rem;
-    border: 1px solid var(--brown);
-    border-radius: 999px;
-    background: linear-gradient(135deg, #7b4a2a, var(--brown));
-    box-shadow: 0 7px 16px rgba(107, 63, 34, 0.18);
-    font: 600 0.69rem/1 'Inter', sans-serif;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
-  }
-  .collection-section .col-btn:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, var(--ocean), #416772);
-    box-shadow: 0 12px 24px rgba(48, 79, 89, 0.24);
-  }
-  .collection-section .col-btn.ghost { background: rgba(255, 255, 255, 0.42); border-color: rgba(45, 41, 35, 0.25); box-shadow: none; }
-  .collection-section .col-btn.ghost:hover { border-color: var(--ocean); }
-  .collection-section .small-legend { font: 500 0.66rem/1.5 'Inter', sans-serif; letter-spacing: 0.1em; text-transform: uppercase; }
-
-  .collection-section .items-row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1.25rem, 3vw, 2rem);
-    margin-top: clamp(6rem, 12vw, 10rem);
-    align-items: stretch;
-  }
-
-  .collection-section .card {
-    position: relative;
-    max-width: none;
-    padding: clamp(1rem, 2vw, 1.35rem);
-    gap: 1.25rem;
-    border: 1px solid rgba(107, 63, 34, 0.12);
-    border-radius: 20px;
-    background: rgba(255, 253, 249, 0.78);
-    box-shadow: 0 10px 34px rgba(45, 41, 35, 0.06);
-    transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 300ms ease, border-color 300ms ease;
-  }
-
-  .collection-section .card:hover { transform: translateY(-8px); border-color: rgba(107, 63, 34, 0.25); box-shadow: 0 24px 52px rgba(45, 41, 35, 0.13); }
-  .collection-section .thumb { width: 100%; height: auto; aspect-ratio: 1.2 / 1; border-radius: 13px; background: var(--warm); }
-  .collection-section .thumb img { transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1); }
-  .collection-section .card:hover .thumb img { transform: scale(1.035); }
-  .collection-section .card h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 400; line-height: 1; }
-  .collection-section .card p { font-size: 0.83rem; line-height: 1.8; }
-  .collection-section .card .buy { justify-content: space-between; padding-top: 1rem; border-top: 1px solid rgba(107, 63, 34, 0.12); }
-  .collection-section .card .price { color: var(--brown); font: 600 0.78rem/1 'Inter', sans-serif; letter-spacing: 0.08em; }
-  .collection-section .card .gift-badge { margin-top: 0; }
-
 /* ══════════════════════════════════════════════════════════════
-   COLLECTION SECTION — CROSS-BROWSER FIXES
-   Mevcut kurallarınızın altına ekleyin.
+   COLLECTION SECTION
+   Bu dosya, eski collection-section CSS bloğunuzun TAMAMININ yerine
+   geçer (top-note-row / mini-stack / gallery-modal tamamen kaldırıldı;
+   option-desc, coming-soon, shipping-note, bundles eklendi).
    ══════════════════════════════════════════════════════════════ */
 
-/* 1) aspect-ratio desteklemeyen eski tarayıcılar için fallback */
-@supports not (aspect-ratio: 1 / 1) {
-  .collection-section .cover img {
-    height: auto;
-  }
-
-  .collection-section .thumb {
-    height: 0;
-    padding-top: 83.3%; /* 1.2:1 oranı */
-  }
+.collection-section {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4.5rem, 9vw, 8rem) 8%;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(201, 168, 122, 0.18), transparent 23rem),
+    linear-gradient(135deg, #f8f3ea 0%, var(--cream) 52%, #e9ddcd 100%);
 }
 
-/* 2) "inset" kısayolunu desteklemeyen eski Safari fallback'i */
-@supports not (inset: 0) {
-  .gallery-modal {
-    top: 0; right: 0; bottom: 0; left: 0;
-  }
+.collection-section::before {
+  content: '';
+  position: absolute;
+  inset: 2rem;
+  border: 1px solid rgba(107, 63, 34, 0.13);
+  pointer-events: none;
+}
 
+@supports not (inset: 0) {
   .collection-section::before {
     top: 2rem; right: 2rem; bottom: 2rem; left: 2rem;
   }
 }
 
-/* 3) Flexbox "gap" — eski Safari (<14.1) fallback'i */
-.top-note-row > * + * { margin-left: 22px; }
-.gift-badge > * + * { margin-left: 10px; }
-.actions > * + * { margin-left: 12px; }
-.col-btn.ghost > * + * { margin-left: 10px; }
-.gallery-modal > * + * { margin-left: 24px; }
-
-@supports (gap: 10px) {
-  .top-note-row > * + *,
-  .gift-badge > * + *,
-  .actions > * + *,
-  .col-btn.ghost > * + *,
-  .gallery-modal > * + * {
-    margin-left: 0;
-  }
+.collection-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-/* 4) Safari'nin varsayılan buton görünümünü sıfırla */
-.col-btn,
-.gallery-modal .close-btn {
+/* ── FEATURE (Uzazi kartı) ── */
+.gallery-grid { display: block; }
+
+.feature {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 253, 249, 0.68), rgba(255, 253, 249, 0.22));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72), 0 20px 50px rgba(45, 41, 35, 0.045);
+}
+
+.cover {
+  position: relative;
+  flex: none;
+  width: auto;
+  margin: 0;
+  padding: clamp(0.65rem, 1.4vw, 1rem);
+  border: 1px solid rgba(107, 63, 34, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: 0 24px 58px rgba(45, 41, 35, 0.14);
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 350ms ease;
+}
+
+.cover:hover {
+  transform: translateY(-6px) rotate(-0.35deg);
+  box-shadow: 0 34px 72px rgba(45, 41, 35, 0.19);
+}
+
+.cover::after {
+  content: '01 / UZAZI';
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(243, 237, 226, 0.9);
+  color: var(--brown);
+  font: 600 0.62rem/1 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+}
+
+.cover img {
+  max-width: none;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+@supports not (aspect-ratio: 1 / 1) {
+  .cover img { height: auto; }
+}
+
+.meta { padding: 1.5rem 0 0; }
+
+.meta h2 {
+  color: var(--dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-weight: 300;
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.meta .sub {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.7rem 0 1.4rem;
+  color: var(--brown);
+  font: 600 0.68rem/1.4 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.meta .sub::before { content: '✦'; color: var(--amber); font-size: 0.9rem; }
+
+.meta p {
+  max-width: 590px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: rgba(45, 41, 35, 0.8);
+}
+
+/* ── PURCHASE OPTIONS ── */
+.options {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  font-size: 1.05rem;
+}
+
+.option label {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.option .price {
+  font-weight: 700;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+/* Açıklama satırı olan seçenekleri (vinyl / original) saran blok —
+   option ile description arasındaki boşluğu, diğer option'lardan
+   bağımsız, sıkı tutar */
+.option-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-desc {
+  margin: 0.5rem 0.2rem 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(45, 41, 35, 0.65);
+}
+
+/* Henüz satışta olmayan seçenek (Original Vinyl) — soluk, tıklanamaz görünüm */
+.option--coming-soon {
+  opacity: 0.6;
+}
+
+.option--coming-soon label {
+  cursor: not-allowed;
+}
+
+.option input:disabled {
+  cursor: not-allowed;
+}
+
+.coming-soon-tag {
+  color: var(--muted) !important;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── GIFT BADGE ── */
+.gift-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border-radius: 0.8rem;
+  background: rgba(201, 168, 122, 0.12);
+  border: 1px solid rgba(138, 90, 59, 0.4);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.8rem;
+  color: var(--dark);
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  transition: max-height .28s ease, opacity .22s ease, padding .28s ease, margin .28s ease;
+}
+
+.gift-badge.show {
+  max-height: 80px;
+  opacity: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 4px;
+}
+
+.gift-badge .star {
+  color: var(--brown);
+  font-size: 1.2rem;
+  flex: 0 0 auto;
+}
+
+.gift-badge .label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--brown);
+  margin-right: 4px;
+}
+
+.gift-badge > * + * { margin-left: 10px; }
+@supports (gap: 10px) { .gift-badge > * + * { margin-left: 0; } }
+
+/* ── ŞU ÜRÜNE ÖZEL KARGO NOTU (Uzazi feature kartı + item kartları) ── */
+.ship-hint {
+  margin: 0.6rem 0 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  color: rgba(45, 41, 35, 0.6);
+}
+
+/* ── ACTIONS / BUTTONS ── */
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.actions > * + * { margin-left: 12px; }
+@supports (gap: 12px) { .actions > * + * { margin-left: 0; } }
+
+.col-btn {
+  padding: 0.88rem 1.3rem;
+  border: 1px solid var(--brown);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7b4a2a, var(--brown));
+  color: var(--cream);
+  box-shadow: 0 7px 16px rgba(107, 63, 34, 0.18);
+  cursor: pointer;
+  font: 600 0.69rem/1 'Inter', sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   -webkit-appearance: none;
   appearance: none;
-  font-family: inherit;
+  transition: transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
 }
 
-/* 5) Dokunmatik cihazlarda mini-stack biraz daha büyük dokunma alanı */
-@media (hover: none) and (pointer: coarse) {
-  .mini-stack {
-    width: 84px;
-    height: 60px;
-  }
-
-  .mini-stack img {
-    width: 54px;
-    height: 54px;
-  }
+.col-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--ocean), #416772);
+  box-shadow: 0 12px 24px rgba(48, 79, 89, 0.24);
 }
 
-/* 6) Hareket hassasiyeti olan kullanıcılar için geçişleri kapat */
+.col-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--muted);
+  border-color: var(--muted);
+  box-shadow: none;
+}
+
+.col-btn:disabled:hover {
+  transform: none;
+  background: var(--muted);
+  box-shadow: none;
+}
+
+.col-btn.ghost {
+  background: rgba(255, 255, 255, 0.42);
+  border-color: rgba(45, 41, 35, 0.25);
+  color: var(--dark);
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.col-btn.ghost:hover { border-color: var(--ocean); }
+
+.col-btn.ghost > * + * { margin-left: 10px; }
+@supports (gap: 10px) { .col-btn.ghost > * + * { margin-left: 0; } }
+
+.col-btn.ghost .play-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--brown);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex: 0 0 auto;
+}
+
+.small-legend {
+  font: 500 0.66rem/1.5 'Inter', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(45, 41, 35, 0.7);
+  margin-top: 14px;
+}
+
+/* ── SHIPPING NOTE ── */
+.shipping-note {
+  max-width: 900px;
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  padding: 1.5rem 1.75rem;
+  border-radius: 20px;
+  background: rgba(255, 253, 249, 0.55);
+  border: 1px solid rgba(107, 63, 34, 0.16);
+}
+
+.shipping-note-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.shipping-note-head > * + * { margin-left: 0.6rem; }
+@supports (gap: 0.6rem) { .shipping-note-head > * + * { margin-left: 0; } }
+
+.shipping-icon { font-size: 1.1rem; }
+
+.shipping-title {
+  font: 600 0.72rem/1 'Inter', sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+.shipping-copy {
+  margin: 0 0 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.75;
+  color: rgba(45, 41, 35, 0.78);
+}
+
+.shipping-copy strong { color: var(--dark); }
+
+.shipping-select-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.shipping-select-row > * + * { margin-left: 0.8rem; }
+@supports (gap: 0.8rem) { .shipping-select-row > * + * { margin-left: 0; } }
+
+.shipping-select-row label {
+  font: 600 0.68rem/1 'Inter', sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.shipping-select-row select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(107, 63, 34, 0.3);
+  background: #fff;
+  color: var(--dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.shipping-hint {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(45, 41, 35, 0.6);
+}
+
+/* ── ITEMS ROW ── */
+.items-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: clamp(3.5rem, 7vw, 6rem);
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  max-width: none;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid rgba(107, 63, 34, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 253, 249, 0.78);
+  box-shadow: 0 10px 34px rgba(45, 41, 35, 0.06);
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(107, 63, 34, 0.25);
+  box-shadow: 0 24px 52px rgba(45, 41, 35, 0.13);
+}
+
+.thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.2 / 1;
+  border-radius: 13px;
+  background: var(--warm);
+  overflow: hidden;
+}
+
+@supports not (aspect-ratio: 1.2 / 1) {
+  .thumb { height: 0; padding-top: 83.3%; }
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .thumb img { transform: scale(1.035); }
+
+.card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.8;
+  color: rgba(45, 41, 35, 0.85);
+  flex: 1;
+  margin: 0;
+}
+
+.card .gift-badge { margin-top: 0; }
+
+.card .buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(107, 63, 34, 0.12);
+}
+
+.card .price {
+  color: var(--brown);
+  font: 600 0.78rem/1 'Inter', sans-serif;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* Bundle kartları — fotoğrafsız, ilk eleman başlık olduğu için üstten
+   ekstra boşluğa gerek yok */
+.bundle-card { padding-top: clamp(1.5rem, 2.5vw, 2rem); }
+
+/* ── BUNDLES ── */
+.bundles-row {
+  margin-top: clamp(5rem, 10vw, 8rem);
+}
+
+.bundles-head {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.bundles-head h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: var(--dark);
+  margin: 0 0 0.7rem;
+}
+
+.bundles-head p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(45, 41, 35, 0.72);
+  margin: 0;
+}
+
+.bundles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+/* ── DOKUNMA / ERİŞİLEBİLİRLİK / HAREKET ── */
 @media (prefers-reduced-motion: reduce) {
-  .mini-stack img,
   .col-btn,
-  .collection-section .cover,
-  .collection-section .card,
-  .collection-section .thumb img {
+  .cover,
+  .card,
+  .thumb img {
     transition: none;
   }
 
-  .collection-section .cover:hover,
-  .collection-section .card:hover,
+  .cover:hover,
+  .card:hover,
   .col-btn:hover {
     transform: none;
   }
@@ -8325,171 +8130,159 @@ header.scrolled .nav-link:hover {
     padding: clamp(3.5rem, 7vw, 6rem) 6%;
   }
 
-  .collection-section .feature {
+  .feature {
     gap: clamp(2rem, 5vw, 4rem);
   }
 
-  .collection-section .items-row {
-    margin-top: clamp(3.5rem, 7vw, 6rem);
+  .bundles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* ---------- FEATURE: 2 SÜTUNDAN 1 SÜTUNA (≤900px) ----------
-   minmax(280px,...) ile sabitlenen kapak sütunu, metinle yan yana
-   bu genişlikten sonra sıkışıyor: tek sütuna düşürüyoruz (DOM sırası
-   zaten kapak → metin, yeniden sıralamaya gerek yok). */
+/* ---------- FEATURE: 2 SÜTUNDAN 1 SÜTUNA (≤900px) ---------- */
 @media (max-width: 900px) {
-  .collection-section .feature {
+  .feature {
     grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .collection-section .cover {
+  .cover {
     max-width: 420px;
     margin: 0 auto;
   }
 
-  .collection-section .meta {
+  .meta {
     padding: 1.6rem 0 0;
   }
 
-  .collection-section .meta .sub {
+  .meta .sub {
     justify-content: center;
   }
 
-  .collection-section .meta p {
+  .meta p {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .collection-section .options {
+  .options {
     max-width: 420px;
     margin: 1.25rem auto 0;
   }
 
-  .collection-section .actions {
+  .actions {
+    justify-content: center;
+  }
+
+  .shipping-select-row {
     justify-content: center;
   }
 }
 
-/* ---------- TOP NOTE ROW: DİKEYE GEÇİŞ (≤820px) ----------
-   Uzun bir cümle + sabit genişlikli mini-foto widget'ı space-between
-   ile yan yana bu genişlikte sıkışıyor. */
-@media (max-width: 820px) {
-  .collection-section .top-note-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-  }
-
-  .collection-section .top-note-row > * + * {
-    margin-left: 0;
-  }
-
-  .collection-section .top-note {
-    text-align: center;
-  }
-}
-
-/* ---------- ÜRÜN KARTLARI: 2 SÜTUNDAN 1 SÜTUNA (≤600px) ---------- */
+/* ---------- ÜRÜN KARTLARI + BUNDLES: TEK SÜTUNA (≤600px) ---------- */
 @media (max-width: 600px) {
   .collection-section {
     padding: 3.5rem 6%;
   }
 
-  .collection-section .items-row {
+  .items-row {
     grid-template-columns: 1fr;
     margin-top: 3rem;
   }
 
-  .collection-section .meta h2 {
+  .bundles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bundles-row {
+    margin-top: 3.5rem;
+  }
+
+  .meta h2 {
     font-size: clamp(3rem, 15vw, 4.5rem);
   }
 
-  .collection-section .card h3 {
+  .card h3 {
     font-size: clamp(1.6rem, 6vw, 2rem);
   }
 
   /* Preorder + Watch trailer butonları dar ekranda alt alta, tam genişlik */
-  .collection-section .actions {
+  .actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .collection-section .actions > * + * {
+  .actions > * + * {
     margin-left: 0;
   }
 
-  .collection-section .col-btn {
+  .col-btn {
     justify-content: center;
   }
 
-  /* Galeri modalı: iki görsel yan yana küçülmek yerine alt alta, büyük */
-  .gallery-modal {
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-  }
-
-  .gallery-modal > * + * {
-    margin-left: 0;
-  }
-
-  .gallery-modal img {
-    max-width: 90%;
-    max-height: 42vh;
+  .shipping-note {
+    padding: 1.25rem 1.4rem;
   }
 }
 
 /* ---------- TELEFON (≤480px) ---------- */
 @media (max-width: 480px) {
-  .collection-section .top-note {
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-  }
-
-  .collection-section .mini-stack {
-    width: 70px;
-    height: 48px;
-  }
-
-  .collection-section .meta p {
+  .meta p {
     font-size: 0.9rem;
   }
 
-  .collection-section .option {
+  .option {
     padding: 11px 13px;
     font-size: 0.95rem;
   }
 
-  .collection-section .gift-badge {
+  .option-desc {
+    font-size: 0.76rem;
+  }
+
+  .gift-badge {
     font-size: 0.74rem;
   }
 
-  .collection-section .col-btn {
+  .ship-hint {
+    font-size: 0.7rem;
+  }
+
+  .col-btn {
     padding: 0.78rem 1.1rem;
     font-size: 0.64rem;
+  }
+
+  .shipping-select-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shipping-select-row > * + * {
+    margin-left: 0;
   }
 }
 
 /* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
 @media (max-width: 360px) {
-  .collection-section .meta h2 {
+  .meta h2 {
     font-size: 2.4rem;
   }
 
-  .collection-section .cover::after {
+  .cover::after {
     font-size: 0.55rem;
     padding: 0.45rem 0.6rem;
   }
 
-  .collection-section .card h3 {
+  .card h3 {
     font-size: 1.5rem;
   }
 
-  .collection-section .card p {
+  .card p {
     font-size: 0.78rem;
+  }
+
+  .shipping-copy {
+    font-size: 0.8rem;
   }
 }
 
@@ -8499,41 +8292,37 @@ header.scrolled .nav-link:hover {
     padding: 2.5rem 6%;
   }
 
-  .collection-section .feature {
+  .feature {
     grid-template-columns: minmax(200px, 0.8fr) minmax(0, 1fr);
     text-align: left;
   }
 
-  .collection-section .cover {
+  .cover {
     max-width: 100%;
     margin: 0;
   }
 
-  .collection-section .meta .sub {
+  .meta .sub {
     justify-content: flex-start;
   }
 
-  .collection-section .meta p {
+  .meta p {
     margin-left: 0;
   }
 
-  .collection-section .items-row {
+  .items-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 2.5rem;
   }
 
-  .gallery-modal {
-    flex-direction: row;
-  }
-
-  .gallery-modal img {
-    max-height: 70vh;
+  .bundles-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* ---------- BÜYÜK / GENİŞ EKRANLAR ---------- */
 @media (min-width: 1700px) {
-  .collection-section .collection-container {
+  .collection-container {
     max-width: 1440px;
   }
 }
@@ -8551,16 +8340,16 @@ header.scrolled .nav-link:hover {
 
 
 
-  .hero {
+  .work-hero {
     background: var(--dark);
     color: var(--cream);
-    padding: 9rem 6% 8rem;
+    padding: 7rem 6% 8rem;
     position: relative;
     overflow: hidden;
   }
  
   /* faint texture line, echoes a stage horizon */
-  .hero::before {
+  .work-hero::before {
     content: "";
     position: absolute;
     left: 0;
@@ -8570,14 +8359,14 @@ header.scrolled .nav-link:hover {
     background: linear-gradient(90deg, transparent, rgba(201, 168, 122, 0.35), transparent);
   }
  
-  .hero-inner {
+  .work-hero-inner {
     max-width: 1320px;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
   }
  
-  .hero-content {
+  .work-hero-content {
     max-width: 700px;
     text-align: left;
   }
@@ -8595,7 +8384,7 @@ header.scrolled .nav-link:hover {
   transform: translateX(0);
 }
  
-  .hero-eyebrow {
+  .work-hero-eyebrow {
     font-family: 'Jost', sans-serif;
     font-size: 0.8rem;
     font-weight: 500;
@@ -8606,7 +8395,7 @@ header.scrolled .nav-link:hover {
     opacity: 0;
   }
  
-  .hero-text {
+  .work-hero-text {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
@@ -9039,8 +8828,6 @@ header.scrolled .nav-link:hover {
   .inquiry .booking-divider {
     background: linear-gradient(180deg, transparent, rgba(243, 237, 226, 0.2) 15%, rgba(243, 237, 226, 0.2) 85%, transparent);
   }
- 
-  .inquiry-about { margin-top: 2.4rem; }
  
   .inquiry-form {
     display: flex;

@@ -5,12 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Collection — Uzazi Gallery</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Cormorant+Garamond:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Jost:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap"
+  rel="stylesheet"
+>
         <!-- Font Awesome — sosyal medya ikonları için -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.min.css" />
 </head>
 
 <body>
@@ -50,7 +54,7 @@
     </div>
   </header>
     <section class="page-banner">
-        <img class="page-banner-img" src="photos/jeremiah-2.JPG" alt="collection banner" />
+        <img class="page-banner-img" src="photos/jeremiah-2.webp" alt="collection banner" />
         <div class="page-banner-overlay"></div>
         <div class="page-banner-content">
             <span class="page-banner-label">THE COLLECTION</span>
@@ -65,48 +69,58 @@
     <section class="collection-section" id="collection-section">
         <div class="collection-container">
 
-            <div class="top-note-row">
-                <p class="top-note">As a small thank you, Jeremiah Review buttons and magnets are available as
-                    complimentary gifts with select purchases, while supplies last.</p>
-                <div class="mini-stack" id="miniGallery" title="Fotoğrafları gör">
-                    <img class="back" src="photos/TJR_Button.jpeg" alt="Jeremiah Review button" />
-                    <img class="front" src="photos/TJR_Magnet.jpeg" alt="Jeremiah Review magnet" />
-                </div>
-            </div>
-
             <main class="gallery-grid">
                 <div class="feature">
                     <div class="cover">
-                        <img src="photos/uzazicover.jpg" alt="Uzazi cover" />
+                        <img src="photos/uzazicover.webp" alt="Uzazi cover" />
                     </div>
                     <div class="meta">
                         <h2>UZAZI</h2>
-                        <div class="sub">Coming September 5</div>
+                        <div class="sub">Available September 5</div>
                         <p>Uzazi marks a new chapter in Jeremiah Hunt’s musical journey, bringing together jazz, soul,
                             groove, and contemporary expression in a deeply collaborative sound. Shaped by years of
                             exploration, live energy, and a commitment to movement and connection, the album reflects
-                            music that feels both rooted and constantly evolving. Available to preorder on CD and vinyl
+                            music that feels both rooted and constantly evolving. Available to pre-order on CD and exclusive ElasticStage vinyl, with the original vinyl pressing coming soon.
                         </p>
 
                         <div class="options" aria-label="purchase options">
-                            <div class="option"><label><input type="radio" name="uzazi_option" value="cd" checked> Uzazi
-                                    — CD</label>
+
+                            <div class="option">
+                                <label><input type="radio" name="uzazi_option" value="cd" checked> Uzazi — CD</label>
                                 <div class="price">$20</div>
                             </div>
-                            <div class="option"><label><input type="radio" name="uzazi_option" value="vinyl"> Uzazi —
-                                    Vinyl</label>
-                                <div class="price">$35</div>
+
+                            <div class="option-block">
+                                <div class="option">
+                                    <label><input type="radio" name="uzazi_option" value="vinyl"> Uzazi — Exclusive
+                                        ElasticStage Vinyl</label>
+                                    <div class="price">$38.90</div>
+                                </div>
+                                <p class="option-desc">Exclusive made-to-order vinyl edition produced and fulfilled by
+                                    ElasticStage.</p>
                             </div>
+
+                            <div class="option-block">
+                                <div class="option option--coming-soon">
+                                    <label><input type="radio" name="uzazi_option" value="original" disabled> Uzazi —
+                                        Original Vinyl</label>
+                                    <div class="price coming-soon-tag">Coming Soon</div>
+                                </div>
+                                <p class="option-desc">The original vinyl pressing of Uzazi. Coming soon.</p>
+                            </div>
+
                         </div>
 
                         <div class="gift-badge" id="giftBadge">
                             <span class="star">✦</span>
                             <span class="label">Free gift</span>
-                            <span id="giftText">Jeremiah Review Button included</span>
+                            <span id="giftText">Complimentary Jeremiah Review button included.</span>
                         </div>
 
+                        <p class="ship-hint" id="uzaziShipHint">Ships within the US · International available.</p>
+
                         <div class="actions">
-                            <button class="col-btn" id="buyNow">Preorder — Buy now</button>
+                            <button class="col-btn" id="buyNow">Preorder</button>
                             <button class="col-btn ghost" id="trailerBtn">
                                 <span class="play-icon">▶</span>
                                 <span>Watch trailer</span>
@@ -118,86 +132,171 @@
                 </div>
             </main>
 
+            <div class="shipping-note">
+                <div class="shipping-note-head">
+                    <span class="shipping-icon">🌍</span>
+                    <span class="shipping-title">Shipping</span>
+                </div>
+                <p class="shipping-copy">
+                    Physical items are shipped by Jeremiah directly, with both domestic and international shipping
+                    available. Final international rates are still being finalized and will be shown at checkout.
+                    <strong>Uzazi — Exclusive ElasticStage Vinyl</strong> is produced and fulfilled separately by
+                    ElasticStage; shipping for that item is selected during their checkout.
+                </p>
+                <div class="shipping-select-row">
+                    <label for="shipRegion">Ship to</label>
+                    <select id="shipRegion">
+                        <option value="us">United States</option>
+                        <option value="intl">International</option>
+                    </select>
+                    <span class="shipping-hint" id="shipRegionHint">Standard domestic shipping.</span>
+                </div>
+            </div>
+
             <div class="items-row">
                 <article class="card">
-                    <div class="thumb"><img src="photos/J.Hunt_33Album.png" alt="Jeremiah 33" /></div>
+                    <div class="thumb"><img src="photos/J.Hunt_33Album.webp" alt="Jeremiah 33" /></div>
                     <h3>Jeremiah 33</h3>
-                    <p>Jeremiah’s first album, 33, available as a physical CD. A foundational piece of his musical journey and creative work.</p>
+                    <p>Jeremiah Hunt’s debut album, 33, available on physical CD. A foundational piece of his musical journey and creative work</p>
                     <div class="gift-badge show">
                         <span class="star">✦</span>
                         <span class="label">Free gift</span>
-                        <span>Jeremiah Review Button included</span>
+                        <span>Complimentary Jeremiah Review button included.</span>
                     </div>
+                    <p class="ship-hint" data-ship-hint>Ships within the US · International available.</p>
                     <div class="buy">
-                        <div class="price">$10</div><button class="col-btn" data-product="jeremiah_33">Buy now</button>
+                        <div class="price">$10</div><button class="col-btn" data-product="jeremiah_33">Buy
+                            now</button>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="thumb"><img src="photos/poster.png" alt="Mingus poster" /></div>
+                    <div class="thumb"><img src="photos/poster.webp" alt="Mingus poster" /></div>
                     <h3>Charles Mingus Centennial Poster</h3>
-                    <p>An archival poster from a 2022 tribute concert celebrating the centennial of Charles Mingus. A limited piece connected to a meaningful moment in Jeremiah’s musical journey.</p>
+                    <p>An archival poster from a 2022 tribute concert celebrating the centennial of Charles Mingus. A
+                        limited piece connected to a meaningful moment in Jeremiah’s musical journey.</p>
+                    <p class="ship-hint" data-ship-hint>Ships within the US · International available.</p>
                     <div class="buy">
                         <div class="price">$20</div><button class="col-btn" data-product="mingus_poster">Buy
                             now</button>
                     </div>
                 </article>
             </div>
-        </div>
-    </section>
 
-
-
-
-    <!-- ── CONTACT ── -->
-    <section class="contact-section">
-        <div class="contact-inner">
-
-            <!-- Sol -->
-            <div class="contact-left">
-                <div class="contact-rule">
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="contact-body">
-                    <span class="contact-label">Get in Touch</span>
-                    <h2 class="contact-title">Curious About a Piece?</h2>
-                    <p class="contact-desc">
-                        Whether you have a question about an item, an order, or something from the collection, feel free
-                        to reach out. I'd be happy to help.
+            <div class="bundles-row">
+                <div class="bundles-head">
+                    <h2>Bundles</h2>
+                    <p>Save by pairing pieces of the collection together. Pricing and checkout links are coming soon.
                     </p>
+                </div>
+
+                <div class="bundles-grid">
+                    <article class="card bundle-card">
+                        <h3>Uzazi CD + Original Vinyl Bundle</h3>
+                        <p>The Uzazi album on CD, paired with the original vinyl pressing.</p>
+                        <div class="buy">
+                            <div class="price coming-soon-tag">Coming Soon</div>
+                            <button class="col-btn" disabled>Coming Soon</button>
+                        </div>
+                    </article>
+
+                    <article class="card bundle-card">
+                        <h3>Uzazi Original Vinyl + Jeremiah 33 CD Bundle</h3>
+                        <p>The original Uzazi vinyl pressing, paired with Jeremiah's first album, 33, on CD.</p>
+                        <div class="buy">
+                            <div class="price coming-soon-tag">Coming Soon</div>
+                            <button class="col-btn" disabled>Coming Soon</button>
+                        </div>
+                    </article>
+
+                    <article class="card bundle-card">
+                        <h3>Complete Music Bundle</h3>
+                        <p>Uzazi CD, Uzazi Original Vinyl, and Jeremiah 33 CD — the full collection in one bundle.</p>
+                        <div class="buy">
+                            <div class="price coming-soon-tag">Coming Soon</div>
+                            <button class="col-btn" disabled>Coming Soon</button>
+                        </div>
+                    </article>
                 </div>
             </div>
 
-            <!-- Sağ — Form -->
-            <form class="contact-form" id="contactForm" novalidate>
-                <div class="form-group">
-                    <label for="cf-name">Name</label>
-                    <input type="text" id="cf-name" name="name" placeholder="Your name" required />
-                </div>
-                <div class="form-group">
-                    <label for="cf-email">Email</label>
-                    <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
-                </div>
-                <div class="form-group">
-                    <label for="cf-message">Message</label>
-                    <textarea id="cf-message" name="message" placeholder="Tell us about yourself or your question..."
-                        required></textarea>
-                </div>
-                <div class="form-success" id="formSuccess">
-                    Thank you — we'll be in touch soon. ✦
-                </div>
-                <button type="submit" class="contact-submit">Send Message</button>
-            </form>
-
         </div>
     </section>
+
+
+
+
+      <!-- ── CONTACT ── -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Sol -->
+      <div class="contact-left">
+        <div class="contact-rule">
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="contact-body">
+          <span class="contact-label">Get in Touch</span>
+
+          <h2 class="contact-title">
+            Curious About a Piece?
+          </h2>
+
+          <p class="contact-desc">
+           Whether you have a question about an item, an order, or something from the collection, feel free
+                        to reach out. I'd be happy to help.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sağ — Form -->
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-group">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" data-fs-field required />
+          <span data-fs-error="name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" data-fs-field required />
+          <span data-fs-error="email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="What would you like to share?" data-fs-field
+            required></textarea>
+          <span data-fs-error="message"></span>
+        </div>
+
+        <!-- Success -->
+        <div class="form-success" id="formSuccess" data-fs-success>
+          Thank you for reaching out. I’ll be in touch soon. ✦
+        </div>
+
+        <!-- General error -->
+        <div class="form-error" data-fs-error></div>
+
+        <button type="submit" class="contact-submit" data-fs-submit-btn>
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
 <footer class="site-footer">
   <div class="footer-inner">
  
     <div class="footer-top">
       <a href="index.html" class="footer-logo">
-        <img src="photos/white-logo.png" alt="Jeremiah Hunt" />
+        <img src="photos/white-logo.webp" alt="Jeremiah Hunt" loading="lazy"
+  decoding="async" />
       </a>
  
       <nav class="footer-nav" aria-label="Footer navigation">
@@ -310,7 +409,6 @@ const navLinks = document.querySelectorAll(
   '#primaryNavigation a.nav-link'
 );
 
-const keepMovingLink = document.querySelector('.keep-moving-link');
 
 
 // Normal sayfa linkleri
@@ -360,82 +458,72 @@ if (
 }
 
 
-// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
-
-if (currentPage === 'index.html') {
-
-  const keepMovingSection =
-    document.getElementById('about-section');
-
-  if (keepMovingLink && keepMovingSection) {
-
-    const updateKeepMovingActive = () => {
-
-      const sectionTop =
-        keepMovingSection.getBoundingClientRect().top;
-
-      const sectionBottom =
-        keepMovingSection.getBoundingClientRect().bottom;
-
-      // Section ekranda veya henüz aşağı doğru geçilmemişse active
-      const isActive =
-        sectionTop <= window.innerHeight * 0.5 &&
-        sectionBottom > window.innerHeight * 0.2;
-
-      keepMovingLink.classList.toggle(
-        'active',
-        isActive
-      );
-    };
-
-    window.addEventListener(
-      'scroll',
-      updateKeepMovingActive,
-      { passive: true }
-    );
-
-    updateKeepMovingActive();
-  }
-}
-
-
-
-
-
-
-
-        document.getElementById('miniGallery').addEventListener('click', () => {
-            const photos = [
-                "photos/TJR_Button.jpeg",
-                "photos/TJR_Magnet.jpeg"
-            ];
-            const modal = document.createElement('div');
-            modal.className = 'gallery-modal';
-            modal.innerHTML = photos.map(src => `<img src="${src}" alt="Jeremiah Review item" />`).join('') +
-                `<button class="close-btn">×</button>`;
-            modal.querySelector('.close-btn').onclick = () => document.body.removeChild(modal);
-            modal.addEventListener('click', (e) => { if (e.target === modal) document.body.removeChild(modal); });
-            document.body.appendChild(modal);
-        });
-
+        /* ── UZAZI PURCHASE OPTIONS / GIFT / SHIPPING ── */
         const giftTexts = {
-            cd: 'Jeremiah Review Button included'
+            cd: 'Complimentary Jeremiah Review button included.'
         };
         const giftBadge = document.getElementById('giftBadge');
         const giftText = document.getElementById('giftText');
+        const buyNowBtn = document.getElementById('buyNow');
+        const uzaziShipHint = document.getElementById('uzaziShipHint');
 
-        function updateGiftBadge() {
-    const choice = document.querySelector('input[name="uzazi_option"]:checked').value;
-    if (choice === 'cd') {
-        giftText.textContent = giftTexts[choice];
-        giftBadge.classList.add('show');
-    } else {
-        giftBadge.classList.remove('show');
-    }
-}
+        const shipRegionSelect = document.getElementById('shipRegion');
+        const shipRegionHint = document.getElementById('shipRegionHint');
+        const shipHintEls = document.querySelectorAll('[data-ship-hint]');
 
-        document.querySelectorAll('input[name="uzazi_option"]').forEach(r => r.addEventListener('change', updateGiftBadge));
-        updateGiftBadge(); // sayfa yüklendiğinde varsayılan seçim (CD) için göster
+        const shipHintText = {
+            us: 'Ships within the US · International available.',
+            intl: 'International shipping available — rates shown at checkout.'
+        };
+
+        function updateShipHints() {
+            const region = shipRegionSelect.value;
+
+            shipRegionHint.textContent = region === 'us'
+                ? 'Standard domestic shipping.'
+                : 'International shipping — rates coming soon, shown at checkout.';
+
+            shipHintEls.forEach(el => { el.textContent = shipHintText[region]; });
+
+            // Uzazi feature card'daki ship-hint, seçili formata göre ayrıca güncellenir
+            updateUzaziOptionUI();
+        }
+
+        function updateUzaziOptionUI() {
+            const choice = document.querySelector('input[name="uzazi_option"]:checked').value;
+
+            // Free gift — şimdilik sadece CD'de
+            if (choice === 'cd') {
+                giftText.textContent = giftTexts.cd;
+                giftBadge.classList.add('show');
+            } else {
+                giftBadge.classList.remove('show');
+            }
+
+            // ElasticStage Vinyl kendi checkout'unda kargolanıyor, diğerleri
+            // global "Ship to" seçimini takip ediyor
+            if (choice === 'vinyl') {
+                uzaziShipHint.textContent = 'Fulfilled & shipped by ElasticStage — shipping selected at their checkout.';
+            } else {
+                uzaziShipHint.textContent = shipHintText[shipRegionSelect.value];
+            }
+
+            // Original Vinyl henüz satışta değil — disabled olduğu için normalde
+            // seçilemez, ama link eklenene kadar ekstra güvence
+            if (choice === 'original') {
+                buyNowBtn.textContent = 'Coming Soon';
+                buyNowBtn.disabled = true;
+            } else {
+                buyNowBtn.textContent = 'Preorder — Buy now';
+                buyNowBtn.disabled = false;
+            }
+        }
+
+        document.querySelectorAll('input[name="uzazi_option"]').forEach(r => r.addEventListener('change', updateUzaziOptionUI));
+        shipRegionSelect.addEventListener('change', updateShipHints);
+
+        updateShipHints();       // sayfa yüklendiğinde varsayılan (US) için göster
+        updateUzaziOptionUI();   // sayfa yüklendiğinde varsayılan seçim (CD) için göster
 
 
 
@@ -446,8 +534,9 @@ if (currentPage === 'index.html') {
             window.open(url, '_blank');
         }
 
-        document.getElementById('buyNow').addEventListener('click', () => {
+        buyNowBtn.addEventListener('click', () => {
             const choice = document.querySelector('input[name="uzazi_option"]:checked').value;
+            if (choice === 'original') return; // Coming Soon — henüz link yok
             openPayPal(choice);
         });
 
@@ -468,20 +557,20 @@ if (currentPage === 'index.html') {
             modal.appendChild(vidWrap); modal.appendChild(closeBtn); document.body.appendChild(modal);
         });
 
-        Vwindow.formspree =
-  window.formspree ||
-  function () {
-    (formspree.q = formspree.q || []).push(arguments);
-  };
+          window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
 
-document.querySelectorAll('.contact-form').forEach((form) => {
+    document.querySelectorAll('.contact-form').forEach((form) => {
 
-  formspree('initForm', {
-    formElement: form,
-    formId: 'xdenyeoj'
-  });
+      formspree('initForm', {
+        formElement: form,
+        formId: 'xdenyeoj'
+      });
 
-});
+    });
 
   </script>
 
