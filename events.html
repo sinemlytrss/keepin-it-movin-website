@@ -282,7 +282,6 @@ const navLinks = document.querySelectorAll(
   '#primaryNavigation a.nav-link'
 );
 
-const keepMovingLink = document.querySelector('.keep-moving-link');
 
 
 // Normal sayfa linkleri
@@ -330,49 +329,6 @@ if (
 
   projectsTrigger.classList.add('active');
 }
-
-
-// ── KEEPIN' IT MOVIN' ACTIVE STATE ──
-
-if (currentPage === 'index.html') {
-
-  const keepMovingSection =
-    document.getElementById('about-section');
-
-  if (keepMovingLink && keepMovingSection) {
-
-    const updateKeepMovingActive = () => {
-
-      const sectionTop =
-        keepMovingSection.getBoundingClientRect().top;
-
-      const sectionBottom =
-        keepMovingSection.getBoundingClientRect().bottom;
-
-      // Section ekranda veya henüz aşağı doğru geçilmemişse active
-      const isActive =
-        sectionTop <= window.innerHeight * 0.5 &&
-        sectionBottom > window.innerHeight * 0.2;
-
-      keepMovingLink.classList.toggle(
-        'active',
-        isActive
-      );
-    };
-
-    window.addEventListener(
-      'scroll',
-      updateKeepMovingActive,
-      { passive: true }
-    );
-
-    updateKeepMovingActive();
-  }
-}
-
-
-
-
 
 
 const events = [
