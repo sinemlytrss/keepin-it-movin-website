@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Jost:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap"
-  rel="stylesheet"
->
-        <!-- Font Awesome — sosyal medya ikonları için -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Jost:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome — sosyal medya ikonları için -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <!-- ── HEADER ── -->
+  <!-- ── HEADER ── -->
   <header id="site-header">
     <div class="header-inner">
 
       <a href="index.html" class="logo">
-        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+        <img src="photos/K-Symbol-Transparent.svg" alt="Uzzi Logo" />
       </a>
 
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="primaryNavigation" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+        aria-controls="primaryNavigation" aria-expanded="false">
         <span class="menu-toggle-line menu-toggle-line-long"></span>
         <span class="menu-toggle-line menu-toggle-line-short"></span>
       </button>
 
       <nav id="primaryNavigation">
-        <a href="index.html" class="nav-link active">Home</a>
         <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
         <div class="dropdown-wrap">
           <span class="nav-link" tabindex="0">
@@ -46,58 +49,89 @@
         <a href="offstage.html" class="nav-link">Off Stage</a>
         <a href="collection.html" class="nav-link">Collection</a>
         <a href="work-with-me.html" class="nav-link">Work With Me</a>
+
+        <div class="header-social">
+          <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/jhuntbassist" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </nav>
 
     </div>
   </header>
-    <section class="page-banner">
-        <img class="page-banner-img" src="photos/events-banner.webp" alt="Events Banner" />
-        <div class="page-banner-overlay"></div>
-        <div class="page-banner-content">
-            <span class="page-banner-label">Upcoming</span>
-            <div class="page-banner-rule"></div>
-            <h1 class="page-banner-title">EVENTS</h1>
-            <span class="page-banner-sub">
-               A calendar of music, collaboration, and shared moments.
-            </span>
-        </div>
-    </section>
+  <section class="page-banner">
+    <img class="page-banner-img" src="photos/events-banner.webp" alt="Events Banner" />
+    <div class="page-banner-overlay"></div>
+    <div class="page-banner-content">
+      <span class="page-banner-label">Upcoming</span>
+      <div class="page-banner-rule"></div>
+      <h1 class="page-banner-title">EVENTS</h1>
+      <span class="page-banner-sub">
+        A calendar of music, collaboration, and shared moments.
+      </span>
+    </div>
+  </section>
 
-<section class="calendar-section" id="calendar-section">
+  <section class="calendar-section" id="calendar-section">
     <div class="container">
-  <div class="controls" role="tablist">
-    <div class="filters" role="toolbar" aria-label="Event filters">
-      <button data-filter="all" class="active">ALL</button>
-      <button data-filter="bandleader"><span class="f-star">★</span>BANDLEADER</button>
-      <button data-filter="sideman"><span class="f-dot">•</span>SIDE-MAN</button>
-      <button data-filter="curation"><span class="f-ex">*</span>CURATIONS</button>
-    </div> 
+      <div class="controls" role="tablist">
+        <div class="filters" role="toolbar" aria-label="Event filters">
+          <button data-filter="all" class="active">ALL</button>
+          <button data-filter="bandleader"><span class="f-star">★</span>BANDLEADER</button>
+          <button data-filter="sideman"><span class="f-dot">•</span>SIDE-MAN</button>
+          <button data-filter="curation"><span class="f-ex">*</span>CURATIONS</button>
+        </div>
 
-    <div class="month-nav" aria-label="month navigation">
-      <button id="prevMonth" title="Previous month">←</button>
-      <div id="monthLabel">September 2026</div>
-      <button id="nextMonth" title="Next month">→</button>
+        <div class="month-nav" aria-label="month navigation">
+          <button id="prevMonth" title="Previous month">←</button>
+          <div id="monthLabel">September 2026</div>
+          <button id="nextMonth" title="Next month">→</button>
+        </div>
+      </div>
+
+      <div class="calendar-wrap">
+        <div class="calendar" id="calendar">
+          <div class="month">
+            <h4 id="visMonthHeader">Month</h4>
+            <div></div>
+          </div>
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="grid-days" id="days"></div>
+        </div>
+
+        <aside class="side-panel" id="sidePanel">
+          <div class="event-photo" id="eventPhoto"><img src="https://placehold.co/800x600?text=Select+a+date"
+              alt="placeholder" /></div>
+          <div class="event-title" id="eventTitle">Select a date</div>
+          <div class="event-meta" id="eventMeta">No event selected</div>
+          <div class="event-desc" id="eventDesc">Click a day on the calendar to view event details. Use the filters
+            above to show only Bandleader or Side-man dates.</div>
+          <a id="viewLink" class="view-link" href="#" target="_blank" style="display:none">View event</a>
+          <div class="footer-note">Use ← / → keys to navigate months</div>
+        </aside>
+      </div>
     </div>
-  </div>
-
-  <div class="calendar-wrap">
-    <div class="calendar" id="calendar">
-      <div class="month"><h4 id="visMonthHeader">Month</h4><div></div></div>
-      <div class="weekdays"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
-      <div class="grid-days" id="days"></div>
-    </div>
-
-    <aside class="side-panel" id="sidePanel">
-      <div class="event-photo" id="eventPhoto"><img src="https://placehold.co/800x600?text=Select+a+date" alt="placeholder"/></div>
-      <div class="event-title" id="eventTitle">Select a date</div>
-      <div class="event-meta" id="eventMeta">No event selected</div>
-      <div class="event-desc" id="eventDesc">Click a day on the calendar to view event details. Use the filters above to show only Bandleader or Side-man dates.</div>
-      <a id="viewLink" class="view-link" href="#" target="_blank" style="display:none">View event</a>
-      <div class="footer-note">Use ← / → keys to navigate months</div>
-    </aside>
-  </div>
-</div>
-</section>
+  </section>
 
 
   <!-- ── CONTACT ── -->
@@ -120,7 +154,7 @@
 
           <p class="contact-desc">
             Want to learn more about an upcoming show, event, or gathering?
-          Feel free to reach out. I'd be happy to hear from you.
+            Feel free to reach out. I'd be happy to hear from you.
           </p>
         </div>
       </div>
@@ -163,49 +197,56 @@
 
     </div>
   </section>
-<footer class="site-footer">
-  <div class="footer-inner">
- 
-    <div class="footer-top">
-      <a href="index.html" class="footer-logo">
-        <img src="photos/white-logo.webp" alt="Jeremiah Hunt" loading="lazy"
-  decoding="async" />
-      </a>
- 
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a>
-        <a href="work-with-me.html">Work With Me</a>
-        <a href="collection.html">Collection</a>
-        <a href="events.html">Events</a>
-        <a href="offstage.html">Off Stage</a>
+  <footer class="site-footer">
+    <div class="footer-inner">
 
-      </nav>
- 
-      <div class="footer-social">
-        <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
+      <div class="footer-top">
+        <a href="index.html" class="footer-logo">
+          <img src="photos/K-Symbol-White-Transparent.svg" alt="Jeremiah Hunt" loading="lazy" decoding="async" />
         </a>
-        <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="work-with-me.html">Work With Me</a>
+          <a href="collection.html">Collection</a>
+          <a href="events.html">Events</a>
+          <a href="offstage.html">Off Stage</a>
+
+        </nav>
+
+        <div class="footer-social">
+          <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/jhuntbassist" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </div>
-    </div>
- 
-    <div class="footer-divider"></div>
- 
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
-      <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/" target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
-    </div>
- 
-  </div>
-</footer>
 
-<script>
-      // Header scroll state
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Jeremiah Hunt. All rights reserved.</p>
+        <p class="footer-credit">Developed by <a class="dev-link" href="https://sinemlytrss.github.io/Sinem-portfolio/"
+            target="_blank" rel="noopener noreferrer">Sinem Karabulut</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll state
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
@@ -272,244 +313,304 @@
     mobileBreakpoint.addEventListener('change', e => {
       if (!e.matches) setMobileMenu(false);
     });
-  
+
     // ── ACTIVE NAVIGATION ──
 
-const currentPage =
-  window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage =
+      window.location.pathname.split('/').pop() || 'index.html';
 
-const navLinks = document.querySelectorAll(
-  '#primaryNavigation a.nav-link'
-);
-
-
-
-// Normal sayfa linkleri
-navLinks.forEach(link => {
-
-  const href = link.getAttribute('href');
-
-  if (!href) return;
-
-  const [linkPath, linkHash] = href.split('#');
-
-  // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
-  if (linkHash) {
-    link.classList.remove('active');
-    return;
-  }
-
-  const linkPage =
-    linkPath.split('/').pop() || 'index.html';
-
-  link.classList.toggle(
-    'active',
-    linkPage === currentPage
-  );
-});
+    const navLinks = document.querySelectorAll(
+      '#primaryNavigation a.nav-link'
+    );
 
 
-// ── ACTIVE PROJECTS DROPDOWN ──
 
-const projectPages = [
-  'jeremiah.html',
-  'kim.html',
-  'mixolydian.html'
-];
+    // Normal sayfa linkleri
+    navLinks.forEach(link => {
 
-const projectsWrap =
-  document.querySelector('.dropdown-wrap');
+      const href = link.getAttribute('href');
 
-if (
-  projectsWrap &&
-  projectPages.includes(currentPage)
-) {
-  const projectsTrigger =
-    projectsWrap.querySelector('.nav-link');
+      if (!href) return;
 
-  projectsTrigger.classList.add('active');
-}
+      const [linkPath, linkHash] = href.split('#');
+
+      // Keepin' It Movin' gibi anchor linklerini burada atlıyoruz
+      if (linkHash) {
+        link.classList.remove('active');
+        return;
+      }
+
+      const linkPage =
+        linkPath.split('/').pop() || 'index.html';
+
+      link.classList.toggle(
+        'active',
+        linkPage === currentPage
+      );
+    });
 
 
-const events = [
-  {date:'2026-09-06',type:'bandleader',title:"Millennium Park: Von Freeman Stage — Chicago Jazz Festival: Jeremiah Hunt",venue:'Chicago, IL',url:'https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_jazz_festival.html',img: "photos/jeremiah-1.webp"},
-  {date:'2026-09-18',type:'bandleader',title:"Englewood Jazz Festival — Jeremiah Hunt Quartet",venue:'Chicago, IL',url:'https://englewoodjazzfestival.org',img: "photos/jeremiah-1.webp"},
-  {date:'2026-09-22',type:'bandleader',title:"The Jazz Showcase — Jeremiah Hunt",venue:'Chicago, IL',url:'https://www.jazzshowcase.com/nowplaying',img:"photos/jeremiah-1.webp"},
-  {date:'2026-08-28',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with LaShera Ellis",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-lashera-ellis-50',img:"photos/LaShera-Ellis.webp"},
-  {date:'2026-08-29',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with LaShera Ellis",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-lashera-ellis-51',img:"photos/LaShera-Ellis.webp"},
-  {date:'2026-09-02',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"},
-  {date:'2026-09-09',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"},
-  {date:'2026-09-10',type:'sideman',title:"Winter’s Jazz Club — Paul Marinaro Quartet",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/paul-marinaro-quartet-17',img:"photos/Paul-Marinaro-Quartet.webp"},
-  {date:'2026-09-12',type:'sideman',title:"Winter’s Jazz Club — Chicago Soul Jazz Collective with Boyce Hudson",venue:'Chicago, IL',url:'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-boyce-hudson-2',img:"photos/Boyce-Hudson.webp"},
-  {date:'2026-09-16',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"},
-  {date:'2026-09-17',type:'curation',title:"Humboldt Park Boathouse — Keepin’ It Movin’: The Art of Jazz — Humboldt Park, Chicago",venue:'Chicago, IL',url:'#',img:"photos/kim-group.webp"},
-  {date:'2026-09-20',type:'curation',title:"Chicago Live Festival — KIM",venue:'Chicago, IL',url:'https://navypier.org/pier-events/chicago-live/',img:"photos/kim-group.webp"},
-  {date:'2026-09-23',type:'sideman',title:"Andy’s Jazz Club — Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"},
-  {date:'2026-09-26',type:'sideman',title:"Hyde Park Jazz Festival: Pickens Stage - It's all about OBJ: Dee Alexander & Bruce Henry",venue:'Chicago, IL',url:'https://hydeparkjazzfestival.org/obj-deealexander-brucehenry',img:"photos/Dee-Alexander.webp"},
-  {date:'2026-09-30',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"},
-  {date:'2026-10-01',type:'sideman',title:"The Jazz Showcase - Chico Freeman Quartet",venue:'Chicago, IL',url:'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e',img:"photos/ChicoFreeman.webp"},
-  {date:'2026-10-07',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img: "photos/charles-heath.webp"},
-  {date:'2026-10-16',type:'sideman',title:"Caffè Vivace - G. Thomas Allen Quintet",venue:'Cincinnati, OH',url:'https://tickets.caffevivace.com/shows/12361/?date=2026-10-16',img:"photos/G.-Thomas-Allen-Quintet.webp"},
-  {date:'2026-10-22',type:'sideman',title:"Keystone Korner - G. Thomas Allen",venue:'Baltimore, MD',url:'https://instantseats.com',img:"photos/G.-Thomas-Allen-Quintet.webp"},
-  {date:'2026-10-28',type:'sideman',title:"Andy’s Jazz Club - Charles Heath Quartet",venue:'Chicago, IL',url:'https://andysjazzclub.com/music-calendar/',img:"photos/charles-heath.webp"}
-];
+    // ── ACTIVE PROJECTS DROPDOWN ──
 
-// State
-let current = new Date(); // start at current month
-let filter = 'all';       // 'all' | 'bandleader' | 'sideman' | 'curation'
+    const projectPages = [
+      'jeremiah.html',
+      'kim.html',
+      'mixolydian.html'
+    ];
 
-// Elements (assumes these IDs exist in DOM)
-const daysEl = document.getElementById('days');
-const monthLabel = document.getElementById('monthLabel');
-const visMonthHeader = document.getElementById('visMonthHeader');
-const viewLink = document.getElementById('viewLink');
-const eventPhoto = document.getElementById('eventPhoto');
-const eventTitle = document.getElementById('eventTitle');
-const eventMeta = document.getElementById('eventMeta');
-const eventDesc = document.getElementById('eventDesc');
+    const projectsWrap =
+      document.querySelector('.dropdown-wrap');
 
-// Initialize
-function start(){
-  renderMonth(current.getMonth(), current.getFullYear());
-  applyFilter(filter);
-}
+    if (
+      projectsWrap &&
+      projectPages.includes(currentPage)
+    ) {
+      const projectsTrigger =
+        projectsWrap.querySelector('.nav-link');
 
-// Render month grid
-function renderMonth(month, year){
-  monthLabel.textContent = `${new Intl.DateTimeFormat('en', {month:'long'}).format(new Date(year,month))} ${year}`;
-  visMonthHeader.textContent = `${new Intl.DateTimeFormat('en', {month:'long'}).format(new Date(year,month))} ${year}`;
-  daysEl.innerHTML = '';
+      projectsTrigger.classList.add('active');
+    }
 
-  const first = new Date(year, month, 1);
-  const last = new Date(year, month + 1, 0);
-  const startDay = first.getDay();
 
-  // blanks for alignment
-  for(let i = 0; i < startDay; i++){
-    const b = document.createElement('div');
-    b.className = 'day inactive';
-    daysEl.appendChild(b);
-  }
+    const events = [
+      // ── AĞUSTOS ──
+      { date: '2026-08-28', type: 'sideman', title: "Navy Pier — Melody Angel", venue: 'Chicago, IL', url: 'https://www.melodyangelmusic.com/tour', img: "photos/Melody-Angel.webp" },
+      { date: '2026-08-29', type: 'sideman', title: "Winter’s Jazz Club — Chicago Soul Jazz Collective with LaShera Ellis", venue: 'Chicago, IL', url: 'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-lashera-ellis-51', img: "photos/LaShera-Ellis.webp" },
+      { date: '2026-08-30', type: 'sideman', title: "Chicago Public Library: Walker Branch — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://chipublib.bibliocommons.com/events/6a6cbff388e9bf2800349aba?_gl=1*mj2nvd*_ga*MTM2NTY5NzkxOC4xNzg3OTI2MTIw*_ga_G99DMMNG39*czE3ODc5MjYxMTkkbzEkZzEkdDE3ODc5MjY0NTEkajU1JGwwJGgw*_ga_92RPWHE421*czE3ODc5MjYxMTkkbzEkZzEkdDE3ODc5MjY0NTAkajU2JGwwJGgw', img: "photos/charles-heath.webp" },
+      { date: '2026-08-30', type: 'sideman', title: "The Jazz Showcase — Eric Schneider & Friends", venue: 'Chicago, IL', url: 'https://jazzshowcase.turntabletickets.com/shows/12145?date=2026-08-30', img: "photos/Eric-Schneider.webp" },
 
-  for(let d = 1; d <= last.getDate(); d++){
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const dayEl = document.createElement('div');
-    dayEl.className = 'day';
-    dayEl.dataset.date = dateStr;
-    dayEl.innerHTML = `<div class="date">${d}</div>`;
+      // ── EYLÜL ──
+      { date: '2026-09-02', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-09-06', type: 'bandleader', title: "Millennium Park: Von Freeman Stage — Chicago Jazz Festival: Jeremiah Hunt", venue: 'Chicago, IL', url: 'https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_jazz_festival.html', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-09', type: 'bandleader', title: "Andy’s Jazz Club — Charles Heath Quartet, Hosted by Jeremiah Hunt", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-10', type: 'sideman', title: "Winter’s Jazz Club — Paul Marinaro Quartet", venue: 'Chicago, IL', url: 'https://www.wintersjazzclub.com/events/paul-marinaro-quartet-17', img: "photos/Paul-Marinaro-Quartet.webp" },
+      { date: '2026-09-12', type: 'sideman', title: "Winter’s Jazz Club — Chicago Soul Jazz Collective with Boyce Hudson", venue: 'Chicago, IL', url: 'https://www.wintersjazzclub.com/events/chicago-soul-jazz-collective-with-boyce-hudson-2', img: "photos/Boyce-Hudson.webp" },
+      { date: '2026-09-16', type: 'bandleader', title: "Andy’s Jazz Club — Charles Heath Quartet, Hosted by Jeremiah Hunt", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-17', type: 'curation', title: "Humboldt Park Boathouse — Keepin’ It Movin’: The Art of Jazz — Humboldt Park, Chicago", venue: 'Chicago, IL', url: '#', img: "photos/kim-group.webp" },
+      { date: '2026-09-18', type: 'bandleader', title: "Englewood Jazz Festival — Jeremiah Hunt Quartet", venue: 'Chicago, IL', url: 'https://englewoodjazzfestival.org', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-20', type: 'curation', title: "Chicago Live Festival — KIM", venue: 'Chicago, IL', url: 'https://navypier.org/pier-events/chicago-live/', img: "photos/kim-group.webp" },
+      { date: '2026-09-22', type: 'bandleader', title: "The Jazz Showcase — Jeremiah Hunt", venue: 'Chicago, IL', url: 'https://www.jazzshowcase.com/nowplaying', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-23', type: 'bandleader', title: "Andy’s Jazz Club — Charles Heath Quartet, Hosted by Jeremiah Hunt", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/jeremiah-1.webp" },
+      { date: '2026-09-25', type: 'sideman', title: "Fitzgerald’s — Chicago Soul Jazz Collective", venue: 'Chicago, IL', url: 'https://www.fitzgeraldsnightclub.com/shows/calendar/#tw-event-dialog-15670', img: "photos/Chicago-Soul-Jazz-Collective.webp" },
+      { date: '2026-09-26', type: 'sideman', title: "Hyde Park Jazz Festival: Pickens Stage - It's all about OBJ: Dee Alexander & Bruce Henry", venue: 'Chicago, IL', url: 'https://hydeparkjazzfestival.org/obj-deealexander-brucehenry', img: "photos/Dee-Alexander.webp" },
+      { date: '2026-09-30', type: 'sideman', title: "Andy’s Jazz Club - Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
 
-    const evs = events.filter(e => e.date === dateStr);
-    if(evs.length){
-      const visible = evs.some(e => filter === 'all' || e.type === filter);
-      if(visible){
-        const marker = document.createElement('div');
-        marker.className = 'marker';
-        // Precedence: bandleader -> special -> sideman
-        if(evs.some(e => e.type === 'bandleader')){
-          marker.classList.add('star'); marker.textContent = '★';
-        } else if(evs.some(e => e.type === 'curation')){
-          marker.classList.add('asterisk'); marker.textContent = '*';
-        } else {
-          marker.classList.add('dot'); marker.textContent = '•';
+      // ── EKİM ──
+      { date: '2026-10-01', type: 'sideman', title: "The Jazz Showcase - Chico Freeman Quartet", venue: 'Chicago, IL', url: 'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e', img: "photos/ChicoFreeman.webp" },
+      { date: '2026-10-02', type: 'sideman', title: "The Jazz Showcase - Chico Freeman Quartet", venue: 'Chicago, IL', url: 'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e', img: "photos/ChicoFreeman.webp" },
+      { date: '2026-10-03', type: 'sideman', title: "The Jazz Showcase - Chico Freeman Quartet", venue: 'Chicago, IL', url: 'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e', img: "photos/ChicoFreeman.webp" },
+      { date: '2026-10-04', type: 'sideman', title: "The Jazz Showcase - Chico Freeman Quartet", venue: 'Chicago, IL', url: 'https://www.jazzshowcase.com/nowplaying/chicofreeman-p3ay8-j8bl7-5mf2e', img: "photos/ChicoFreeman.webp" },
+      { date: '2026-10-07', type: 'sideman', title: "Andy’s Jazz Club - Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-10-10', type: 'sideman', title: "Winter’s Jazz Club — Thaddeus Tukes", venue: 'Chicago, IL', url: 'https://www.wintersjazzclub.com', img: "photos/Thaddeus-Tukes.webp" },
+      { date: '2026-10-16', type: 'sideman', title: "Caffè Vivace - G. Thomas Allen Quintet", venue: 'Cincinnati, OH', url: 'https://tickets.caffevivace.com/shows/12361/?date=2026-10-16', img: "photos/G.-Thomas-Allen-Quintet.webp" },
+      { date: '2026-10-22', type: 'sideman', title: "Keystone Korner - G. Thomas Allen Quintet", venue: 'Baltimore, MD', url: 'https://www.instantseats.com/index.cfm?fuseaction=buy.event&eventID=F08C8705-09BC-9163-2C1BCC7C7D22B462', img: "photos/G.-Thomas-Allen-Quintet.webp" },
+      { date: '2026-10-28', type: 'sideman', title: "Andy’s Jazz Club - Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-10-30', type: 'sideman', title: "The Ravenscroft — G. Thomas Allen Quartet", venue: 'Scottsdale, AZ', url: 'https://theravenscroft.com/event/jazzbird-nights-g-thomas-allen/', img: "photos/G.-Thomas-Allen-Quintet.webp" },
+
+      // ── KASIM (tüm Çarşambalar Andy's Jazz Club — Charles Heath Quartet) ──
+      { date: '2026-11-04', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-11-07', type: 'sideman', title: "Chicago Public Library: Uptown Branch — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://chipublib.bibliocommons.com/events/6a6cc513cca66c2f00a74fd2', img: "photos/charles-heath.webp" },
+      { date: '2026-11-11', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-11-18', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-11-25', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-11-27', type: 'sideman', title: "Winter’s Jazz Club — Chicago Soul Jazz Collective", venue: 'Chicago, IL', url: 'https://www.wintersjazzclub.com', img: "photos/Chicago-Soul-Jazz-Collective.webp" },
+
+      // ── ARALIK (tüm Çarşambalar Andy's Jazz Club — Charles Heath Quartet, değişebilir) ──
+      { date: '2026-12-02', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet (Subject to change)", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-12-05', type: 'sideman', title: "Chicago Public Library: Clearing Branch — Charles Heath Quartet", venue: 'Chicago, IL', url: 'https://chipublib.bibliocommons.com/events/6a6cbcad0d65ac3600438167', img: "photos/charles-heath.webp" },
+      { date: '2026-12-09', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet (Subject to change)", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-12-16', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet (Subject to change)", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-12-23', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet (Subject to change)", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+      { date: '2026-12-30', type: 'sideman', title: "Andy’s Jazz Club — Charles Heath Quartet (Subject to change)", venue: 'Chicago, IL', url: 'https://andysjazzclub.com/music-calendar/', img: "photos/charles-heath.webp" },
+
+      // ── 2027 ──
+      { date: '2027-03-15', type: 'sideman', title: "Blues Alive at Sea XII — Melody Angel (March 15–19)", venue: 'Miami to Grand Cayman', url: 'https://www.bluesaliveatsea.com', img: "photos/Melody-Angel.webp" },
+      { date: '2027-03-16', type: 'sideman', title: "Blues Alive at Sea XII — Melody Angel (March 15–19)", venue: 'Miami to Grand Cayman', url: 'https://www.bluesaliveatsea.com', img: "photos/Melody-Angel.webp" },
+      { date: '2027-03-17', type: 'sideman', title: "Blues Alive at Sea XII — Melody Angel (March 15–19)", venue: 'Miami to Grand Cayman', url: 'https://www.bluesaliveatsea.com', img: "photos/Melody-Angel.webp" },
+      { date: '2027-03-18', type: 'sideman', title: "Blues Alive at Sea XII — Melody Angel (March 15–19)", venue: 'Miami to Grand Cayman', url: 'https://www.bluesaliveatsea.com', img: "photos/Melody-Angel.webp" },
+      { date: '2027-03-19', type: 'sideman', title: "Blues Alive at Sea XII — Melody Angel (March 15–19)", venue: 'Miami to Grand Cayman', url: 'https://www.bluesaliveatsea.com', img: "photos/Melody-Angel.webp" }
+    ];
+
+    // State
+    let current = new Date(); // start at current month
+    let filter = 'all';       // 'all' | 'bandleader' | 'sideman' | 'curation'
+
+    // Elements (assumes these IDs exist in DOM)
+    const daysEl = document.getElementById('days');
+    const monthLabel = document.getElementById('monthLabel');
+    const visMonthHeader = document.getElementById('visMonthHeader');
+    const viewLink = document.getElementById('viewLink');
+    const eventPhoto = document.getElementById('eventPhoto');
+    const eventTitle = document.getElementById('eventTitle');
+    const eventMeta = document.getElementById('eventMeta');
+    const eventDesc = document.getElementById('eventDesc');
+
+    // "2026-09-06" gibi salt-tarih string'ini UTC olarak yorumlamadan,
+    // doğrudan yerel bir Date nesnesi olarak oluşturur (timezone hatasını
+    // önlemek için).
+    function parseLocalDate(dateStr) {
+      const [y, m, d] = dateStr.split('-').map(Number);
+      return new Date(y, m - 1, d);
+    }
+
+    // Initialize
+    function start() {
+      renderMonth(current.getMonth(), current.getFullYear());
+      applyFilter(filter);
+    }
+
+    // Render month grid
+    function renderMonth(month, year) {
+      monthLabel.textContent = `${new Intl.DateTimeFormat('en', { month: 'long' }).format(new Date(year, month))} ${year}`;
+      visMonthHeader.textContent = `${new Intl.DateTimeFormat('en', { month: 'long' }).format(new Date(year, month))} ${year}`;
+      daysEl.innerHTML = '';
+
+      const first = new Date(year, month, 1);
+      const last = new Date(year, month + 1, 0);
+      const startDay = first.getDay();
+
+      for (let i = 0; i < startDay; i++) {
+        const b = document.createElement('div');
+        b.className = 'day inactive';
+        daysEl.appendChild(b);
+      }
+
+      for (let d = 1; d <= last.getDate(); d++) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        const dayEl = document.createElement('div');
+        dayEl.className = 'day';
+        dayEl.dataset.date = dateStr;
+        dayEl.innerHTML = `<div class="date">${d}</div>`;
+
+        const evs = events.filter(e => e.date === dateStr);
+        if (evs.length) {
+          const visible = evs.some(e => filter === 'all' || e.type === filter);
+          if (visible) {
+            const marker = document.createElement('div');
+            marker.className = 'marker';
+            if (evs.some(e => e.type === 'bandleader')) {
+              marker.classList.add('star'); marker.textContent = '★';
+            } else if (evs.some(e => e.type === 'curation')) {
+              marker.classList.add('asterisk'); marker.textContent = '*';
+            } else {
+              marker.classList.add('dot'); marker.textContent = '•';
+            }
+            dayEl.appendChild(marker);
+          }
         }
-        dayEl.appendChild(marker);
+
+        dayEl.addEventListener('click', () => selectDate(dateStr));
+        daysEl.appendChild(dayEl);
       }
     }
 
-    dayEl.addEventListener('click', () => selectDate(dateStr));
-    daysEl.appendChild(dayEl);
-  }
-}
+    // Select a date and populate side panel
+    function selectDate(dateStr) {
+      const dayEvents = events.filter(e => e.date === dateStr);
+      if (dayEvents.length === 0) {
+        eventPhoto.innerHTML = `<img src="https://placehold.co/800x600?text=No+Event+on+${dateStr}" alt="no"/>`;
+        eventTitle.textContent = 'No event';
+        eventMeta.textContent = dateStr;
+        eventDesc.textContent = 'No scheduled performance for this date.';
+        viewLink.style.display = 'none';
+        return;
+      }
 
-// Select a date and populate side panel
-function selectDate(dateStr){
-  const dayEvents = events.filter(e => e.date === dateStr);
-  if(dayEvents.length === 0){
-    eventPhoto.innerHTML = `<img src="https://placehold.co/800x600?text=No+Event+on+${dateStr}" alt="no"/>`;
-    eventTitle.textContent = 'No event';
-    eventMeta.textContent = dateStr;
-    eventDesc.textContent = 'No scheduled performance for this date.';
-    viewLink.style.display = 'none';
-    return;
-  }
+      // Aynı güne birden fazla etkinlik denk geliyorsa (şu an yalnızca
+      // 30 Ağustos) hepsini listele. Tek etkinlikli tüm diğer günlerde
+      // davranış aşağıdaki orijinal koddan hiç değişmiyor.
+      if (dayEvents.length > 1) {
+        eventPhoto.innerHTML = `<img src="${dayEvents[0].img}" alt="event"/>`;
+        eventTitle.textContent = `${dayEvents.length} Events`;
+        eventMeta.textContent = parseLocalDate(dateStr).toLocaleDateString();
+        eventDesc.innerHTML = dayEvents.map(evt => `
+      <div class="multi-event-item">
+        <strong>${evt.title}</strong><br>
+        <span>${evt.venue}</span>
+        ${evt.url ? `<br><a href="${evt.url}" target="_blank" rel="noopener noreferrer">View event</a>` : ''}
+      </div>
+    `).join('');
+        viewLink.style.display = 'none';
+        return;
+      }
 
-  const evt = dayEvents[0];
-  eventPhoto.innerHTML = `<img src="${evt.img}" alt="event"/>`;
-  eventTitle.textContent = evt.title;
-  eventMeta.textContent = evt.venue + ' • ' + (new Date(evt.date)).toLocaleDateString();
-  eventDesc.textContent = '';
+      const evt = dayEvents[0];
+      eventPhoto.innerHTML = `<img src="${evt.img}" alt="event"/>`;
+      eventTitle.textContent = evt.title;
+      eventMeta.textContent = evt.venue + ' • ' + parseLocalDate(evt.date).toLocaleDateString();
+      eventDesc.textContent = '';
 
-  if(evt.url){
-    viewLink.href = evt.url;
-    viewLink.style.display = 'inline-block';
-    viewLink.textContent = 'View event';
-  } else {
-    viewLink.style.display = 'none';
-  }
-}
-
-// Filters
-const filterButtons = document.querySelectorAll('.filters button');
-filterButtons.forEach(b => b.addEventListener('click', () => {
-  filterButtons.forEach(x => x.classList.remove('active'));
-  b.classList.add('active');
-  filter = b.dataset.filter;
-  renderMonth(current.getMonth(), current.getFullYear());
-  applyFilter(filter);
-}));
-
-function applyFilter(f){
-  filter = f;
-  document.querySelectorAll('.day .marker').forEach(m => m.remove());
-  events.forEach(ev => {
-    if(filter === 'all' || (filter === 'bandleader' && ev.type === 'bandleader') || (filter === 'sideman' && ev.type === 'sideman') || (filter === 'curation' && ev.type === 'curation')){
-      const sel = document.querySelector(`.day[data-date="${ev.date}"]`);
-      if(sel){
-        if(!sel.querySelector('.marker')){
-          const marker = document.createElement('div');
-          marker.className = 'marker';
-          if(ev.type === 'bandleader'){ marker.classList.add('star'); marker.textContent = '★'; }
-          else if(ev.type === 'curation'){ marker.classList.add('asterisk'); marker.textContent = '*'; }
-          else { marker.classList.add('dot'); marker.textContent = '•'; }
-          sel.appendChild(marker);
-        }
+      if (evt.url) {
+        viewLink.href = evt.url;
+        viewLink.style.display = 'inline-block';
+        viewLink.textContent = 'View event';
+      } else {
+        viewLink.style.display = 'none';
       }
     }
-  });
-}
 
-// Month navigation
-document.getElementById('prevMonth').addEventListener('click', () => {
-  current.setMonth(current.getMonth() - 1);
-  renderMonth(current.getMonth(), current.getFullYear());
-  applyFilter(filter);
-});
-document.getElementById('nextMonth').addEventListener('click', () => {
-  current.setMonth(current.getMonth() + 1);
-  renderMonth(current.getMonth(), current.getFullYear());
-  applyFilter(filter);
-});
+    // Filters
+    const filterButtons = document.querySelectorAll('.filters button');
+    filterButtons.forEach(b => b.addEventListener('click', () => {
+      filterButtons.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      filter = b.dataset.filter;
+      renderMonth(current.getMonth(), current.getFullYear());
+      applyFilter(filter);
+    }));
 
-// Keyboard nav
-window.addEventListener('keydown', (e) => {
-  if(e.key === 'ArrowLeft'){ document.getElementById('prevMonth').click(); }
-  if(e.key === 'ArrowRight'){ document.getElementById('nextMonth').click(); }
-});
+    function applyFilter(f) {
+      filter = f;
+      document.querySelectorAll('.day .marker').forEach(m => m.remove());
+      events.forEach(ev => {
+        if (filter === 'all' || (filter === 'bandleader' && ev.type === 'bandleader') || (filter === 'sideman' && ev.type === 'sideman') || (filter === 'curation' && ev.type === 'curation')) {
+          const sel = document.querySelector(`.day[data-date="${ev.date}"]`);
+          if (sel) {
+            if (!sel.querySelector('.marker')) {
+              const marker = document.createElement('div');
+              marker.className = 'marker';
+              if (ev.type === 'bandleader') { marker.classList.add('star'); marker.textContent = '★'; }
+              else if (ev.type === 'curation') { marker.classList.add('asterisk'); marker.textContent = '*'; }
+              else { marker.classList.add('dot'); marker.textContent = '•'; }
+              sel.appendChild(marker);
+            }
+          }
+        }
+      });
+    }
 
-// Open a specific event when a date is included in the URL.
-const requestedDate = new URLSearchParams(window.location.search).get('date');
-const requestedEventExists = requestedDate && events.some(event => event.date === requestedDate);
+    // Month navigation
+    document.getElementById('prevMonth').addEventListener('click', () => {
+      current.setMonth(current.getMonth() - 1);
+      renderMonth(current.getMonth(), current.getFullYear());
+      applyFilter(filter);
+    });
+    document.getElementById('nextMonth').addEventListener('click', () => {
+      current.setMonth(current.getMonth() + 1);
+      renderMonth(current.getMonth(), current.getFullYear());
+      applyFilter(filter);
+    });
 
-if (requestedEventExists) {
-  const [year, month] = requestedDate.split('-').map(Number);
-  current = new Date(year, month - 1, 1);
-}
+    // Keyboard nav
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { document.getElementById('prevMonth').click(); }
+      if (e.key === 'ArrowRight') { document.getElementById('nextMonth').click(); }
+    });
 
-start();
+    // Open a specific event when a date is included in the URL.
+    const requestedDate = new URLSearchParams(window.location.search).get('date');
+    const requestedEventExists = requestedDate && events.some(event => event.date === requestedDate);
 
-if (requestedEventExists) {
-  selectDate(requestedDate);
-}
+    if (requestedEventExists) {
+      const [year, month] = requestedDate.split('-').map(Number);
+      current = new Date(year, month - 1, 1);
+    }
+
+    start();
+
+    if (requestedEventExists) {
+      selectDate(requestedDate);
+    }
 
 
 
@@ -517,7 +618,7 @@ if (requestedEventExists) {
 
 
 
-      window.formspree =
+    window.formspree =
       window.formspree ||
       function () {
         (formspree.q = formspree.q || []).push(arguments);
@@ -536,4 +637,5 @@ if (requestedEventExists) {
 
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
+
 </html>
