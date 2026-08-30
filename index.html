@@ -20,13 +20,59 @@
 </head>
 
 <body class="homepage">
+  <!-- ══════════════════════════════════════════════════════════════
+     UZAZI INTRO OVERLAY — bunu <body> etiketinden hemen sonra,
+     sayfanızın en başına ekleyin
+     ══════════════════════════════════════════════════════════════ -->
+  <div class="uzazi-intro-overlay" id="uzaziIntroOverlay">
+    <div class="uzazi-intro-card" role="dialog" aria-modal="true" aria-labelledby="uzaziIntroTitle">
+      <button class="uzazi-intro-close" id="uzaziIntroClose" aria-label="Close">×</button>
+
+      <p class="uzazi-intro-eyebrow">New Music</p>
+
+      <div class="uzazi-intro-cover">
+        <img src="photos/uzazicover.webp" alt="Uzazi album cover" />
+      </div>
+
+      <h2 class="uzazi-intro-title" id="uzaziIntroTitle">UZAZI</h2>
+      <p class="uzazi-intro-release">Available September 5</p>
+
+      <div class="uzazi-intro-countdown" id="uzaziCountdown">
+        <div class="uzazi-countdown-unit">
+          <span class="uzazi-countdown-num" id="cdDays">00</span>
+          <span class="uzazi-countdown-label">Days</span>
+        </div>
+        <div class="uzazi-countdown-unit">
+          <span class="uzazi-countdown-num" id="cdHours">00</span>
+          <span class="uzazi-countdown-label">Hrs</span>
+        </div>
+        <div class="uzazi-countdown-unit">
+          <span class="uzazi-countdown-num" id="cdMinutes">00</span>
+          <span class="uzazi-countdown-label">Min</span>
+        </div>
+        <div class="uzazi-countdown-unit">
+          <span class="uzazi-countdown-num" id="cdSeconds">00</span>
+          <span class="uzazi-countdown-label">Sec</span>
+        </div>
+      </div>
+
+      <p class="uzazi-intro-available">Available Now</p>
+
+      <div class="uzazi-intro-actions">
+        <a class="uzazi-intro-btn secondary" href="jeremiah.html">Explore Uzazi</a>
+        <a class="uzazi-intro-btn primary" href="collection.html#collection-section"
+          id="uzaziIntroPreorder">Pre-order</a>
+      </div>
+    </div>
+  </div>
+
 
   <!-- ── HEADER ── -->
   <header id="site-header">
     <div class="header-inner">
 
       <a href="index.html" class="logo">
-        <img src="photos/logo2.svg" alt="Uzzi Logo" />
+        <img src="photos/K-Symbol-Transparent.svg" alt="Uzzi Logo" />
       </a>
 
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
@@ -36,7 +82,6 @@
       </button>
 
       <nav id="primaryNavigation">
-        <a href="index.html" class="nav-link active">Home</a>
         <a href="index.html#about-section" class="nav-link keep-moving-link">Keepin' It Movin'</a>
         <div class="dropdown-wrap">
           <span class="nav-link" tabindex="0">
@@ -52,6 +97,24 @@
         <a href="offstage.html" class="nav-link">Off Stage</a>
         <a href="collection.html" class="nav-link">Collection</a>
         <a href="work-with-me.html" class="nav-link">Work With Me</a>
+
+        <div class="header-social">
+          <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/jhuntbassist" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jhunt@jeremiahhunt.com" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </nav>
 
     </div>
@@ -68,16 +131,16 @@
 
     <div class="hero-content">
       <h1 class="hero-heading">
-        Keeping<br>
+        Keepin'<br>
         It<br>
-        Moving
+        Movin'
       </h1>
 
       <div class="hero-taglines">
         <span class="hero-tagline">More than music.</span> <br>
-        <span class="hero-tagline">A mindset.</span>
-        <span class="hero-tagline">A movement.</span>
-        <span class="hero-tagline">A way of life.</span>
+        <span class="hero-tagline">In music.</span>
+        <span class="hero-tagline">In life.</span>
+        <span class="hero-tagline">In everything between.</span>
       </div>
 
       <div class="hero-buttons">
@@ -403,7 +466,7 @@
 
       <div class="footer-top">
         <a href="index.html" class="footer-logo">
-          <img src="photos/white-logo.webp" alt="Jeremiah Hunt" loading="lazy" decoding="async" />
+          <img src="photos/K-Symbol-White-Transparent.svg" alt="Jeremiah Hunt" loading="lazy" decoding="async" />
         </a>
 
         <nav class="footer-nav" aria-label="Footer navigation">
@@ -419,6 +482,10 @@
           <a href="https://www.instagram.com/_b_loops/" target="_blank" rel="noopener noreferrer"
             aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/jhuntbassist" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a href="https://www.youtube.com/channel/UCzuVBGOGoLPFvimA3YbY9TA" target="_blank" rel="noopener noreferrer"
             aria-label="YouTube">
@@ -440,13 +507,138 @@
 
     </div>
   </footer>
+  <script>
+    (function () {
+      /* ── SADECE ANASAYFADA ÇALIŞSIN ──
+         Bu overlay yalnızca index.html (veya kök "/") üzerindeyken
+         tetiklenir. Başka bir sayfadaysa (collection.html, kim.html vb.)
+         hiçbir şey yapmadan çıkar. */
+      const path = window.location.pathname;
+      const isHomepage =
+        path === '/' ||
+        path === '' ||
+        path.endsWith('/index.html');
 
+      if (!isHomepage) return;
+
+      /* ── AYARLAR ──
+         Yayın tarihini buradan değiştirin. Yıl/ay/gün/saat kendi saat
+         diliminize göre ayarlanabilir; şu an yerel saat kullanılıyor. */
+      const RELEASE_DATE = new Date('2026-09-05T00:00:00');
+
+      const overlay = document.getElementById('uzaziIntroOverlay');
+      const closeBtn = document.getElementById('uzaziIntroClose');
+      const replayBtn = document.getElementById('replayBtn');
+
+      const els = {
+        days: document.getElementById('cdDays'),
+        hours: document.getElementById('cdHours'),
+        minutes: document.getElementById('cdMinutes'),
+        seconds: document.getElementById('cdSeconds')
+      };
+
+      let countdownTimer = null;
+
+      function pad(n) {
+        return String(n).padStart(2, '0');
+      }
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = RELEASE_DATE - now;
+
+        /* KRİTİK: tarih geçtiyse (diff <= 0) sayaç negatife dönüp
+           "0 0 0 0" ya da tuhaf sayılar göstermeye devam etmesin —
+           interval'i durdurup overlay'i "available" durumuna al. */
+        if (diff <= 0) {
+          overlay.classList.add('available');
+          if (countdownTimer) {
+            clearInterval(countdownTimer);
+            countdownTimer = null;
+          }
+          return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        els.days.textContent = pad(days);
+        els.hours.textContent = pad(hours);
+        els.minutes.textContent = pad(minutes);
+        els.seconds.textContent = pad(seconds);
+      }
+
+      function openOverlay() {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Reflow sonrası fade/scale-in animasyonunu tetikle
+        requestAnimationFrame(() => {
+          overlay.classList.add('show');
+        });
+
+        updateCountdown();
+        if (RELEASE_DATE - new Date() > 0) {
+          countdownTimer = setInterval(updateCountdown, 1000);
+        }
+      }
+
+      function closeOverlay() {
+        overlay.classList.remove('show');
+        document.body.style.overflow = '';
+
+        if (countdownTimer) {
+          clearInterval(countdownTimer);
+          countdownTimer = null;
+        }
+
+        // Kapanış animasyonu bitene kadar display:flex'i koru, sonra kaldır
+        setTimeout(() => {
+          overlay.classList.remove('active');
+        }, 450);
+      }
+
+      closeBtn.addEventListener('click', closeOverlay);
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeOverlay();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+          closeOverlay();
+        }
+      });
+
+      // "Pre-order" / "Explore Uzazi" butonlarına tıklayınca overlay kapansın
+      document.querySelectorAll('.uzazi-intro-btn').forEach(btn => {
+        btn.addEventListener('click', closeOverlay);
+      });
+
+      /* ── HER ANASAYFA YÜKLEMESİNDE GÖSTER ──
+         Artık localStorage/sessionStorage ile hatırlama yok — kullanıcı
+         anasayfayı her yenilediğinde veya her girişinde overlay tekrar
+         açılır, cihaz/tarayıcı fark etmeksizin. */
+      openOverlay();
+
+      // Demo: "tekrar göster" butonu (gerçek sitenizde bu butona gerek yok)
+      if (replayBtn) {
+        replayBtn.addEventListener('click', () => {
+          overlay.classList.remove('available');
+          openOverlay();
+        });
+      }
+    })();
+  </script>
   <script>
     // Header scroll state
     const header = document.getElementById('site-header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.08);
-    }, {passive: true});
+    }, { passive: true });
 
     // Dropdown JS
     const dropdowns = document.querySelectorAll('.dropdown-wrap');
@@ -454,7 +646,7 @@
       let closeTimer = null;
       const open = () => {
         clearTimeout(closeTimer);
-        dropdowns.forEach(d => {if (d !== wrap) d.classList.remove('open');});
+        dropdowns.forEach(d => { if (d !== wrap) d.classList.remove('open'); });
         wrap.classList.add('open');
       };
       const close = () => {
@@ -496,7 +688,7 @@
       const trigger = wrap.querySelector('.nav-link');
       trigger.addEventListener('click', () => {
         if (mobileBreakpoint.matches) {
-          dropdowns.forEach(item => {if (item !== wrap) item.classList.remove('open');});
+          dropdowns.forEach(item => { if (item !== wrap) item.classList.remove('open'); });
           wrap.classList.toggle('open');
         }
       });
@@ -600,7 +792,7 @@
         window.addEventListener(
           'scroll',
           updateKeepMovingActive,
-          {passive: true}
+          { passive: true }
         );
 
         updateKeepMovingActive();

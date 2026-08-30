@@ -41,6 +41,318 @@ body {
 }
 
 
+
+
+
+
+
+  /* ══════════════════════════════════════════════════════════════
+     UZAZI INTRO OVERLAY
+     ══════════════════════════════════════════════════════════════ */
+ 
+  .uzazi-intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(20, 12, 5, 0.72);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+  }
+ 
+  @supports not (backdrop-filter: blur(1px)) {
+    .uzazi-intro-overlay {
+      background: rgba(20, 12, 5, 0.9);
+    }
+  }
+ 
+  .uzazi-intro-overlay.active {
+    display: flex;
+  }
+ 
+  .uzazi-intro-overlay.show {
+    opacity: 1;
+  }
+ 
+  .uzazi-intro-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 2.6rem 2.4rem 2.2rem;
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at 88% 8%, rgba(201, 168, 122, 0.16), transparent 18rem),
+      linear-gradient(150deg, #f8f3ea 0%, var(--cream) 55%, #ecdfc9 100%);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45);
+    text-align: center;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+ 
+  .uzazi-intro-overlay.show .uzazi-intro-card {
+    transform: translateY(0) scale(1);
+  }
+ 
+  .uzazi-intro-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(45, 41, 35, 0.18);
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--dark);
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+ 
+  .uzazi-intro-close:hover {
+    background: var(--brown);
+    border-color: var(--brown);
+    color: var(--cream);
+    transform: rotate(90deg);
+  }
+ 
+  .uzazi-intro-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brown);
+    margin: 0 0 1.2rem;
+  }
+ 
+  .uzazi-intro-cover {
+    width: 168px;
+    margin: 0 auto 1.4rem;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(107, 63, 34, 0.2);
+    box-shadow: 0 18px 40px rgba(45, 41, 35, 0.22);
+  }
+ 
+  .uzazi-intro-cover img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+ 
+  @supports not (aspect-ratio: 1 / 1) {
+    .uzazi-intro-cover img { height: 168px; }
+  }
+ 
+  .uzazi-intro-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 8vw, 3rem);
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin: 0;
+    line-height: 1;
+  }
+ 
+  .uzazi-intro-release {
+    margin: 0.7rem 0 1.6rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+ 
+  /* ---- countdown ---- */
+  .uzazi-intro-countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0 auto 1.8rem;
+    max-width: 360px;
+  }
+ 
+  .uzazi-countdown-unit {
+    padding: 0.7rem 0.3rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(107, 63, 34, 0.16);
+  }
+ 
+  .uzazi-countdown-num {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.9rem;
+    line-height: 1;
+    color: var(--brown);
+    font-variant-numeric: tabular-nums;
+  }
+ 
+  .uzazi-countdown-label {
+    display: block;
+    margin-top: 4px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+ 
+  /* Tarih geçtiğinde countdown grid'i gizlenip bunun yerine gösterilir */
+  .uzazi-intro-available {
+    display: none;
+    margin: 0 auto 1.8rem;
+    padding: 0.9rem 1.2rem;
+    max-width: 320px;
+    border-radius: 999px;
+    background: rgba(113, 128, 91, 0.14);
+    border: 1px solid rgba(113, 128, 91, 0.35);
+    color: var(--sage);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+ 
+  .uzazi-intro-overlay.available .uzazi-intro-countdown { display: none; }
+  .uzazi-intro-overlay.available .uzazi-intro-available { display: block; }
+ 
+  /* ---- buttons ---- */
+  .uzazi-intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+ 
+  .uzazi-intro-actions > * + * { margin-left: 0.7rem; }
+  @supports (gap: 0.7rem) { .uzazi-intro-actions > * + * { margin-left: 0; } }
+ 
+  .uzazi-intro-btn {
+    padding: 0.85rem 1.4rem;
+    border-radius: 999px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+ 
+  .uzazi-intro-btn.primary {
+    border: 1px solid var(--brown);
+    background: linear-gradient(135deg, #7b4a2a, var(--brown));
+    color: var(--cream);
+    box-shadow: 0 10px 22px rgba(107, 63, 34, 0.28);
+  }
+ 
+  .uzazi-intro-btn.primary:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--ocean), #416772);
+    box-shadow: 0 14px 28px rgba(48, 79, 89, 0.3);
+  }
+ 
+  .uzazi-intro-btn.secondary {
+    border: 1px solid rgba(45, 41, 35, 0.25);
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--dark);
+  }
+ 
+  .uzazi-intro-btn.secondary:hover {
+    border-color: var(--brown);
+    transform: translateY(-2px);
+  }
+ 
+  @media (prefers-reduced-motion: reduce) {
+    .uzazi-intro-overlay,
+    .uzazi-intro-card,
+    .uzazi-intro-close,
+    .uzazi-intro-btn {
+      transition: none;
+    }
+ 
+    .uzazi-intro-close:hover { transform: none; }
+    .uzazi-intro-btn:hover { transform: none; }
+  }
+ 
+  /* ---- responsive ---- */
+  @media (max-width: 480px) {
+    .uzazi-intro-card {
+      padding: 2.2rem 1.5rem 1.8rem;
+      border-radius: 16px;
+    }
+ 
+    .uzazi-intro-cover {
+      width: 132px;
+    }
+ 
+    .uzazi-intro-title {
+      font-size: 2.1rem;
+    }
+ 
+    .uzazi-intro-countdown {
+      gap: 7px;
+    }
+ 
+    .uzazi-countdown-num {
+      font-size: 1.5rem;
+    }
+ 
+    .uzazi-countdown-label {
+      font-size: 0.52rem;
+    }
+ 
+    .uzazi-intro-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+ 
+    .uzazi-intro-actions > * + * { margin-left: 0; }
+ 
+    .uzazi-intro-btn {
+      text-align: center;
+    }
+  }
+ 
+  @media (max-width: 360px) {
+    .uzazi-intro-countdown {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+ 
+    .uzazi-countdown-num { font-size: 1.25rem; }
+  }
+
+
+
+
+
+
+
+
+
 /* ══════════════════════════════
        GLOBAL BANNER CLASS (ROOT)
     ══════════════════════════════ */
@@ -494,6 +806,65 @@ header.scrolled .logo img {
   filter: brightness(0) invert(0);
 }
 
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.header-social > * + * { margin-left: 0.8rem; }
+@supports (gap: 0.6rem) { .header-social > * + * { margin-left: 0; } }
+
+.header-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 41, 35, 0.2);
+  color: inherit;
+  font-size: 0.78rem;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.header-social a:hover,
+.header-social a:focus-visible {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+
+.header-social a:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-social a { transition: none; }
+  .header-social a:hover { transform: none; }
+}
+
+/* Mobil menüde (≤900px) diğer nav linkleriyle aynı sütuna düşsün,
+   üstte ince bir ayraçla ayrılsın */
+@media (max-width: 900px) {
+  .header-social {
+    margin: 1.2rem 0 0;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(45, 41, 35, 0.12);
+    justify-content: center;
+  }
+
+  .header-social a {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
+
 /* ── INDEX MOBILE NAVIGATION ── */
 @media (max-width: 900px) {
   #site-header .header-inner {
@@ -827,7 +1198,7 @@ header.scrolled .nav-link:hover {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 8%;
+  right: 4%;
   /* header altından başla, tam dikey orta */
   padding-left: env(safe-area-inset-left, 0px);
   padding-right: env(safe-area-inset-right, 0px);
@@ -835,7 +1206,8 @@ header.scrolled .nav-link:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  text-align: right;
+  align-items: end;
   gap: 0;
   /* sağ tarafın yarısından fazlasına taşmasın */
   max-width: 55%;
@@ -2716,19 +3088,6 @@ header.scrolled .nav-link:hover {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-}
-
-.kim-booking-eyebrow {
-    display: block;
-    margin-bottom: 20px;
-    font-family: 'Inter', sans-serif;
-
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-
-    opacity: 0.55;
 }
 
 .kim-booking-title {
@@ -5227,485 +5586,942 @@ header.scrolled .nav-link:hover {
 
 
 
+/* ══════════════════════════════════════════════════════════════
+   B_LOOPS SECTION — TAM CSS
+   Bu dosya, eski b-loops-section CSS bloğunuzun TAMAMININ yerine geçer.
+   ══════════════════════════════════════════════════════════════ */
+
+.b-loops-section {
+  padding: 7rem 10%;
+}
+
+.b-loops-header {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.b-loops-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  color: var(--cream);
+  margin: 0;
+}
+
+/* ── OUTER LAYOUT: loops grid + youtube kartı, dikey, ortalanmış ──
+   !important kullanıyoruz çünkü bu kurallar başka bir yerde tanımlı
+   olabilecek eski grid tabanlı bir .b-loops-layout kuralını kesin
+   olarak ezmeli. */
+.b-loops-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.b-loops-grid {
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.loop-item {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  max-width: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--dark);
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(45, 41, 35, 0.12);
+}
+
+.loop-cover,
+.loop-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.loop-cover {
+  transition: opacity 0.4s ease;
+}
+
+.loop-video {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.loop-item.is-playing .loop-cover { opacity: 0; }
+.loop-item.is-playing .loop-video { opacity: 1; }
+
+.loop-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 41, 35, 0.22);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.loop-item:hover::after {
+  background: rgba(45, 41, 35, 0.34);
+}
+
+/* ---- play / pause button ---- */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(243, 237, 226, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.loop-item.is-playing .play-overlay { opacity: 0; }
+
+.loop-item:hover .play-overlay {
+  opacity: 1;
+  background: var(--amber);
+}
+
+.play-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.play-overlay .icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+}
+
+.play-overlay .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--dark);
+}
+
+.play-overlay .pause-icon { display: none; }
+.play-overlay .play-icon  { display: flex; }
+
+.loop-item.is-playing .play-overlay .play-icon  { display: none; }
+.loop-item.is-playing .play-overlay .pause-icon { display: flex; }
+
+/* ---- mute / unmute button ---- */
+.mute-toggle {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 237, 226, 0.5);
+  background: rgba(45, 41, 35, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 2;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .mute-toggle {
+    background: rgba(45, 41, 35, 0.82);
+  }
+}
+
+.mute-toggle:hover {
+  background: rgba(45, 41, 35, 0.7);
+  border-color: var(--amber);
+}
+
+.mute-toggle .icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+}
+
+.mute-toggle .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--cream);
+}
+
+.mute-toggle .unmuted-icon { display: none; }
+.mute-toggle .muted-icon   { display: flex; }
+
+.loop-item.is-muted-off .mute-toggle .muted-icon   { display: none; }
+.loop-item.is-muted-off .mute-toggle .unmuted-icon { display: flex; }
+
+/* aspect-ratio desteklemeyen eski tarayıcılar için fallback */
+@supports not (aspect-ratio: 3 / 4) {
+  .loop-item {
+    height: 0;
+    padding-top: 133.33%; /* 3:4 oranı */
+  }
+}
+
+/* ── YOUTUBE KARTI — loops grid'in altında, ortalanmış ── */
+.b-loops-video-wrap {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.b-loops-video-wrap .wrap {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+.video-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cream);
+  margin: 0 0 1.4rem;
+}
+
+.youtube-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(45, 41, 35, 0.25);
+  background-color: var(--dark);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+  .youtube-card {
+    height: 0;
+    padding-top: 56.25%;
+  }
+}
+
+.youtube-card--loops {
+  background-image:
+    linear-gradient(rgba(20, 12, 5, 0.4), rgba(20, 12, 5, 0.55)),
+    url("https://img.youtube.com/vi/COAduY3jkI0/maxresdefault.jpg");
+}
+
+.youtube-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+}
+
+.youtube-play {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(243, 237, 226, 0.75);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.youtube-play svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--cream);
+  margin-left: 3px;
+}
+
+.youtube-label {
+  margin-top: 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243, 237, 226, 0.85);
+}
+
+.youtube-card:hover .youtube-play {
+  transform: scale(1.08);
+  background: rgba(243, 237, 226, 0.14);
+}
+
+/* ---- touch devices ---- */
+@media (hover: none) and (pointer: coarse) {
+  .loop-item.is-playing .play-overlay {
+    opacity: 0.55;
+  }
+
+  .mute-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .youtube-card:active .youtube-play {
+    transform: scale(1.05);
+    background: rgba(243, 237, 226, 0.16);
+  }
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .loop-cover,
+  .loop-video,
+  .loop-item::after,
+  .play-overlay,
+  .mute-toggle,
+  .youtube-play {
+    transition: none;
+  }
+
+  .play-overlay:hover {
+    transform: translate(-50%, -50%);
+  }
+
+  .youtube-card:hover .youtube-play,
+  .youtube-card:active .youtube-play {
+    transform: none;
+  }
+}
 
 
+/* ══════════════════════════════════════════════════════════════
+   B_LOOPS SECTION — RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════════════════════════ */
 
-  /* ============ B_LOOPS SECTION ============ */
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
   .b-loops-section {
-    padding: 7rem 6%;
+    padding: 5.7rem 10%;
   }
- 
+
   .b-loops-header {
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto 3rem;
+    margin-bottom: 2.4rem;
   }
- 
-  .b-loops-label {
-    display: block;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 0.8rem;
+}
+
+/* ---------- BÜYÜK TELEFON / DİKEY TABLET (≤768px) ---------- */
+@media (max-width: 768px) {
+  .b-loops-section {
+    padding: 4.7rem 10%;
   }
- 
+
   .b-loops-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: clamp(2.4rem, 4vw, 3.2rem);
-    color: var(--cream);
-    margin: 0;
+    font-size: clamp(2rem, 7vw, 2.6rem);
   }
- 
-  /* ---- outer layout: loops grid (left) | youtube card (right) ---- */
+
   .b-loops-layout {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    gap: 2.5rem;
   }
- 
+
   .b-loops-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.6rem;
+  }
+
+  .play-overlay {
+    width: 56px;
+    height: 56px;
+  }
+
+  .play-overlay .icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .video-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .youtube-play {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ---------- TELEFON (≤480px) ----------
+   KRİTİK: auto-fit + minmax(220px,1fr) çok dar ekranlarda kartın
+   220px'in altına inememesi yüzünden yatay taşmaya sebep olabilir.
+   Sütunu açıkça 1fr'e sabitleyip bu riski ortadan kaldırıyoruz. */
+@media (max-width: 480px) {
+  .b-loops-section {
+    padding: 3.7rem 10%;
+  }
+
+  .b-loops-layout {
     gap: 2rem;
   }
- 
-  .loop-item {
-    position: relative;
-    aspect-ratio: 3 / 4;
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--dark);
-    cursor: pointer;
-    box-shadow: 0 14px 34px rgba(45, 41, 35, 0.12);
-  }
- 
-  .loop-cover,
-  .loop-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
- 
-  .loop-cover {
-    transition: opacity 0.4s ease;
-  }
- 
-  .loop-video {
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
- 
-  .loop-item.is-playing .loop-cover { opacity: 0; }
-  .loop-item.is-playing .loop-video { opacity: 1; }
- 
-  .loop-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(45, 41, 35, 0.22);
-    transition: background 0.3s ease;
-    pointer-events: none;
-  }
- 
-  .loop-item:hover::after {
-    background: rgba(45, 41, 35, 0.34);
-  }
- 
-  /* ---- play / pause button ---- */
-  .play-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(243, 237, 226, 0.92);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
-  }
- 
-  .loop-item.is-playing .play-overlay { opacity: 0; }
- 
-  .loop-item:hover .play-overlay {
-    opacity: 1;
-    background: var(--amber);
-  }
- 
-  .play-overlay:hover {
-    transform: translate(-50%, -50%) scale(1.06);
-  }
- 
-  .play-overlay .icon {
-    width: 22px;
-    height: 22px;
-    display: flex;
-  }
- 
-  .play-overlay .icon svg {
-    width: 100%;
-    height: 100%;
-    fill: var(--dark);
-  }
- 
-  .play-overlay .pause-icon { display: none; }
-  .play-overlay .play-icon  { display: flex; }
- 
-  .loop-item.is-playing .play-overlay .play-icon  { display: none; }
-  .loop-item.is-playing .play-overlay .pause-icon { display: flex; }
- 
-  /* ---- mute / unmute button ---- */
-  .mute-toggle {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    border: 1px solid rgba(243, 237, 226, 0.5);
-    background: rgba(45, 41, 35, 0.45);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease;
-    z-index: 2;
-  }
- 
-  @supports not (backdrop-filter: blur(1px)) {
-    .mute-toggle {
-      background: rgba(45, 41, 35, 0.82);
-    }
-  }
- 
-  .mute-toggle:hover {
-    background: rgba(45, 41, 35, 0.7);
-    border-color: var(--amber);
-  }
- 
-  .mute-toggle .icon {
-    width: 18px;
-    height: 18px;
-    display: flex;
-  }
- 
-  .mute-toggle .icon svg {
-    width: 100%;
-    height: 100%;
-    fill: var(--cream);
-  }
- 
-  .mute-toggle .unmuted-icon { display: none; }
-  .mute-toggle .muted-icon   { display: flex; }
- 
-  .loop-item.is-muted-off .mute-toggle .muted-icon   { display: none; }
-  .loop-item.is-muted-off .mute-toggle .unmuted-icon { display: flex; }
- 
-  /* aspect-ratio desteklemeyen eski tarayıcılar için fallback */
-  @supports not (aspect-ratio: 3 / 4) {
-    .loop-item {
-      height: 0;
-      padding-top: 133.33%; /* 3:4 oranı */
-    }
-  }
- 
-  /* ---- youtube card (right column) ---- */
-  .b-loops-video-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
- 
-  .b-loops-video-wrap .wrap {
-    width: 100%;
-    max-width: 100%;
-    text-align: center;
-  }
- 
-  .video-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    color: var(--cream);
-    margin: 0 0 1.4rem;
-  }
- 
-  .youtube-card {
-    position: relative;
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 14px 34px rgba(45, 41, 35, 0.25);
-    background-color: var(--dark);
-    background-size: cover;
-    background-position: center;
-  }
- 
-  @supports not (aspect-ratio: 16 / 9) {
-    .youtube-card {
-      height: 0;
-      padding-top: 56.25%;
-    }
-  }
- 
-  .youtube-card--loops {
-    background-image:
-      linear-gradient(rgba(20, 12, 5, 0.4), rgba(20, 12, 5, 0.55)),
-      url("https://img.youtube.com/vi/COAduY3jkI0/maxresdefault.jpg");
-  }
- 
-  .youtube-card-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--cream);
-  }
- 
-  .youtube-play {
-    width: 60px;
-    height: 60px;
-    border: 1px solid rgba(243, 237, 226, 0.75);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease, background 0.4s ease;
-  }
- 
-  .youtube-play svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--cream);
-    margin-left: 3px;
-  }
- 
-  .youtube-label {
-    margin-top: 16px;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(243, 237, 226, 0.85);
-  }
- 
-  .youtube-card:hover .youtube-play {
-    transform: scale(1.08);
-    background: rgba(243, 237, 226, 0.14);
-  }
- 
-  /* ---- touch devices ---- */
-  @media (hover: none) and (pointer: coarse) {
-    .loop-item.is-playing .play-overlay {
-      opacity: 0.55;
-    }
- 
-    .mute-toggle {
-      width: 42px;
-      height: 42px;
-    }
- 
-    .youtube-card:active .youtube-play {
-      transform: scale(1.05);
-      background: rgba(243, 237, 226, 0.16);
-    }
-  }
- 
-  /* ---- reduced motion ---- */
-  @media (prefers-reduced-motion: reduce) {
-    .loop-cover,
-    .loop-video,
-    .loop-item::after,
-    .play-overlay,
-    .mute-toggle,
-    .youtube-play {
-      transition: none;
-    }
- 
-    .play-overlay:hover {
-      transform: translate(-50%, -50%);
-    }
- 
-    .youtube-card:hover .youtube-play,
-    .youtube-card:active .youtube-play {
-      transform: none;
-    }
-  }
- 
-  /* ============ RESPONSIVE ============ */
- 
-  /* ---- tablet (≤1024px) ---- */
-  @media (max-width: 1024px) {
-    .b-loops-section {
-      padding: 5.7rem 10%;
-    }
- 
-    .b-loops-header {
-      margin-bottom: 2.4rem;
-    }
- 
-    .b-loops-layout {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
- 
-    .b-loops-video-wrap {
-      justify-content: center;
-    }
- 
-    .b-loops-video-wrap .wrap {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-  }
- 
-  /* ---- büyük telefon / dikey tablet (≤768px) ---- */
-  @media (max-width: 768px) {
-    .b-loops-section {
-      padding: 4.7rem 10%;
-    }
- 
-    .b-loops-title {
-      font-size: clamp(2rem, 7vw, 2.6rem);
-    }
- 
-    .b-loops-grid {
-      gap: 1.6rem;
-    }
- 
-    .play-overlay {
-      width: 56px;
-      height: 56px;
-    }
- 
-    .play-overlay .icon {
-      width: 19px;
-      height: 19px;
-    }
- 
-    .video-title {
-      font-size: 1.5rem;
-      margin-bottom: 1.1rem;
-    }
- 
-    .youtube-play {
-      width: 52px;
-      height: 52px;
-    }
-  }
- 
-  /* ---- telefon (≤480px) ----
-     KRİTİK: auto-fit + minmax(220px,1fr) çok dar ekranlarda kartın
-     220px'in altına inememesi yüzünden yatay taşmaya sebep olabilir.
-     Sütunu açıkça 1fr'e sabitleyip bu riski ortadan kaldırıyoruz. */
-  @media (max-width: 480px) {
-    .b-loops-section {
-      padding: 3.7rem 10%;
-    }
- 
-    .b-loops-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-    }
- 
-    .b-loops-grid {
-      grid-template-columns: 1fr;
-      gap: 1.4rem;
-    }
- 
-    .play-overlay {
-      width: 50px;
-      height: 50px;
-    }
- 
-    .play-overlay .icon {
-      width: 17px;
-      height: 17px;
-    }
- 
-    .mute-toggle {
-      right: 10px;
-      bottom: 10px;
-      width: 34px;
-      height: 34px;
-    }
- 
-    .youtube-play {
-      width: 46px;
-      height: 46px;
-    }
- 
-    .youtube-label {
-      font-size: 0.6rem;
-      letter-spacing: 0.16em;
-    }
-  }
- 
-  /* ---- çok küçük telefon (≤360px) ---- */
-  @media (max-width: 360px) {
-    .b-loops-title {
-      font-size: 1.7rem;
-    }
- 
-    .loop-item {
-      aspect-ratio: 4 / 5;
-    }
- 
-    .play-overlay {
-      width: 44px;
-      height: 44px;
-    }
-  }
- 
-  /* ---- yatay telefon (kısa yükseklik) ---- */
-  @media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
-    .b-loops-section {
-      padding: 2.5rem 6%;
-    }
- 
-    .b-loops-header {
-      margin-bottom: 1.6rem;
-    }
- 
-    .b-loops-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-    }
- 
-    .loop-item {
-      aspect-ratio: 16 / 10;
-    }
-  }
- 
-  /* ---- büyük / geniş ekranlar ---- */
-  @media (min-width: 1600px) {
-    .b-loops-layout {
-      max-width: 1360px;
-    }
+
+  .b-loops-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 
+  .play-overlay {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-overlay .icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .mute-toggle {
+    right: 10px;
+    bottom: 10px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .youtube-play {
+    width: 46px;
+    height: 46px;
+  }
+
+  .youtube-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+  }
+}
+
+/* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
+@media (max-width: 360px) {
+  .b-loops-title {
+    font-size: 1.7rem;
+  }
+
+  .loop-item {
+    aspect-ratio: 4 / 5;
+  }
+
+  .play-overlay {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ---------- YATAY TELEFON (kısa yükseklik) ---------- */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .b-loops-section {
+    padding: 2.5rem 6%;
+  }
+
+  .b-loops-header {
+    margin-bottom: 1.6rem;
+  }
+
+  .b-loops-layout {
+    gap: 2rem;
+  }
+
+  .b-loops-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .loop-item {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ---------- BÜYÜK / GENİŞ EKRANLAR ---------- */
+@media (min-width: 1600px) {
+  .b-loops-layout {
+    max-width: 1360px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   B_LOOPS SECTION — TAM CSS
+   Bu dosya, eski b-loops-section CSS bloğunuzun TAMAMININ yerine geçer.
+   ══════════════════════════════════════════════════════════════ */
+
+.b-loops-section {
+  padding: 7rem 6%;
+}
+
+.b-loops-header {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.b-loops-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  color: var(--cream);
+  margin: 0;
+}
+
+/* ── OUTER LAYOUT: loops grid + youtube kartı, dikey, ortalanmış ── */
+.b-loops-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.b-loops-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.loop-item {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--dark);
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(45, 41, 35, 0.12);
+}
+
+.loop-cover,
+.loop-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.loop-cover {
+  transition: opacity 0.4s ease;
+}
+
+.loop-video {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.loop-item.is-playing .loop-cover { opacity: 0; }
+.loop-item.is-playing .loop-video { opacity: 1; }
+
+.loop-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 41, 35, 0.22);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+
+.loop-item:hover::after {
+  background: rgba(45, 41, 35, 0.34);
+}
+
+/* ---- play / pause button ---- */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(243, 237, 226, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.25s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.loop-item.is-playing .play-overlay { opacity: 0; }
+
+.loop-item:hover .play-overlay {
+  opacity: 1;
+  background: var(--amber);
+}
+
+.play-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.play-overlay .icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+}
+
+.play-overlay .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--dark);
+}
+
+.play-overlay .pause-icon { display: none; }
+.play-overlay .play-icon  { display: flex; }
+
+.loop-item.is-playing .play-overlay .play-icon  { display: none; }
+.loop-item.is-playing .play-overlay .pause-icon { display: flex; }
+
+/* ---- mute / unmute button ---- */
+.mute-toggle {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 237, 226, 0.5);
+  background: rgba(45, 41, 35, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 2;
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .mute-toggle {
+    background: rgba(45, 41, 35, 0.82);
+  }
+}
+
+.mute-toggle:hover {
+  background: rgba(45, 41, 35, 0.7);
+  border-color: var(--amber);
+}
+
+.mute-toggle .icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+}
+
+.mute-toggle .icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--cream);
+}
+
+.mute-toggle .unmuted-icon { display: none; }
+.mute-toggle .muted-icon   { display: flex; }
+
+.loop-item.is-muted-off .mute-toggle .muted-icon   { display: none; }
+.loop-item.is-muted-off .mute-toggle .unmuted-icon { display: flex; }
+
+/* aspect-ratio desteklemeyen eski tarayıcılar için fallback */
+@supports not (aspect-ratio: 3 / 4) {
+  .loop-item {
+    height: 0;
+    padding-top: 133.33%; /* 3:4 oranı */
+  }
+}
+
+/* ── YOUTUBE KARTI — loops grid'in altında, ortalanmış ── */
+.b-loops-video-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.b-loops-video-wrap .wrap {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
+.video-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--cream);
+  margin: 0 0 1.4rem;
+}
+
+.youtube-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(45, 41, 35, 0.25);
+  background-color: var(--dark);
+  background-size: cover;
+  background-position: center;
+}
+
+@supports not (aspect-ratio: 16 / 9) {
+  .youtube-card {
+    height: 0;
+    padding-top: 56.25%;
+  }
+}
+
+.youtube-card--loops {
+  background-image:
+    linear-gradient(rgba(20, 12, 5, 0.4), rgba(20, 12, 5, 0.55)),
+    url("https://img.youtube.com/vi/COAduY3jkI0/maxresdefault.jpg");
+}
+
+.youtube-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+}
+
+.youtube-play {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(243, 237, 226, 0.75);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.youtube-play svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--cream);
+  margin-left: 3px;
+}
+
+.youtube-label {
+  margin-top: 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(243, 237, 226, 0.85);
+}
+
+.youtube-card:hover .youtube-play {
+  transform: scale(1.08);
+  background: rgba(243, 237, 226, 0.14);
+}
+
+/* ---- touch devices ---- */
+@media (hover: none) and (pointer: coarse) {
+  .loop-item.is-playing .play-overlay {
+    opacity: 0.55;
+  }
+
+  .mute-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .youtube-card:active .youtube-play {
+    transform: scale(1.05);
+    background: rgba(243, 237, 226, 0.16);
+  }
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .loop-cover,
+  .loop-video,
+  .loop-item::after,
+  .play-overlay,
+  .mute-toggle,
+  .youtube-play {
+    transition: none;
+  }
+
+  .play-overlay:hover {
+    transform: translate(-50%, -50%);
+  }
+
+  .youtube-card:hover .youtube-play,
+  .youtube-card:active .youtube-play {
+    transform: none;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   B_LOOPS SECTION — RESPONSIVE BREAKPOINTS
+   ══════════════════════════════════════════════════════════════ */
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+  .b-loops-section {
+    padding: 5.7rem 10%;
+  }
+
+  .b-loops-header {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* ---------- BÜYÜK TELEFON / DİKEY TABLET (≤768px) ---------- */
+@media (max-width: 768px) {
+  .b-loops-section {
+    padding: 4.7rem 10%;
+  }
+
+  .b-loops-title {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+  }
+
+  .b-loops-layout {
+    gap: 2.5rem;
+  }
+
+  .b-loops-grid {
+    gap: 1.6rem;
+  }
+
+  .play-overlay {
+    width: 56px;
+    height: 56px;
+  }
+
+  .play-overlay .icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .video-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .youtube-play {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ---------- TELEFON (≤480px) ----------
+   KRİTİK: auto-fit + minmax(220px,1fr) çok dar ekranlarda kartın
+   220px'in altına inememesi yüzünden yatay taşmaya sebep olabilir.
+   Sütunu açıkça 1fr'e sabitleyip bu riski ortadan kaldırıyoruz. */
+@media (max-width: 480px) {
+  .b-loops-section {
+    padding: 3.7rem 10%;
+  }
+
+  .b-loops-layout {
+    gap: 2rem;
+  }
+
+  .b-loops-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .play-overlay {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-overlay .icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .mute-toggle {
+    right: 10px;
+    bottom: 10px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .youtube-play {
+    width: 46px;
+    height: 46px;
+  }
+
+  .youtube-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+  }
+}
+
+/* ---------- ÇOK KÜÇÜK TELEFON (≤360px) ---------- */
+@media (max-width: 360px) {
+  .b-loops-title {
+    font-size: 1.7rem;
+  }
+
+  .loop-item {
+    aspect-ratio: 4 / 5;
+  }
+
+  .play-overlay {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ---------- YATAY TELEFON (kısa yükseklik) ---------- */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+  .b-loops-section {
+    padding: 2.5rem 6%;
+  }
+
+  .b-loops-header {
+    margin-bottom: 1.6rem;
+  }
+
+  .b-loops-layout {
+    gap: 2rem;
+  }
+
+  .b-loops-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .loop-item {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ---------- BÜYÜK / GENİŞ EKRANLAR ---------- */
+@media (min-width: 1600px) {
+  .b-loops-layout {
+    max-width: 1360px;
+  }
+}
 
 
 
@@ -7303,6 +8119,33 @@ header.scrolled .nav-link:hover {
 .f-ex {
   color: var(--ocean);
   margin-right: 6px;
+}
+
+
+.multi-event-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(107, 63, 34, 0.14);
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.5;
+}
+
+.multi-event-item:last-child {
+  border-bottom: none;
+}
+
+.multi-event-item a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #1a1410dd;
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.multi-event-item a:hover {
+  background-color: #5e3c1fea;
 }
 
 /* ══════════════════════════════════════════════════════════════
