@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/svg+xml" href="photos/logo2.svg">
+  <link rel="icon" type="image/svg+xml" href="photos/K-Symbol-Transparent.svg">
 </head>
 
 <body class="homepage">
@@ -137,7 +137,6 @@
       </h1>
 
       <div class="hero-taglines">
-        <span class="hero-tagline">More than music.</span> <br>
         <span class="hero-tagline">In music.</span>
         <span class="hero-tagline">In life.</span>
         <span class="hero-tagline">In everything between.</span>
@@ -179,7 +178,7 @@
 
           <div class="about-intro">
             <p class="about-subtitle">
-              “Movement means more than going <br> from one place to another.
+              “Movement means more than going <br> from one place to another."
             </p>
 
             <div class="about-logo">
@@ -350,14 +349,6 @@
     </div>
 
     <div class="homepage-events-list">
-
-      <a class="homepage-event-row" href="events.html?date=2026-08-28#calendar-section">
-        <span class="homepage-event-date">Aug 28–29</span>
-        <span class="homepage-event-info"><span class="homepage-event-venue">Winter's Jazz Club</span> — Chicago <span
-            class="homepage-event-detail">Soul Jazz Collective with LaShera Ellis</span></span>
-        <span class="homepage-event-arrow">→</span>
-      </a>
-
       <a class="homepage-event-row" href="events.html?date=2026-09-02#calendar-section">
         <span class="homepage-event-date">Sep 2</span>
         <span class="homepage-event-info"><span class="homepage-event-venue">Andy's Jazz Club</span> — <span
@@ -386,6 +377,13 @@
         <span class="homepage-event-arrow">→</span>
       </a>
 
+      
+      <a class="homepage-event-row" href="events.html?date=2026-09-12#calendar-section">
+        <span class="homepage-event-date">Sep 12</span>
+        <span class="homepage-event-info"><span class="homepage-event-venue">Winter's Jazz Club</span> — Chicago <span
+            class="homepage-event-detail"> Soul Jazz Collective with Boyce Hudson</span></span>
+        <span class="homepage-event-arrow">→</span>
+      </a>
     </div>
 
     <div class="homepage-events-cta-wrap">
@@ -800,6 +798,33 @@
     }
 
 
+    // ── HIDE PAST EVENTS ──
+    // Her satırın href'indeki ?date=YYYY-MM-DD değeri ziyaretçinin yerel
+    // tarihinden önceyse o satırı kaldırır. Hiç güncel etkinlik kalmazsa
+    // tüm "Upcoming Events" bölümünü gizler.
+    (function () {
+      const t = new Date();
+      const todayStr = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
+
+      const eventRows = document.querySelectorAll('.homepage-event-row');
+      let visibleCount = 0;
+
+      eventRows.forEach(row => {
+        const match = row.getAttribute('href').match(/date=(\d{4}-\d{2}-\d{2})/);
+        const eventDate = match ? match[1] : null;
+
+        if (eventDate && eventDate < todayStr) {
+          row.remove();
+        } else {
+          visibleCount++;
+        }
+      });
+
+      if (visibleCount === 0) {
+        const eventsSection = document.querySelector('.homepage-events-section');
+        if (eventsSection) eventsSection.style.display = 'none';
+      }
+    })();
 
 
     window.formspree =
